@@ -1,0 +1,51 @@
+// $desktop-lg: 1800px;
+// $laptop-md-l: 1500px;
+// $desktop-md: 1500px;
+// $laptop-xlg: 1368px; ✓
+// $laptop-lg: 1280px; ✓
+// $laptop-md: 1100px; ✓
+
+
+// $tablet-xlg: 992px; ✓
+// $tablet-lg: 962px; ✓
+// $tablet-md: 768px; ✓
+
+
+// $mobile-xl: 601px; // ✓
+// $mobile-l: 450px; // ✓
+// $mobile-m: 390px; // ✓
+// $mobile-s: 330px; // ✓
+
+// $w-burger: $tablet-xlg;
+
+$desktop-xxlg: 3839px; // 3840×2160
+$desktop-xlg: 2559px; // 2560×1440
+$desktop-lg: 1919px; // 1920×1000
+$desktop-md: 1599px; // 1600×900
+$desktop-lgz: 1535px; // 1536×864
+
+$laptop-xxlg: 1439px; // 1440×800
+$laptop-xlg: 1365px; // 1366×650
+$laptop-lg: 1279px; // 1280×1024
+$laptop-md: 1099px; // 1100×768
+$laptop-sm: 1023px; // 1024×768
+$laptop: $laptop-xxlg;
+
+$tablet-xlg: 991px; // 992×601
+$tablet-lg: 809px; // 810×1080
+$tablet-md: 767px; // 768×1024
+$tablet-sm: 719px; // 720×1280
+$tablet: $tablet-xlg;
+
+// $mobile-xxlg: 600px; // 601×962
+$mobile-xxlg: 575px; // 601×962
+$mobile-xlg: 449px; // 450×846
+$mobile-lg: 413px; // 414×892
+$mobile-md: 411px; // 412×846
+$mobile-sm: 392px; // 393×812
+$mobile-xs: 374px; // 375×812
+$mobile-xxs: 359px; // 360×720
+$mobile-xxx: 320px; // 320×700
+$mobile: $mobile-xxlg;
+
+$has-burger: $tablet-xlg;

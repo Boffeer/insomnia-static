@@ -1,0 +1,85 @@
+.link {
+  --icon-width: 4rem;
+  --icon-height: 2.4rem;
+  --icon-gap: 0.8rem;
+
+  --c-disabled: #4B4B4B;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  --padding: var(--padding-block) var(--padding-inline);
+  padding: var(--padding);
+
+
+  font-family: var(--ff);
+  font-size: var(--fz);
+  font-weight: var(--fw);
+  line-height: var(--lh);
+  color: var(--fg);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: var(--ls);
+
+  background-image: linear-gradient(to bottom, var(--border-color) 0,var(--border-color) 100%);
+  // background-position: 0 90%;
+  background-position: 0 110%;
+  background-repeat: repeat-x;
+  background-size: 0.1rem 0.1rem;
+  text-decoration: none;
+}
+
+.link__text {
+}
+
+
+.link {
+  /*
+  --ff: var(--ff-regular);
+  --fz: 2rem;
+  --fw: 500;
+  --lh: initial;
+  --ls: initial;
+
+  --padding-block: 1.25em;
+  --padding-inline: 1.5em;
+
+  --fg: var(--c-primary);
+  --bg: var(--bg-app);
+
+  --border-width: 0.1rem;
+  --border-color: var(--c-primary);
+  --border-radius: 9999px;
+  */
+}
+
+.link__text {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+
+  // border-bottom: var(--border-width) solid var(--border-color);
+  transition: inherit;
+  padding: var(--text-padding);
+}
+
+.link__icon {
+  width: var(--icon-width);
+  min-width: var(--icon-width);
+  height: var(--icon-height);
+  min-height: var(--icon-height);
+  display: block;
+  --icon-color: var(--fg);
+  transition: inherit;
+}
+
+.link__icon:first-child {
+  margin-right: var(--icon-gap);
+}
+.link__icon:last-child {
+  margin-left: var(--icon-gap);
+}
+

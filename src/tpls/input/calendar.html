@@ -1,0 +1,18 @@
+<label class="input input-calendar js_form__control">
+  @@if (typeof context.label != 'undefined') {
+    <span class="input__label">
+      <span class="decor-ui input__label-decor-ui"></span>
+      Дата рождения
+    </span>
+  }
+  <input
+    class="input__field"
+    name="user_birthday"
+    type="text"
+    @@if (typeof context.placeholder != 'undefined') {
+      placeholder="@@placeholder"
+    }
+    readonly
+    required
+  >
+</label>

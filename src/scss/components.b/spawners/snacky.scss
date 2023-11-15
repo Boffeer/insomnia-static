@@ -1,0 +1,91 @@
+.snacky {
+  --snacky-bg: var(--bg-app);
+  --snacky-fg: var(--fg-regular);
+  --snacky-tr: var(--tr-jolly-enter, var(--tr-regular));
+  --snacky-closer-fg: var(--fg-regular);
+  --snacky-closer-fg--hover: var(--c-error);
+  --snacky-ff: var(--ff-regular);
+	position: absolute;
+	left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+	background-color: var(--snacky-bg);
+	color: var(--snacky-fg);
+	border-radius: 2rem;
+	border: 1px solid var(--snacky-fg);
+	max-width: 32rem;
+	width: 100%;
+	z-index: 20;
+	padding: 2.5rem 2rem;
+  transition: var(--tr-regular);
+  opacity: 0;
+  transform: translateY(2rem);
+
+  @media (max-width: $tablet-lg) {
+    max-width: 25rem;
+  }
+}
+.snacky--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.snacky__message {
+	font-size: 1.6rem;
+  font-family: var(--snacky-ff);
+}
+.snacky__closer {
+
+}
+.snacky__closer {
+  color: transparent;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 0;
+  font-size: 1.5rem;//20px;
+  background: transparent;
+  transition: all 0.3s ease;
+  --closer-color: var(--c-accent);
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+.snacky__closer::before,
+.snacky__closer::after {
+  position: absolute;
+  top: 48%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 20%;
+  content: "";
+  background-color: var(--fg-regular);
+  border-radius: 1em;
+  transition: all 0.3s ease;
+}
+.snacky__closer::before {
+  transform: rotate(45deg);
+}
+.snacky__closer::after {
+  transform: rotate(-45deg);
+}
+.snacky__closer:hover::before,
+.snacky__closer:hover::after {
+  background-color: var(--c-error);
+}
+
+
+.snacky__closer::before,
+.snacky__closer::after {
+  top: 44%;
+  right: 0;
+  width: 65%;
+  height: 7%;
+  margin-right: auto;
+  margin-left: auto;
+}

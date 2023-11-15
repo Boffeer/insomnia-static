@@ -1,0 +1,134 @@
+.modal {
+	background-color: var(--bg-app);
+	max-width: 67.2rem;
+	padding-left: 5.3rem;
+	padding-right: 5.3rem;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	border-radius: 2rem;
+	border: 0.1rem solid rgba(255, 255, 255, 0.10);
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width: $mobile-xlg) {
+		max-width: 30rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+.modal__icon {
+	width: 9.6rem;
+	height: 9.6rem;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.modal__title  {
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: initial;
+	font-family: var(--ff-title);
+	margin-bottom: 1.2rem;
+	text-align: center;
+	color: #565656;
+
+	@media (max-width: $mobile-xlg) {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		text-align: left;
+	}
+}
+
+.modal__desc {
+	font-size: 1.8rem;
+	line-height: initial;
+	margin-bottom: 3.5rem;
+	text-align: center;
+	color: #9a9a9a;
+
+	@media (max-width: $mobile-xlg) {
+		font-size: 1.4rem;
+		margin-bottom: 1.5rem;
+		text-align: left;
+	}
+}
+
+.modal__desc br {
+	@media (max-width: $mobile-xlg) {
+		display: none;
+	}
+}
+
+
+.modal__button {
+	max-width: 100%;
+	width: 100%;
+	border-radius: 0.6rem;
+
+	@media (max-width: $mobile-xlg) {
+		--fz-button: 1.6rem;
+	}
+}
+
+
+.modal__content .checkbox__link {
+	--link-color: var(--c-text-regular);
+	// --link-color: var(--c-text-regular);
+}
+
+.modal--wide {
+	max-width: var(--w-container);
+	width: 100%;
+
+	@media (min-width: $mobile-xlg + 1) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+		padding-left: 7rem;
+		padding-right: 7rem;
+	}
+}
+
+.modal--wide .modal__title {
+	@media (min-width: $laptop-md + 1) {
+		text-align: left;
+		font-size: 4.5rem;
+		margin-bottom: 1.9rem;
+	}
+}
+
+.modal--wide .modal__desc {
+	@media (min-width: $laptop-md + 1) {
+		text-align: left;
+		font-size: 1.6rem;
+		margin-bottom: 5rem;
+	}
+}
+
+.modal--wide .form__fields {
+	@media (min-width: $laptop-md + 1) {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		gap: 2.3rem;
+	}
+}
+
+.modal--wide .form__row {
+	@media (min-width: $laptop-md + 1) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 0;
+	}
+}
+
+.modal--wide .form__row .input {
+	margin-right: 2.3rem;
+	--fz: 1.6rem;
+}
+.modal--wide .form__row .input:last-of-type {
+	margin-right: 0;
+}

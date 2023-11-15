@@ -1,0 +1,251 @@
+.offer-carousel {
+	color: var(--fg-title);
+}
+
+.offer-carousel__container {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media (max-width: $mobile-xlg) {
+		flex-wrap: wrap;
+	}
+}
+
+.offer-carousel__content {
+	padding-top: 8.7rem;
+	max-width: 45rem;
+	padding-bottom: 24.1rem;
+
+	@media (max-width: $tablet-xlg) {
+		max-width: 55rem;
+	}
+	@media (max-width: $mobile-xlg) {
+		padding-bottom: 1.2rem;
+		padding-top: 4rem;
+	}
+}
+
+.offer-carousel__title {
+	font-weight: 500;
+	font-family: var(--ff-title);
+	font-size: 8rem;
+	margin-bottom: 3.2rem;
+	font-weight: 500;
+	line-height: 108.5%;
+
+	@media (max-width: $tablet-lg) {
+		font-size: 6rem;
+	}
+
+	@media (max-width: $mobile-xlg) {
+		max-width: 80%;
+		font-size: 3.5rem;
+		margin-bottom: 1.8rem;
+	}
+}
+
+.offer-carousel__sub {
+	font-family: var(--ff-regular);
+  font-size: 0.275em;//2.2rem;
+  font-weight: 400;
+  position: relative;
+  padding-left: 6.4em;//14rem;
+  padding-top: 8%;
+  margin-left: 0.8em; //2rem;
+
+  @media (max-width: $mobile-xlg) {
+	  padding-top: 6%;
+  }
+}
+
+.offer-carousel__sub-text {
+	position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  line-height: initial;
+}
+
+.offer-carousel__subtitle {
+	font-weight: 700;
+	font-size: 1.8rem;
+	margin-bottom: 1.2rem;
+
+	@media (max-width: $tablet-xlg) {
+		font-size: 2rem;
+	}
+
+	@media (max-width: $mobile-xlg) {
+		font-size: 1.5rem;
+		margin-bottom: 0.8rem;
+	}
+}
+
+.offer-carousel__desc {
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 135%;
+	padding-left: 4.4rem;
+	position: relative;
+	max-width: 37rem;
+	margin-bottom: 4rem;
+
+	@media (max-width: $tablet-xlg) {
+		font-size: 2rem;
+	}
+
+	@media (max-width: $mobile-xlg) {
+		max-width: 100%;
+		font-size: 1.5rem;
+		padding-left: 2.9rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.offer-carousel__desc::before {
+	content: "";
+	background-color: var(--c-primary);
+	width: 3.1rem;
+	height: 0.2rem;
+	position: absolute;
+	top: 1.1rem;
+	left: 0;
+
+	@media (max-width: $mobile-xlg) {
+		width: 2rem;
+	}
+}
+
+.offer-carousel__button  {
+	max-width: 32.7rem;
+	width: 100%;
+
+	@media (max-width: $mobile-xlg) {
+		max-width: 100%;
+	}
+}
+
+.offer-carousel__hero {
+	max-width: 70rem;
+	height: 70rem;
+	margin-top: auto;
+	pointer-events: none;
+  transform: translateY(1rem);
+
+  @media (max-width: $laptop-lg) {
+  	max-width: 60rem;
+  	height: 60rem;
+  }
+
+  @media (max-width: $tablet-xlg) {
+  	max-width: 50rem;
+  	height: 65rem;
+  }
+
+  @media (max-width: $tablet-lg) {
+  	max-width: 50rem;
+  }
+
+  @media (max-width: $mobile-xlg) {
+  	margin-left: auto;
+  	margin-right: auto;
+  	height: 40rem;
+  }
+
+  @media (max-width: $mobile-lg) {
+  	margin-left: #{'calc(0px - var(--p-container))'};
+  	margin-right: #{'calc(0px - var(--p-container))'};
+  	max-width: initial;
+  	width: fit-content;
+  }
+}
+
+.offer-carousel__hero-pic {
+	display: block;
+	height: 100%;
+	width: 100%;
+
+	@media (max-width: $mobile-lg) {
+		transform: scale(1.3);
+	}
+}
+
+.offer-carousel__hero-img {
+	object-fit: contain;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.offer-carousel__bg {
+  background-color: var(--bg-primary);
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.offer-carousel__bg-pic {
+	display: block;
+	height: 100%;
+	width: 100%;
+
+	@media (max-width: $mobile-xlg) {
+    height: 220%;
+    width: 270%;
+    max-width: initial;
+	}
+}
+.offer-carousel__bg-img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.offer-carousel__slide {
+	margin-bottom: -8.7rem;
+	overflow: hidden;
+}
+
+
+.offer-carousel__nav {
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-bottom: 3.3rem;
+}
+
+.offer-carousel-buttons {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 7.3rem;
+
+	@media (max-width: $mobile-lg) {
+		justify-content: space-between;
+		margin-bottom: 2.3rem;
+	}
+}
+
+.offer-carousel-button-prev,
+.offer-carousel-button-next {
+	position: static;
+}
+
+.offer-carousel-button-prev {
+	margin-right: 4rem;
+}
+
+.offer-carousel-button-next {
+
+}

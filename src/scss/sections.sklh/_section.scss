@@ -1,0 +1,91 @@
+.section {
+	padding-top: 20rem;
+	padding-bottom: 20rem;
+
+	@media (max-width: $laptop-md) {
+		padding-top: 12rem;
+		padding-bottom: 12rem;
+	}
+
+	@media (max-width: $tablet) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+}
+
+.section--convex {
+	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+	// padding-top: 12rem;
+	// padding-bottom: 12rem;
+}
+
+.section-title {
+	margin-bottom: 7rem;
+
+	font-family: var(--ff-title);
+	font-size: var(--fz-title);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	letter-spacing: 0.11rem;
+
+	leading-trim: both;
+	text-edge: cap;
+
+	@media (max-width: $laptop-md) {
+		margin-bottom: 4.5rem;
+	}
+
+	@media (max-width: $tablet) {
+		letter-spacing: 0.05rem;
+		margin-bottom: 3rem;
+	}
+}
+
+.section-buttons {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	display: inline-grid;
+	row-gap: 3rem;
+
+	@media (max-width: $tablet) {
+		row-gap: 1.2rem;
+	}
+}
+.container.section-buttons {
+  display: grid;
+}
+
+.text-sub {
+	color: var(--fg-regular, #FFF);
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--ff-regular);
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: -0.096rem;
+}
+
+.text-sub--square::after {
+	content: "2";
+	font-size: 0.6em;
+	position: relative;
+	bottom: 0.45em;
+	left: 0.1em;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.section__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	@media (max-width: $tablet) {
+		display: block;
+	}
+}

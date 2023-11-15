@@ -1,0 +1,9 @@
+.bestseller {
+	overflow: hidden;
+}
+
+.bestseller .product-card__media {
+	@media (min-width: $mobile-lg + 1) {
+		// height: 18.1rem;
+	}
+}

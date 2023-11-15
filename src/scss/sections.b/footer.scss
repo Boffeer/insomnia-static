@@ -1,0 +1,10 @@
+.footer {
+	margin-top: auto;
+	padding-top: 3.4rem;
+	padding-bottom: 3.9rem;
+
+	@media (max-width: $mobile-lg) {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+}

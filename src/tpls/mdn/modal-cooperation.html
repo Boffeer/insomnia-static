@@ -1,0 +1,36 @@
+<div id="modal-cooperation" class="b_modal modal modal--wide modal-price">
+  <h3 class="modal__title">
+    Для обсуждения <br>
+    сотрудничества
+  </h3>
+  <p class="modal__desc">
+    Оставьте свои контакты номер, чтобы <br>
+    мы могли отправить связаться с&nbsp;вами <br>
+    и&nbsp;обсудить подробности
+  </p>
+  <form action="/" id="form-cooperation" class="form js_form modal__form">
+    <div class="form__hidden">
+      <input type="text" name="page" hidden>
+      <input type="text" name="formname" hidden>
+      <input type="text" name="additional" hidden>
+
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="utm_term" value="">
+      <input type="hidden" name="referer" value="">
+      <input type="hidden" name="requestTime" value="">
+      <input type="hidden" name="requestSimpleSign" value="">
+    </div>
+    <div class="form__fields">
+      <fieldset class="form__row">
+        @@include('../input/name.html')
+        @@include('../input/tel.html')
+      </fieldset>
+      <button type="submit" class="button-primary button-filled modal__button">
+        Заказать звонок
+      </button>
+    </div>
+  </form>
+</div>

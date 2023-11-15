@@ -1,0 +1,150 @@
+@import "../components.b/lego/burger.scss";
+
+.header {
+	background: rgba(0, 0, 0, 0.70);
+	position: sticky;
+	top: 0;
+	z-index: var(--z-header);
+	margin-bottom: -10.3rem;
+
+	@media (max-width: $tablet) {
+		margin-bottom: -7.795rem;
+	}
+}
+
+.header--no-overlap {
+	margin-bottom: 0;
+}
+
+.header .burger {
+	--c-burger-line: var(--c-primary);
+	--line-width: 100%;
+	--line-offset: 1.1rem;
+	--burger-width: 4rem;
+	--burger-height: 2.8rem;
+	margin-left: 0;
+	margin-top: 0.7rem;
+	margin-right: 1rem;
+	z-index: 3;
+	transition: all 0.3s ease;
+
+	@media (min-width: $has-burger + 1) {
+		display: block;
+	}
+
+	@media (max-width: $tablet-xlg) {
+		position: absolute;
+		left: var(--p-container);
+	}
+	@media (max-width: $tablet) {
+		--burger-width: 2.8rem;
+		--line-height: 2px;
+		--line-offset: 0.8rem;
+		margin-top: 0;
+	}
+
+	@media (max-width: $mobile) {
+	    --burger-width: 2rem;
+	    --line-height: 1px;
+	}
+}
+
+.header--burger-opened .burger {
+	@media (max-width: $tablet-xlg) {
+		left: 34rem;
+		transition: all 0.7s ease;
+		margin-left: auto;
+	}
+	@media (max-width: $tablet) {
+		left: 89.5%;
+		transition: all 0.55s ease;
+	}
+}
+
+.header__container {
+	padding-top: 2.6rem;
+	padding-bottom: 3.5rem;
+	display: flex;
+	align-items: center;
+
+	@media (max-width: $tablet) {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+}
+
+.header__socials {
+	margin-left: auto;
+
+	@media (max-width: $tablet-xlg) {
+		display: none;
+	}
+}
+
+.header__logo {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 17rem;
+
+	@media (max-width: $tablet) {
+		max-width: 10.1rem;
+	}
+}
+
+.header__menu {
+	margin-left: 4rem;
+	margin-right: 3.6rem;
+
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+
+.header__menu-link {
+	--text-padding: 1rem 0 0 0;
+}
+
+.header__contacts {
+	// margin-left: auto;
+	display: flex;
+	flex-direction: column;
+  align-items: flex-end;
+	justify-content: flex-start;
+
+	@media (max-width: $tablet) {
+		text-align: right;
+		align-items: flex-end;
+	}
+}
+
+.header__contacts-item {
+	leading-trim: both;
+	text-edge: cap;
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 1.4px;
+  transition: all 0.4s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		font-size: 0.8rem;
+		letter-spacing: 0.8px;
+	}
+}
+
+.header__contacts-item:hover {
+  @media (any-hover:hover) {
+    color: var(--c-primary);
+  }
+}
+
+.header__button-callback {
+	font-size: 1.8rem;
+	--text-padding: 0;
+
+	@media (max-width: $tablet) {
+		font-size: 1rem;
+	}
+}
+

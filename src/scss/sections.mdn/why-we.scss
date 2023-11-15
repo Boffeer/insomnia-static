@@ -1,0 +1,77 @@
+.why-we__gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5rem 3rem;
+
+	@media (max-width: $tablet-xlg) {
+		gap: 3rem;
+	}
+
+	@media (max-width: $mobile-xlg) {
+		grid-template-columns: 100%;
+		gap: 0.6rem;
+	}
+}
+
+.why-we-card {
+	@media (max-width: $mobile-xlg) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 40rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.why-we-card__media {
+	--size: 18.8rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	margin-bottom: 1rem;
+
+	@media (max-width: $mobile-xlg) {
+		margin-left: 3rem;
+		--size: 13.8rem;
+	}
+
+	@media (max-width: $mobile-lg) {
+		--size: 10.9rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.why-we-card__pic {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.why-we-card__img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.why-we-card__title {
+	font-size: 2.3rem;
+	margin-bottom: 0.8rem;
+	font-weight: 700;
+
+	@media (max-width: $mobile-lg) {
+		font-size: 1.6rem;
+	}
+}
+
+.why-we-card__desc {
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 130.4%;
+
+	@media (max-width: $mobile-lg) {
+		font-size: 1.5rem;
+	}
+}

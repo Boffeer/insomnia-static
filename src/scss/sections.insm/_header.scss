@@ -1,0 +1,48 @@
+@import "../components.b/lego/burger.scss";
+
+.header {
+	font-size: 1rem;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--bg-panel);
+	color: var(--fg-panel);
+	border-radius: 0 0 5em 5em;
+	--p-container: 2.8em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.header__logo {
+	position: relative;
+	z-index: 2;
+}
+
+.header__burger {
+	--c-burger-line: var(--c-primary);
+	--line-width: 100%;
+	--line-offset: 1.1rem;
+	--burger-width: 4rem;
+	--burger-height: 2.8rem;
+	margin: 0;
+	z-index: 3;
+	transition: all 0.3s ease;
+	display: block;
+}
+
+.header__burger .burger__line:nth-of-type(2) {
+	display: none;
+}
+
+
+.header__menu {
+	position: fixed;
+	background: var(--bg-panel);
+	width: 100%;
+	left: 0;
+	top: 0;
+	transform: translateY(-100%);
+}

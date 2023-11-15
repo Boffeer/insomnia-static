@@ -1,0 +1,32 @@
+.portfolio-gallery {
+	@media (min-width: $tablet + 1) {
+		padding-bottom: 18rem;
+	}
+}
+.features + .portfolio-gallery {
+	padding-top: 0;
+}
+
+
+.portfolio-gallery__showcase {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	position: relative;
+	z-index: 1;
+	padding-top: 4rem;
+	margin-bottom: 8rem;
+
+	@media (max-width: $laptop-md) {
+		grid-template-columns: repeat(2, 1fr);
+		padding-top: 0.5rem;
+		margin-bottom: 1.6rem;
+	}
+}
+
+.portfolio-gallery__buttons {
+	@media (max-width: $tablet) {
+		display: grid;
+		justify-items: center;
+		padding-bottom: 0;
+	}
+}

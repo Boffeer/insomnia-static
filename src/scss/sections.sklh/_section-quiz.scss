@@ -1,0 +1,13 @@
+.secti
+on-quiz
+{
+	padding-top: 13.5rem;
+	padding-bottom: 14rem;
+	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+  transition: all 0.45s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		padding-top: 5.5rem;
+		padding-bottom: 5.5rem;
+	}
+}

@@ -1,0 +1,15 @@
+<label class="input js_form__control">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_email"
+      type="email"
+      autocomplete="email"
+      required 
+      @@if (typeof context.placeholder != 'undefined') {
+      placeholder="@@placeholder"
+      }
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+</label>

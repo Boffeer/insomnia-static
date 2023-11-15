@@ -1,0 +1,108 @@
+/**
+
+radio.html
+
+<label class="radio @@className">
+  <input type="radio" name="@@name" class="radio__input" value="@@value" @@attributes >
+  <span class="radio__check"></span>
+  <p class="radio__label">@@label</p>
+</label>
+
+*/
+
+.radio {
+
+  /*
+  --size-check: 2.4rem;
+  --border-width-check: 0.1rem;
+  --border-color-check: var(--fg-regular);
+  --margin-right-check: 0.5em;
+  --padding-check-active: 1.2rem;
+  --height-media: 40rem;
+
+  @media (max-width: $tablet) {
+    --height-media: 18rem;
+  }
+
+  --border-width-check--checked: 0.7rem;
+  --border-color-check--checked: var(--c-primary);
+
+
+  --fz-label: 2.4rem;
+  --fg-label: var(--fg-regular);
+  --fw-label: 500;
+  --lh-label: 1.15;
+  --ls-label: -0.096rem;
+  //*/
+
+  font-size: var(--fz-label);
+  font-family: var(--ff-regural);
+  font-style: normal;
+  font-weight: var(--fw-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+.radio__input {
+  appearance: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+.radio__check {
+  font-size: inherit;
+  position: relative;
+  width: var(--size-check);
+  min-width: var(--size-check);
+  height: var(--size-check);
+  min-height: var(--size-check);
+  border-radius: var(--size-check);
+  border: var(--border-width-check) solid var(--border-color-check);
+  margin-right: var(--margin-right-check);
+  transition: all 0.3s ease;
+}
+
+.radio__input:checked ~ .radio__check {
+  border-width: var(--border-width-check--checked);
+  border-color: var(--border-color-check--checked);
+}
+
+.radio__label {
+  flex-basis: 75%;
+}
+
+.radio-imaged {
+}
+
+.radio__media {
+  display: block;
+  flex-basis: 100%;
+  margin-bottom: 1.6rem;
+  transition: all 0.25s var(--tr-jolly-enter);
+  height: var(--height-media);
+}
+
+.radio__media-pic {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: inherit;
+}
+.radio__media-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: inherit;
+}
+
+.radio__input:checked ~ .radio__media {
+  border: 0.1rem solid var(--c-primary);
+  padding: var(--padding-check-active);
+}

@@ -1,0 +1,40 @@
+.round-button {
+	--fg: var(--c-primary);
+	--size: 8em;
+	position: relative;
+	display: block;
+	width: var(--size);
+	min-width: var(--size);
+	max-width: var(--size);
+	height: var(--size);
+	min-height: var(--size);
+	max-height: var(--size);
+	font-size: 1rem;
+	color: var(--fg);
+}
+
+.round-button__text {
+	fill: none;
+	font-size: 70%;
+	animation: spin 10s infinite linear;
+	text-transform: uppercase;
+	font-size: 1.05em;
+}
+@keyframes spin {
+  100% {transform: rotate(360deg)}
+}
+
+.round-button__icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 50%;
+	border-radius: 99999px;
+	z-index: 2;
+	border: 0.4em solid;
+	margin: auto;
+	padding: 0.6em;
+}

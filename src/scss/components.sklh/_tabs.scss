@@ -1,0 +1,83 @@
+.tabs {
+
+}
+
+.tabs__tablist {
+	margin-top: -2rem;
+	margin-bottom: 10.5rem;
+	display: flex;
+	justify-content: flex-end;
+
+	@media (max-width: $laptop-md) {
+		margin-top: -1rem;
+		justify-content: flex-start;
+		margin-bottom: 3rem;
+	}
+
+	@media (max-width: $tablet) {
+		margin-bottom: 3.2rem;
+	}
+}
+
+.aggregated-reviews .tabs__tablist {
+	margin-bottom: 2rem;
+	flex-wrap: wrap;
+}
+
+.tabs__panel {
+	// display: none;
+	max-height: 0.01rem;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.45s var(--tr-jolly-enter);
+	transform: scale(0.7);
+}
+.tabs__panel.active {
+	// display: block;
+	max-height: 100rem;
+	pointer-events: initial;
+}
+
+.tabs__panel.tab--animated {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.tabs__button {
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+
+	@media (max-width: $tablet) {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+}
+
+.tabs__button-icon-horizontal {
+	height: 2.4rem;
+
+	@media (max-width: $tablet) {
+		height: 2rem;
+	}
+}
+
+.aggregated-reviews .tabs__button {
+	margin-bottom: 0.5em;
+}
+
+.aggregated-reviews .tabs__button-icon-horizontal {
+	filter: contrast(0.1) grayscale(1);
+	-webkit-filter: contrast(0.1) grayscale(1);
+	transition: var(--tr);
+}
+.aggregated-reviews .tabs__button:hover .tabs__button-icon-horizontal {
+	@media (any-hover: hover) {
+		filter: contrast(1) grayscale(0);
+		-webkit-filter: contrast(1) grayscale(0);
+	}
+}
+
+.aggregated-reviews .active .tabs__button-icon-horizontal {
+	filter: contrast(1) grayscale(0);
+	-webkit-filter: contrast(1) grayscale(0);
+}

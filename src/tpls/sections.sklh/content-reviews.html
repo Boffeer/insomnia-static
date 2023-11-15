@@ -1,0 +1,47 @@
+<section class="content-reviews section">
+  <div class="content-reviews__container container">
+    <div class="content-reviews__offer">
+      <h2 class="section-title content-reviews__title">
+	    Квартира <br>
+        <span class="text-colored">Егора и Анастасии</span>
+      </h2>
+      <div class="content-reviews__desc">
+        <div class="content-reviews__feedback wysiwyg">
+          <p>
+            <span class="text-italic">
+            	@@desc	
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-reviews__media">
+      <div class="b_video content-reviews__media-video" data-video-url="https://www.youtube.com/watch?v=2VcEI3KF7tA">
+      </div>
+      <div class="content-reviews__media-caption">
+        <h3 class="content-reviews__media-caption-title">
+          <span class="text-bold text-colored">Анастасия Егорова</span>
+        </h3>
+        <p class="content-reviews__media-caption-desc">
+          Ремонт 3-комнатной квартиры 60 м2
+        </p>
+      </div>
+    </div>
+    <div class="section-buttons content-reviews__buttons">
+      <a href="#" class="content-reviews__source" title="Смотреть отзыв в источнике" aria-label="Смотреть отзыв в источнике">
+        <img class="content-reviews__source-img" src="./img/sklh_services-logo/otzovik.svg" alt="Смотреть отзыв в источнике">
+      </a>
+    </div>
+  </div>
+  @@if (typeof context.hasButtonMore != 'undefined') {
+  <div class="container section-buttons">
+    <button class="content-reviews__button-more button-secondary" type="button">
+      <span class="button__text">Еще отзывы</span>
+      <svg class="button__icon">
+        <use href="./img/sklh_common/arrow-right.svg#arrow-right" />
+      </svg>
+    </button>
+  </div>
+  }
+</section>

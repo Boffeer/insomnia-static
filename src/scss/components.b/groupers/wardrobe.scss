@@ -1,0 +1,233 @@
+/*
+
+<div class="wardrobe">
+	<form class="wardrobe__container wardrobe__container">
+		<div class="wardrobe__shaft">
+			<div class="wardrobe__shaft-lift">
+				<label class="wardrobe__item wardrobe__item--total">
+						<input type="radio" name="filter" class="wardrobe__item-input" value="-1" checked="">
+						<span class="wardrobe__item-text">Все</span>
+				</label>
+			</div>
+		</div>
+		<div class="wardrobe__more">
+			<button class="tabs__toggler wardrobe__more-button" title="" type="button">
+				Все категории
+				<span class="button-more__dot"></span>
+				<span class="button-more__dot"></span>
+				<span class="button-more__dot"></span>
+			</button>
+			<div class="wardrobe__dropdown">
+				<label class="wardrobe__item">
+					<input type="radio" name="filter" class="wardrobe__item-input" value="5">
+					<span class="wardrobe__item-text">Айтем 1</span>
+				</label>
+				<label class="wardrobe__item">
+					<input type="radio" name="filter" class="wardrobe__item-input" value="5">
+					<span class="wardrobe__item-text">Айтем 2</span>
+				</label>
+				<label class="wardrobe__item">
+					<input type="radio" name="filter" class="wardrobe__item-input" value="5">
+					<span class="wardrobe__item-text">Айтем 3</span>
+				</label>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+
+
+<div class="wardrobe">
+	<div class="wardrobe__container wardrobe__container">
+		<div class="wardrobe__shaft">
+			<div class="wardrobe__shaft-lift">
+				<label class="wardrobe__item wardrobe__item--total">
+						<input type="radio" name="filter" class="wardrobe__item-input" value="-1" checked="">
+						<span class="wardrobe__item-text">Все</span>
+				</label>
+			</div>
+		</div>
+		<div class="wardrobe__more">
+			<button class="tabs__toggler wardrobe__more-button" title="" type="button">
+				Все категории
+				<span class="button-more__dot"></span>
+				<span class="button-more__dot"></span>
+				<span class="button-more__dot"></span>
+			</button>
+			<div class="wardrobe__dropdown">
+				<?php for ($i = 0; $i < 20; $i++) : ?>
+					<label class="wardrobe__item">
+						<input type="radio" name="filter" class="wardrobe__item-input" value="5">
+						<span class="wardrobe__item-text">Айтем 1</span>
+					</label>
+				<?php endfor; ?>
+			</div>
+		</div>
+	</div>
+</div>
+
+*/
+
+
+.wardrobe {
+  position: relative;
+  z-index: 2;
+  // margin-bottom: 1.4285714285714284rem;//48px;
+
+  // @media (max-width: 720px) and (min-width: 610px) {
+  //   margin-bottom: 1.428571rem;
+  // }
+}
+.wardrobe__container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media (max-width: 600px) {
+    margin-left: -28px;
+    margin-right: -28px;
+    overflow: hidden;
+  }
+}
+
+.wardrobe__shaft {
+	height: 100%;
+  @media (max-width: 600px) {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: -20px;
+    padding-top: 1px;
+    padding-bottom: 21px;
+  }
+}
+.wardrobe__shaft-lift {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+	height: 100%;
+
+  @media (max-width: 700px) {
+    padding-left: 28px;
+    padding-right: 28px;
+    width: fit-content;
+  }
+}
+
+.wardrobe__item {
+  position: relative;
+  display: inline-block;
+	cursor: pointer;
+
+  margin-right: 18px;
+  @media (max-width: 1300px) {
+    margin-right: 12px;
+  }
+  @media (max-width:992px) {
+    margin-right: 8px;
+  }
+  @media (max-width:600px) {
+    margin-right: 12px;
+  }
+}
+.wardrobe__item:last-child {
+  @media (max-width:600px) {
+    margin-right: 0;
+  }
+}
+
+.wardrobe__item-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  appearance: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.wardrobe__item-text {
+  display: block;
+  cursor: pointer;
+}
+
+.wardrobe__item-input:checked + .wardrobe__item-text {
+  color: #fff;
+  background: var(--c-text-regular);
+}
+
+.wardrobe__more-button {
+  --dots-color: #fff;
+  letter-spacing: -100em;
+  color: transparent;
+  margin-right: 0;
+	cursor: pointer;
+	border: none;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+}
+
+.wardrobe__more-button:hover {
+  --dots-color: var(--color-main);
+}
+
+.button-more__dot {
+	display: block;
+	border-radius: 100%;
+	margin-left: 2px;
+	margin-right: 2px;
+	width: 6px;
+	height: 6px;
+	background: var(--dots-color);
+	transition: all 0.3s ease;
+}
+
+.wardrobe__dropdown {
+  transform-origin: top right;
+  transition: all 0.5s ease;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: var(--bg-color-gray);
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0px 3px 14px -2px rgba(6, 29, 40, 0.05),
+    0px 9px 26px -2px rgba(6, 29, 40, 0.12);
+  border-radius: 4px;
+  transform: scale(0.2);
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+	overflow-x: hidden;
+  max-height: 285px;
+	width: fit-content;
+}
+.wardrobe__dropdown--visible {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: initial;
+}
+.wardrobe__dropdown .wardrobe__item {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 8px;
+	height: initial !important;
+}
+.wardrobe__dropdown .wardrobe__item .dropdown-block {
+	display: none !important;
+	visibility: hidden;
+}
+
+.wardrobe__more {
+  position: relative;
+}

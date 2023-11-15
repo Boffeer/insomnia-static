@@ -1,0 +1,16 @@
+// Модификаторы
+.is-hidden {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+.only-mobile {
+  @media (min-width: $mobile-xlg + 1) {
+    display: none;
+  }
+}
+
+.is-transparent {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

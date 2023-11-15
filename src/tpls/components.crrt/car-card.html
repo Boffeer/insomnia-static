@@ -1,0 +1,68 @@
+<article class="car-card">
+	<div class="carousel car-card__carousel">
+		<div class="swiper carousel__swiper car-card__swiper">
+			<div class="swiper-wrapper">
+				@@for (var i = 0; i < 8; i++) {
+				<div class="swiper-slide carousel__slide car-card__slide">
+					<div class="carousel__media">
+						<picture class="carousel__media-pic">
+							<img class="carousel__media-img" src="./img/img-path" alt="">
+						</picture>
+					</div>
+				</div>
+				}
+			</div>
+		</div>
+		<div class="b_swiper__buttons carousel__buttons car-card__buttons">
+			<div class="swiper-button-prev carousel__button-prev car-card__button-prev"></div>
+			<div class="swiper-button-next carousel__button-next car-card__button-next"></div>
+		</div>
+	</div>
+	<header class="car-card__header">
+		<h3 class="car-card__title">
+			<a href="#" class="link">Nissan Micra 1.0 Automatic</a>
+		</h3>
+		<span class="car-card__price">
+			<span>40</span>
+			<span class="currency">€</span>
+		</span>
+		<span class="car-card__caption">
+			*При аренде от 30 до 45 дней
+		</span>
+	</header>
+	<div class="car-card__bullets">
+		<div class="car-card-bullet">
+			<div class="car-card-bullet__media">
+				<picture class="car-card-bullet__media-pic">
+				  	<img class="car-card-bullet__media-img" src="./img/" alt="">
+				</picture>
+			</div>
+			<p class="card-card-bullet__caption">Дизель</p>
+		</div>
+		<div class="car-card-bullet">
+			<div class="car-card-bullet__media">
+				<picture class="car-card-bullet__media-pic">
+				  	<img class="car-card-bullet__media-img" src="./img/" alt="">
+				</picture>
+			</div>
+			<p class="card-card-bullet__caption">Дизель</p>
+		</div>
+		<div class="car-card-bullet">
+			<div class="car-card-bullet__media">
+				<picture class="car-card-bullet__media-pic">
+				  	<img class="car-card-bullet__media-img" src="./img/" alt="">
+				</picture>
+			</div>
+			<p class="card-card-bullet__caption">Дизель</p>
+		</div>
+		<div class="car-card-bullet">
+			<div class="car-card-bullet__media">
+				<picture class="car-card-bullet__media-pic">
+				  	<img class="car-card-bullet__media-img" src="./img/" alt="">
+				</picture>
+			</div>
+			<p class="card-card-bullet__caption">Дизель</p>
+		</div>
+	</div>
+	<a href="#" class="button-primary car-card__button">Забронировать машину</a>
+</article>

@@ -1,0 +1,151 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@use "sass:math";
+
+@import "./variables/media";
+@import "./variables/variables";
+@import "./variables/colors";
+@import "./mixins";
+
+
+// Шрифты
+@include font('SK Primo', normal, 400, '../resources/fonts/sk-primo/sk-primo-regular');
+
+@include font('Unbounded', normal, 400, '../resources/fonts/unbounded/unbounded-regular');
+@include font('Unbounded', normal, 500, '../resources/fonts/unbounded/unbounded-medium');
+@include font('Unbounded', normal, 700, '../resources/fonts/unbounded/unbounded-bold');
+
+:root {
+  --ff-regular: "Unbounded", sans-serif;
+  --ff-title: "SK Primo", sans-serif;
+
+  --fz-regular: 1.5rem;
+  --fz-title: 4.5rem;
+  @media (max-width: $laptop-md) {
+    --fz-title: 4.5rem;
+  }
+  @media (max-width: $tablet) {
+    --fz-regular: 1rem;
+    --fz-title: 2.5rem;
+  }
+  @media (max-width: $mobile-xxs) {
+    // --fz-regular: 1rem;
+  }
+}
+
+// Сброс CSS
+@import "./reset";
+@import "./normalize";
+
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+
+html {
+  overscroll-behavior: none;
+  --fz-modifier: 0.520834;
+  font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
+
+  @media (max-width: $laptop-xxlg) {
+    --fz-modifier: 0.6949267;
+  }
+  @media (max-width: $laptop-xlg) {
+    --fz-modifier: 0.78125;
+  }
+
+  @media (max-width: $tablet) {
+    --fz-modifier: 1.763894;
+  }
+  @media (max-width: $mobile-xxlg) {
+    --fz-modifier: 2.666666;
+  }
+
+  @media (max-width: $mobile-xxs) {
+    --fz-modifier: 2.777777; // 360
+  }
+  background-color: var(--bg-app);
+}
+
+body {
+  color: var(--fg-regular);
+  font-family: var(--ff-regular);
+  font-size: var(--fz-regular);
+  font-weight: 400;
+  line-height: 145%;
+  background: inherit;
+  overscroll-behavior: none;
+}
+
+body._lock {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+.wrapper > .content {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: var(--w-container);
+  // max-width: #{'calc(var(--w-container) + 2 * var(--p-container))'};
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--p-container);
+  padding-right: var(--p-container);
+}
+
+.main {
+  @media (max-width: $laptop-md) {
+    margin-top: auto;
+  }
+}
+
+// Библиотеки
+@import "./libs/vanilla-datepicker";
+@import "./libs/swiper";
+// @import "./libs/fancybox";
+
+
+.js_use-bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.js_use-bg > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  background-size: inherit;
+  background-repeat: inherit;
+  background-position: inherit;
+  object-fit: cover;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+.text-colored {
+  color: var(--c-primary);
+}
+
+
+@import "./keyframes";
+@import "./sections.sklh/section";
+
+@import "./components";
+@import "./sections";
+@import "./pages";
+@import "./modifiers";

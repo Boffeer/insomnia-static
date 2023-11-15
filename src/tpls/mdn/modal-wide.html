@@ -1,0 +1,36 @@
+<div id="modal-price" class="b_modal modal modal--wide modal-price">
+  <h3 class="modal__title">
+    Получите прайс-лист <br>
+    по&nbsp;электронной почте
+  </h3>
+  <p class="modal__desc">
+    Оставьте свой контактный номер, чтобы <br>
+    мы могли отправить вам каталог с ценами <br>
+    и проконсультировать по продукции
+  </p>
+  <form action="/" id="form-price" class="form js_form modal__form">
+    <div class="form__hidden">
+      <input type="text" name="page" hidden>
+      <input type="text" name="formname" hidden>
+      <input type="text" name="additional" hidden>
+
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="utm_term" value="">
+      <input type="hidden" name="referer" value="">
+      <input type="hidden" name="requestTime" value="">
+    </div>
+    <div class="form__fields">
+      <fieldset class="form__row">
+        @@include('../input/name.html')
+        @@include('../input/tel.html')
+        @@include('../input/email.html')
+      </fieldset>
+      <button type="submit" class="button-primary button-filled modal__button">
+        Получить прайс
+      </button>
+    </div>
+  </form>
+</div>

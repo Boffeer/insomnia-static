@@ -1,0 +1,60 @@
+<header class="header">
+  <div class="container header__container">
+    <a href="#" class="header__logo logo">
+      <img src="./img/common.insm/logo.svg" alt="" class="logo__img">
+    </a>
+    
+    <div class="header__menu">
+      <nav class="nav header__nav">
+        <ul class="header__nav-links">
+          <li class="header__nav-item header__nav-item--active">
+            <a href="#" class="header__nav-link">О парке</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Цены</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Ивенты</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Меню</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">События</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Тренинг</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Карта</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="burger header__burger">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+
+    <a href="#" class="header-button__book round-button" aria-label="Забронировть сейчас">
+    	<!-- https://codepen.io/ponycorn/pen/MWbgXgE -->
+    	<svg class="round-button__text" viewbox="0 0 100 100">
+        <path  d="M 18,50
+                  a 30,30 0 1,1 60,0
+                  a 30,30 0 1,1 -60,0"
+                  id="curve"/>
+  			<text x="1" fill="currentColor">
+  				<textpath xlink:href="#curve" spacing="exact">
+            Забронировать &nbsp; сейчас
+            <!-- &nbsp;Забронировать&nbsp; &nbsp; сейчас -->
+  				</textpath>
+  			</text>
+  		</svg>
+      <svg class="round-button__icon">
+        <use href="./img/common.insm/lock.svg#lock"></use>
+      </svg>
+    </a>
+  </div>
+</header>

@@ -1,0 +1,26 @@
+:root {
+  // Colors
+  --c-primary: #F15A29;
+  --c-secondary: #F1573F;
+
+  --fg-regular: #fff;
+  --fg-panel: var(--c-secondary);
+  --fg-accent: #FFE600;
+
+
+  // BGs
+  --bg-app: #F4F4F4;
+  --bg-app-primary: var(--c-primary);
+  --bg-app-secondary: var(--c-secondary);
+
+  --bg-panel: #FFFFFF;
+
+  --bg-overlay: rgba(241, 87, 63, 0.52);
+  --bg-popup: var(--c-secondary);
+
+
+  // nomads
+  --c-error: #E5042C;
+  --c-success: #34C759;
+}
+

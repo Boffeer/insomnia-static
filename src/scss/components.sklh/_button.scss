@@ -1,0 +1,58 @@
+ @import "../components.b/controls/button";
+
+.button-primary,
+.button-secondary {
+  --ff: var(--ff-regular);
+  --fz: 2rem;
+  --fw: 400;
+  --lh: 1;
+  --ls: -0.04rem;
+
+  --padding-block: 1.25em;
+  --padding-inline: 1.5em;
+
+  min-width: 30rem;
+
+  @media (max-width: $tablet) {
+    --fz: 1rem;
+    min-width: 15rem;
+  }
+}
+
+.button-primary {
+  --fg: #1a1a1a;
+  --bg: var(--gradient-gold, linear-gradient(266deg, #C4AD6F 0%, #FFECB8 100%));
+
+  --border-width: 0;
+  --border-color: transparent;
+  --border-radius: 9999px;
+}
+
+.button-secondary {
+  --fg: var(--c-primary);
+  --bg: var(--bg-app);
+
+  --border-width: 0.1rem;
+  --border-color: var(--c-primary);
+  --border-radius: 9999px;
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  @media (any-hover:hover) {
+    box-shadow: 0 0 3rem 0.5rem rgba(223, 183, 172, 0.30);
+  }
+}
+
+.button-primary:active,
+.button-secondary:active {
+  --padding-inline: 1.47em;
+  --fw: 600;
+}
+
+
+.button-primary.is-disabled,
+.button-secondary.is-disabled {
+  --fg: var(--c-disabled);
+  --border-color: var(--c-disabled)
+}

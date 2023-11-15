@@ -1,0 +1,208 @@
+.header__nav-item--has-children::after {
+  @media (min-width: $w-burger + 1) {
+    content: "";
+    display: block;
+    width: 0.334em;
+    height: 0.556em;
+    margin-left: 0.334em;
+    transition: var(--tr-regular);
+    background-image: url("../img/common/link-angle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    right: -1.2rem;
+    transition: var(--tr-regular);
+  }
+}
+.header__nav-item--has-children:hover::after {
+  @media (any-hover:hover) {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
+
+.header__nav-item.header__nav-item--active {
+  font-weight: 700;
+
+  @media (max-width: $w-burger) {
+    color: var(--c-primary);
+  }
+}
+
+.header__nav-item.header__nav-item--active:after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 0.3rem;
+  background-color: var(--c-second);
+  border-radius: 0.6rem 0.6rem 0 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $w-burger) {
+    display: none;
+  }
+}
+
+.header__buttons {
+  display: grid;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 3.7rem;
+
+  @media (max-width: $w-burger) {
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+}
+
+.header__contacts {
+  @media (min-width: $w-burger) {
+    display: none;
+  }
+}
+
+.header-shoppers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-shoppers__item {
+  margin-right: 2.1rem;
+  position: relative;
+
+  @media (max-width: $w-burger) {
+    margin-right: 1rem;
+    position: static;
+  }
+}
+
+.header-shoppers__item:last-child {
+  margin-right: 0;
+}
+
+.header-shoppers__dropdown {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.4s var(--tr-jolly-enter);
+  position: absolute;
+  top: 140%;
+  right: 0;
+  width: 320px;
+  transform: translateY(2rem);
+  box-shadow: 0px 1.4rem 4.4rem 0px rgba(197, 197, 197, 0.25);
+
+  @media (max-width: $w-burger) {
+    max-width: #{'calc(100% - 2.2rem)'};
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    top: 90%;
+  }
+}
+
+.header-shoppers__dropdown::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1rem;
+  right: 1.4rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0.8rem 1rem 0.8rem;
+  border-color: transparent transparent var(--bg-card) transparent;
+
+  @media (max-width: $mobile-lg) {
+    right: 8.4rem;
+  }
+}
+
+.header-shoppers__search._opened .header-shoppers__dropdown{
+  opacity: 1;
+  pointer-events: initial;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header-shoppers__item.active .header-shoppers__dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+.header-shoppers__item-icon {
+  max-width: 3.2rem;
+  max-height: 4.3rem;
+  width: 100%;
+
+  @media (max-width: $w-burger) {
+    max-width: 2.6rem;
+    max-height: 2.6rem;
+  }
+}
+
+
+.header__burger {
+  --c-burger-line: #777782;
+  --line-width: 71.25%;
+
+  @media (max-width: $tablet-xlg) {
+    margin-left: 1.8rem;
+  }
+}
+
+.header__button-callback {
+  @media (max-width: $w-burger) {
+    margin-bottom: 2.7rem;
+  }
+}
+
+.header__nav-dropdown {
+  background-color: var(--bg-card);
+  position: absolute;
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.4s var(--tr-jolly-enter);
+  border: 0.1rem solid var(--c-border);
+  border-top: none;
+
+  @media (max-width: $w-burger) {
+    pointer-events: initial;
+    opacity: 1;
+    transform: translateY(0);
+    position: static;
+    border: none;
+  }
+}
+
+.header__nav-dropdown:hover,
+.header__nav-item:hover .header__nav-dropdown {
+  @media (any-hover:hover) {
+    pointer-events: initial;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__nav-dropdown-link {
+  margin-bottom: 1em;
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+.header__nav-dropdown-link:last-of-type {
+  margin-bottom: 0;
+}

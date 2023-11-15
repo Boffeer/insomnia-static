@@ -1,0 +1,47 @@
+.chips-select {
+	--c-text: #222;
+	--c-text-active: #fff;
+	--bg: transparent;
+	--bg-active: #222;
+	--brad: 9999px;
+	position: relative;
+	display: inline-flex;
+	--fz: 1.8rem;
+	line-height: 120%;
+	color: var(--c-text);
+	border: 1px solid var(--c-text);
+	border-radius: var(--brad);
+	margin-right: 1rem;
+	margin-bottom: 1.5rem;
+
+	@media (max-width: $tablet-xlg) {
+		--fz: 1.4rem;
+	}
+}
+.chips-select__input {
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	appearance: none;
+}
+.chips-select__box {
+	border-radius: 9999px;
+	background-color: var(--brad);
+	padding: 0.7rem 1.5rem;
+	display: block;
+	transition: var(--tr-regular);
+	cursor: pointer;
+	font-size: var(--fz);
+
+	@media (max-width: $tablet-xlg) {
+		line-height: initial;
+	}
+}
+.chips-select__input:checked ~ .chips-select__box {
+	background-color: var(--bg-active);
+	color: var(--c-text-active);
+}
+
+.chips-select__count {
+	color: #a7a7a7;
+}

@@ -1,0 +1,17 @@
+.blog {
+	padding-top: 3rem;
+}
+
+.help + .blog {
+	padding-top: 10rem;
+
+	@media (max-width: $mobile-xlg) {
+		padding-top: 5rem;
+	}
+}
+
+.blog__gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
+	gap: 3rem;
+}

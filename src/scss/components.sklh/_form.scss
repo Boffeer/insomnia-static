@@ -1,0 +1,22 @@
+.form {
+
+}
+
+.form__hidden-fieldset {
+	display: none;
+}
+
+.form__fieldset {
+	display: grid;
+	row-gap: 2rem;
+	margin-bottom: 4rem;
+
+	@media (max-width: $tablet) {
+		row-gap: 1rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.form__submit {
+	width: 100%;
+}

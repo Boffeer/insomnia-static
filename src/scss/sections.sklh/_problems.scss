@@ -1,0 +1,58 @@
+.problems {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+	overflow-x: hidden;
+
+	@media (max-width: $tablet) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+}
+
+.problems__title {
+	@media (max-width: $tablet-xlg) and (min-width: $mobile) {
+		margin-bottom: 2rem;
+	}
+}
+
+.problems__desc {
+	margin-bottom: 9rem;
+
+	@media (max-width: $tablet-xlg) and (min-width: $mobile) {
+		margin-bottom: 2rem;
+	}
+	@media (max-width: $tablet) {
+		margin-top: -0.8em;
+		margin-bottom: 5rem;
+	}
+}
+
+.problems-carousel {
+	position: relative;
+}
+
+.problems-carousel__swiper {
+	margin-bottom: 10rem;
+	overflow: visible;
+
+	@media (max-width: $laptop-md) {
+		margin-bottom: 6.2rem;
+	}
+}
+
+
+.problems-carousel__button-prev,
+.problems-carousel__button-next {
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+
+.problems-carousel__nav {
+	@media (max-width: $tablet) {
+		max-width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

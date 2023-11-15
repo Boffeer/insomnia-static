@@ -1,0 +1,33 @@
+.floor-plan {
+	background-image: url('../img/sklh_case/plan-bg.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	--margin-top-media: -35rem;
+}
+
+.floor-plan__desc {
+	font-size: 1.2rem;
+	max-width: 45rem;
+	margin-bottom: 4rem;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 2rem;
+	}
+}
+
+.floor-plan__desc:empty {
+	display: none;
+}
+
+
+.floor-plan__media {
+	margin-top: var(--margin-top-media);
+  pointer-events: none;
+
+	@media (max-width: $tablet-xlg) {
+		margin-top: #{'calc(var(--margin-top-media) + 20rem)'};
+	}
+	@media (max-width: $tablet) {
+		margin-top: #{'calc(var(--margin-top-media) + 28rem)'};
+	}
+}

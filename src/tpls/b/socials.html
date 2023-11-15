@@ -1,0 +1,11 @@
+<div class="socials @@className">
+  @@for (var i = 0; i < context.socials.length; i++) {
+    <a class="socials__link socials__link--`+context.socials[i].id+`" aria-label="`+context.socials[i].name+`"
+      href="`+context.socials[i].href+`" target="_blank" rel="noopener noreferrer"
+      >
+      <svg class="socials__icon">
+        <use href="./img/sklh_common/icon-`+context.socials[i].id+`.svg#icon-`+context.socials[i].id+`"></use>
+      </svg>
+    </a>
+  }
+</div>

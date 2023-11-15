@@ -1,0 +1,85 @@
+.stepper {
+  --padding: 0.3rem var(--minw-stepper-button) 0.45rem;
+  --fz: 1.8rem;
+	--fg-stepper-button: #000;
+	--bg-stepper-button: var(--bg-card);
+	--minw-stepper-button: 3.5rem;
+	--fg-stepper-value: #000;
+	--bg-stepper-value: var(--bg-card);
+	--border-color: var(--c-primary);
+	--brad: 1rem;
+	display: inline-flex;
+  position: relative;
+  max-width: 11rem;
+  overflow: visible;
+
+  @media (max-width: $mobile-xlg) {
+  	--fz: 1.2rem;
+		--minw-stepper-button: 2.8rem;
+		--brad: 0.63rem;
+	  max-width: 9rem;
+  }
+}
+
+.stepper__minus,
+.stepper__plus {
+	position: absolute;
+	top: 0;
+	display: block;
+	aspect-ratio: 1;
+	min-width: var(--minw-stepper-button);
+	height: 100%;
+	color: var(--fg-stepper-button);
+	background-color: var(--bg-stepper-button);
+	font-size: var(--fz);
+	padding-bottom: 0.2rem;
+}
+
+.stepper__minus[disabled],
+.stepper__plus[disabled] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.stepper__minus {
+	left: 0;
+	border: 0.1rem solid var(--border-color);
+	border-radius: var(--brad) 0 0 var(--brad);
+}
+.stepper__plus {
+	right: 0;
+  border: 0.1rem solid var(--border-color);
+	border-radius: 0 var(--brad) var(--brad) 0;
+}
+
+.stepper__value {
+	color: var(--text-color);
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: var(--padding);
+	font-size: var(--fz);
+  font-family: var(--ff-title);
+  border: 0.1rem solid var(--border-color);
+  border-left: none;
+  border-right: none;
+  border-radius: var(--brad);
+}
+
+.stepper__title {
+	position: absolute;
+	font-size: 1.4rem;
+	top: -1.6rem;
+	right: 0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: nowrap;
+	color: rgba(68, 68, 68, 0.4);
+
+	@media (max-width: $mobile-xlg) {
+		font-size: 1.2rem;
+		top: -1.4rem;
+	}
+}

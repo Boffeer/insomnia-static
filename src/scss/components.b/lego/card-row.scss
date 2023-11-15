@@ -1,0 +1,20 @@
+.card-row {
+	--fz: 1.6rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	@media (max-width: $mobile-xlg) {
+		--fz: 1.4rem;
+	}
+}
+
+.card-row__title {
+	font-size: var(--fz);
+	opacity: 0.4;
+}
+
+.card-row__value {
+	margin-left: 0.2em;
+	font-size: var(--fz);
+}

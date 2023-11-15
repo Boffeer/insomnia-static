@@ -1,0 +1,323 @@
+<section class="section section-quiz" id="section-quiz">
+  <div class="container section-quiz__container">
+    <div class="quiz js_form">
+      <div class="quiz__progress">
+        <div class="swiper-pagination quiz__progress-pagination">
+        </div>
+        <p class="quiz__progress-value is-hidden">
+          <span class="quiz__progress-value-current">1</span>
+          <span class="quiz__progress-value-separator">/</span>
+          <span class="quiz__progress-value-max">6</span>
+        </p>
+      </div>
+      <div class="swiper quiz__swiper">
+        <div class="swiper-wrapper">
+          <article class="swiper-slide quiz-slide">
+            <div class="quiz-slide__question">
+              <h3 class="quiz-slide__title section-title">
+                Где Вы планируете делать ремонт?
+              </h3>
+              <input type="text" name="quiz_question_1" value="Где Вы планируете делать ремонт?" hidden>
+              <div class="quiz-slide__content">
+                <div class="quiz-slide__answerlist">
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_1',
+                    label: 'Новостройка',
+                    value: 'Новостройка',
+                    attributes: 'checked required',
+                  })
+                  @@include('../input/radio.html', {
+                    name: 'quiz_step_1',
+                    className: 'quiz-slide__answer',
+                    label: 'Вторичка',
+                    value: 'Вторичка',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    name: 'quiz_step_1',
+                    className: 'quiz-slide__answer',
+                    label: 'Коттедж / Таунхаус',
+                    value: 'Коттедж / Таунхаус',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    name: 'quiz_step_1',
+                    className: 'quiz-slide__answer',
+                    label: 'Коммерческий объект',
+                    value: 'Коммерческий объект',
+                    attributes: 'required',
+                  })
+                </div>
+              </div>
+            </div>
+            <div class="quiz-slide__media">
+              <picture class="quiz-slide__media-pic">
+                <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+              </picture>
+            </div>
+          </article>
+
+          <article class="swiper-slide quiz-slide quiz-slide--wide">
+            <div class="quiz-slide__question">
+              <h3 class="quiz-slide__title section-title">
+                Какой тип ремонта Вас интересует?
+              </h3>
+              <input type="text" name="quiz_question_2" value="Какой тип ремонта Вас интересует?" hidden>
+              <div class="quiz-slide__content">
+                <div class="quiz-slide__answerlist quiz-slide__answerlist--horizontal-list">
+                  @@include('../input/radio-imaged.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_2',
+                    label: 'Дизайнерский',
+                    value: 'Дизайнерский',
+                    attributes: 'checked required',
+                    img: './img/sklh_quiz/quiz-step-1.jpg',
+                  })
+                  @@include('../input/radio-imaged.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_2',
+                    label: 'Косметический',
+                    value: 'Косметический',
+                    attributes: 'required',
+                    img: './img/sklh_quiz/quiz-step-1.jpg',
+                  })
+                  @@include('../input/radio-imaged.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_2',
+                    label: 'Капитальный',
+                    value: 'Капитальный',
+                    attributes: 'required',
+                    img: './img/sklh_quiz/quiz-step-1.jpg',
+                  })
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="swiper-slide quiz-slide">
+            <div class="quiz-slide__question">
+              <h3 class="quiz-slide__title section-title">
+                Сколько комнат в квартире?
+              </h3>
+              <input type="text" name="quiz_question_3" value="Сколько комнат в квартире?" hidden>
+              <div class="quiz-slide__content">
+                <div class="quiz-slide__answerlist">
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_3',
+                    label: '1 комната',
+                    value: '1 комната',
+                    attributes: 'checked required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_3',
+                    label: '2 комнаты',
+                    value: '2 комнаты',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_3',
+                    label: '3 комнаты',
+                    value: '3 комнаты',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_3',
+                    label: '4+ комнаты',
+                    value: '4+ комнаты',
+                    attributes: 'required',
+                  })
+                </div>
+              </div>
+            </div>
+            <div class="quiz-slide__media">
+              <picture class="quiz-slide__media-pic">
+                <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="" class="quiz-slide__media-img">
+              </picture>
+            </div>
+          </article>
+          <article class="swiper-slide quiz-slide">
+            <div class="quiz-slide__question">
+              <h3 class="quiz-slide__title section-title">
+                Введите площадь квартиры
+              </h3>
+              <input type="text" name="quiz_question_4" value="Введите площадь квартиры" hidden>
+              <div class="quiz-slide__content">
+                <div class="quiz-slide__answerlist">
+                  @@include('../input/input.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_4',
+                    placeholder: 'Например, 60',
+                    attributes: 'required',
+                  })
+                </div>
+              </div>
+            </div>
+            <div class="quiz-slide__media">
+              <picture class="quiz-slide__media-pic">
+                <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="" class="quiz-slide__media-img">
+              </picture>
+            </div>
+          </article>
+          <article class="swiper-slide quiz-slide">
+            <div class="quiz-slide__question">
+              <h3 class="quiz-slide__title section-title">
+                У Вас есть дизайнерский проект?
+              </h3>
+              <input type="text" name="quiz_question_5" value="У Вас есть дизайнерский проект?" hidden>
+              <div class="quiz-slide__content">
+                <div class="quiz-slide__answerlist">
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_5',
+                    label: 'Да',
+                    value: 'Да',
+                    attributes: 'checked required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_5',
+                    label: 'Нет',
+                    value: 'Нет',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_5',
+                    label: 'Нет, но нужен',
+                    value: 'Нет, но нужен',
+                    attributes: 'required',
+                  })
+                </div>
+              </div>
+            </div>
+            <div class="quiz-slide__media">
+              <picture class="quiz-slide__media-pic">
+                <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="" class="quiz-slide__media-img">
+              </picture>
+            </div>
+          </article>
+          <article class="swiper-slide quiz-slide">
+            <div class="quiz-slide__question">
+              <h3 class="quiz-slide__title section-title">
+                Как срочно нужно приступить к ремонту?
+              </h3>
+              <input type="text" name="quiz_question_6" value="Как срочно нужно приступить к ремонту?" hidden>
+              <div class="quiz-slide__content">
+                <div class="quiz-slide__answerlist">
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_6',
+                    label: 'Чем раньше, тем лучше',
+                    value: 'Чем раньше, тем лучше',
+                    attributes: 'checked required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_6',
+                    label: 'Через несколько недель',
+                    value: 'Через несколько недель',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_6',
+                    label: 'Через несколько месяцев',
+                    value: 'Через несколько месяцев',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_6',
+                    label: 'Зависит от стоимости',
+                    value: 'Зависит от стоимости',
+                    attributes: 'required',
+                  })
+                </div>
+              </div>
+            </div>
+            <div class="quiz-slide__media">
+              <picture class="quiz-slide__media-pic">
+                <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="" class="quiz-slide__media-img">
+              </picture>
+            </div>
+          </article>
+
+          <article class="swiper-slide quiz-slide" data-step-button-next="Последний вопрос">
+            <div class="quiz-slide__question">
+              <h3 class="quiz-slide__title section-title">
+                Как с Вами связаться?
+              </h3>
+              <input type="text" name="quiz_question_7" value="Как с Вами связаться?" hidden>
+              <div class="quiz-slide__content">
+                <div class="quiz-slide__answerlist">
+                  @@include('../input/radio.html', {
+                    className: 'quiz-slide__answer',
+                    name: 'quiz_step_7',
+                    label: 'Перезвоните, у меня <br>еще остались вопросы',
+                    value: 'Перезвоните, у меня еще остались вопросы',
+                    attributes: 'checked required',
+                  })
+                  @@include('../input/radio.html', {
+                    name: 'quiz_step_7',
+                    className: 'quiz-slide__answer',
+                    label: 'Whatsapp',
+                    value: 'Whatsapp',
+                    attributes: 'required',
+                  })
+                  @@include('../input/radio.html', {
+                    name: 'quiz_step_7',
+                    className: 'quiz-slide__answer',
+                    label: 'Telegram',
+                    value: 'Telegram',
+                    attributes: 'required',
+                  })
+                </div>
+                <div class="quiz-slide__answerlist">
+                  <div class="form__hidden-fieldset">
+                    <input type="text" name="page" hidden>
+                      <input type="text" name="formname" hidden>
+
+                      <input type="hidden" name="utm_source" value="">
+                      <input type="hidden" name="utm_medium" value="">
+                      <input type="hidden" name="utm_campaign" value="">
+                      <input type="hidden" name="utm_content" value="">
+                      <input type="hidden" name="utm_term" value="">
+                      <input type="hidden" name="referrer" value="">
+                      <input type="hidden" name="requestTime" value="">
+                  </div>
+                  @@include('../input/name.html', {placeholder: 'Ваше имя'})
+                  @@include('../input/tel.html', {placeholder: 'Номер телефона'})
+                  <div class="button-primary js_form__submit">Узнать цену</div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz-slide__media">
+              <picture class="quiz-slide__media-pic">
+                <img src="./img/sklh_quiz/quiz-step-1.jpg" alt="Где Вы планируете делать ремонт?" class="quiz-slide__media-img">
+              </picture>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="b_swiper__buttons quiz__buttons">
+        <div class="swiper-button-prev quiz__button-prev link">
+          <svg class="link__icon">
+            <use href="./img/sklh_common/arrow-left.svg#arrow-left" />
+          </svg>
+          <span class="link__text">Назад</span>
+        </div>
+        <div class="swiper-button-next quiz__button-next button-secondary">
+          <span class="button__text">Следующий шаг</span>
+          <svg class="button__icon">
+            <use href="./img/sklh_common/arrow-right.svg#arrow-right" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

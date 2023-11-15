@@ -1,0 +1,54 @@
+<footer class="footer">
+	<div class="container footer__container">
+	    <a href="#" class="footer__logo logo">
+	      <!-- <img src="./img/common/logo-header.svg" alt="" class="logo__img"> -->
+	      carrent
+	    </a>
+
+	    <div class="footer__links">
+	    	@@include('../b/socials.html', {
+	    		className: 'header__socials',
+	    		socials: [
+		    		{
+		    			id: 'facebook',
+		    			name: 'FB',
+		    			href: 'https://fb.com'
+		    		},
+		    		{
+		    			id: 'instagram',
+		    			name: 'IG',
+		    			href: 'https://instagram.com'
+		    		},
+		    		{
+		    			id: 'whatsapp',
+		    			name: 'WA',
+		    			href: 'https://wa.me'
+		    		},
+	    		],
+	    	})
+	    	<ul class="footer__links-list">
+	    		<li class="footer__links-item">
+	    			<a href="#" class="footer__links-link">Политика конфиденциальности</a>
+	    		</li>
+	    		<li class="footer__links-item">
+	    			<a href="#" class="footer__links-link">Договор оферты</a>
+	    		</li>
+	    	</ul>
+	    </div>
+
+
+	    <div class="footer__contact">
+	    	<a href="#" class="footer__phone">
+	    		<span class="footer__phone-caption">Связаться с нами:</span>
+	    		<span class="footer__phone-text">+7 (495) 968-32-27</span>
+	    		<span class="footer__phone-caption">09:00 - 22:00 Мск</span>
+	    	</a>
+	    	<a href="#" class="footer__location">
+				<svg class="header__contacts-icon">
+					<use xlink:href="./img/common/mail.svg#mail" />
+				</svg>
+				<span class="footer__locations-address">109316, Мадейра, ул. За ухо, 25</span>
+	    	</a>
+	    </div>
+	</div>
+</footer>

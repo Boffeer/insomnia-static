@@ -1,0 +1,142 @@
+<header class="header @@className">
+	<div class="container header__container">
+		<div class="burger" id="burger">
+			<span class="burger__line"></span>
+			<span class="burger__line"></span>
+			<span class="burger__line"></span>
+		</div>
+		@@include('../b/socials.html', {
+			className: 'header__socials',
+			socials: [
+         {
+         	 id: 'youtube',
+	         name: 'YT',
+		       href: 'https://youtube.com'
+         },
+         {
+         	 id: 'instagram',
+	         name: 'IG',
+		       href: 'https://instagram.com'
+         },
+         {
+         	 id: 'telegram',
+	         name: 'TG',
+		       href: 'https://t.me'
+         },
+         {
+         	 id: 'whatsapp',
+	         name: 'WA',
+		       href: 'https://wa.me'
+         },
+			],
+		})
+		<a href="/" class="logo header__logo">
+			<picture class="logo__pic">
+				<img src="./img/sklh_common/logo.svg" alt="Skillhouse" class="logo__img">
+			</picture>
+		</a>
+
+		<div class="header__menu">
+			<ul class="header__menu-links">
+				<li class="header__menu-links-item">
+					<a href="/reviews" class="header__menu-link link">
+						Отзывы клиентов
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header__contacts">
+			<a href="tel:+74991113999" class="header__contacts-item js_copyclicker">+7(996) 316-39-99</a>
+			<button class="link header__button-callback" type="button" data-b_modal-open="callback">
+				Заказать звонок
+			</button>
+		</div>
+	</div>
+	<div class="header__sidemenu menu">
+		<div class="menu__head">
+			<a href="/" class="logo menu__logo">
+				<picture class="logo__pic">
+					<img src="./img/sklh_common/logo.svg" alt="Skillhouse" class="logo__img">
+				</picture>
+			</a>
+		</div>
+		<div class="menu__body">
+			<ul class="menu__nav">
+				<li class="menu__nav-item">
+					<a href="#section-portfolio" class="menu__nav-link">Портфолио</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#section-price" class="menu__nav-link">Заказать дизайн-проект</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#section-quiz" class="menu__nav-link">Рассчитать ремонт</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#section-showroom" class="menu__nav-link">О нас</a>
+				</li>
+				<li class="menu__nav-item">
+					<a href="#section-contacts" class="menu__nav-link"> Контакты</a>
+				</li>
+			</ul>
+		</div>
+		<div class="menu__footer">
+			<ul class="menu__linklist">
+				<li class="menu__linklist-item">
+					<a href="tel:" class="menu__linklist-link js_copyclicker">
+						+7(925) 111-39-99
+					</a>
+				</li>
+				<li class="menu__linklist-item">
+					<a href="tel:" class="menu__linklist-link js_copyclicker">
+						+7(499) 111-39-99
+					</a>
+				</li>
+			</ul>
+			<div class="menu__contacts">
+				<a class="menu__contacts-item" href="mailto">
+					<span class="text-bold">Email</span>
+					<span class="js_copyclicker">info@skill-house.ru</span>
+				</a>
+				<a class="menu__contacts-item" href="" target="_blank">
+					<span class="text-bold">Адрес: </span>
+					<span class="js_copyclicker">г. Москва, ул. Большая Якиманка 31, офис 105</span>
+				</a>
+				<p class="menu__contacts-item">
+					<span class="text-bold">ИНН:</span> 9721188852 <br>
+					<span class="text-bold">ОГРН: </span> 1227700804891
+				</p>
+			</div>
+			<div class="menu__footbuttons">
+				<button class="button-secondary menu__button-callback" type="button" data-b_modal-open="callback">Заказать звонок</button>
+			</div>
+			@@include('../b/socials.html', {
+				className: 'menu__socials',
+				socials: [
+	         {
+	         	 id: 'youtube',
+		         name: 'YT',
+			       href: 'https://youtube.com'
+	         },
+	         {
+	         	 id: 'instagram',
+		         name: 'IG',
+			       href: 'https://instagram.com'
+	         },
+	         {
+	         	 id: 'telegram',
+		         name: 'TG',
+			       href: 'https://t.me'
+	         },
+	         {
+	         	 id: 'whatsapp',
+		         name: 'WA',
+			       href: 'https://wa.me'
+	         },
+				],
+			})
+			<div class="menu__footnotes">
+				<p>© 2023 СкилХаус</p>
+			</div>
+		</div>
+	</div>
+</header>

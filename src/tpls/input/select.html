@@ -1,0 +1,20 @@
+<div class="form-select form-control">
+  <div class="input__label">Откуда вы узнали о нас?</div>
+  <select class="form-select__input"
+          name="from_source"
+          tabindex="-1"
+          required>
+    <option value="" disabled selected>Откуда вы узнали о нас?</option>
+    <?php foreach ($know_from_options as $option) : ?>
+      <option value="<?php echo $option ?>"><?php echo $option; ?></option>
+    <?php endforeach; ?>
+  </select>
+  <button class="form-select__toggle input__field" type="button">Выберите вариант ответа</button>
+  <ul class="form-select__list">
+    <?php foreach ($know_from_options as $option) : ?>
+      <li>
+        <button class="form-select__button" type="button"><?php echo $option; ?></button>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+</div>

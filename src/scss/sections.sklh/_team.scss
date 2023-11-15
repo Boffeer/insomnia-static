@@ -1,0 +1,71 @@
+.team {
+	padding-top: 11rem;
+	padding-bottom: 11rem;
+	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
+  transition: all 0.45s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		padding-top: 5.6rem;
+		padding-bottom: 2.6rem;
+	}
+}
+
+.team__container {
+	overflow: hidden;
+}
+
+.team__tabs .tabs__button {
+	margin-left: 4.4rem;
+	margin-right: 4.4rem;
+
+	@media (max-width: $tablet) {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+}
+
+.team__tabs .tabs__button:first-of-type {
+	margin-left: 0;
+}
+.team__tabs .tabs__button:last-of-type {
+	margin-right: 0;
+}
+
+.team__tabs .tabs__button.active {
+    background-position: 0 90%;
+    text-shadow: 0 0 15px rgba(215,191,127,.5), 0 0 10px rgba(215,191,127,.6);
+}
+
+.team-carousel {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 1rem;
+}
+
+.team-carousel__swiper {
+	overflow: visible;
+	margin-bottom: 8rem;
+
+	@media (max-width: $laptop-md) {
+		margin-bottom: 1.6rem;
+	}
+}
+
+.team-carousel__swiper .swiper-wrapper {
+	overflow: inherit;
+}
+
+.team-carousel__button-prev,
+.team-carousel__button-next {
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+
+.team-carousel__nav {
+	@media (max-width: $tablet) {
+		max-width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

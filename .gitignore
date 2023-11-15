@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+artefacts/
+node_modules
+psd/
+package-lock.json
+convert-images/
+_inbox/
+desktop.txt
+
+readme-local.md
+pz.md

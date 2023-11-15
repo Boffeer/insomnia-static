@@ -1,0 +1,38 @@
+.form__hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.form__row {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  row-gap: 2rem;
+  margin-bottom: 2.5rem;
+
+  @media (max-width: $mobile-lg) {
+    row-gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form__submit {
+  width: 100%;
+  margin-bottom: 1.7rem;
+
+  @media (max-width: $mobile-lg) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form__caption {
+  color: #d5d5d5;
+  // text-align: center;
+  font-size: 1.5rem;
+
+  @media (max-width: $mobile-lg) {
+   font-size: 1.4rem;
+   margin-left: -0.5rem;
+   margin-right: -0.5rem;
+  }
+}

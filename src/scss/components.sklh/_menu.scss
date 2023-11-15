@@ -1,0 +1,251 @@
+.menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	display: block;
+	background: rgba(0, 0, 0, 0.90);
+	padding: 3rem 4rem 3rem;
+	height: 100%;
+	max-width: 40rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	pointer-events: none;
+	transform: translateX(-100%);
+	transition: all 0.45s var(--tr-jolly-enter);
+	overflow-y: auto;
+
+	@media (max-width: $tablet) {
+		max-width: 100%;
+		padding: 2.1rem 2rem;
+	}
+}
+.menu--visible {
+	transform: translateX(0);
+	pointer-events: initial;
+}
+
+.menu__head {
+	margin-bottom: 11.6rem;
+	@media (max-width: $laptop-xlg) {
+		margin-bottom: 5.5rem;
+	}
+}
+
+.menu__body {
+	margin-bottom: auto;
+	margin-top: auto;
+
+	@media (max-width: $tablet) and (min-width: $mobile) {
+		margin-top: 0;
+	}
+}
+
+.menu__nav {
+	counter-reset: menu-nav;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-left: 4rem;
+
+	@media (max-width: $tablet) {
+		padding-left: 3rem;
+	}
+}
+
+.menu__logo {
+	display: block;
+	max-width: 17rem;
+
+	@media (max-width: $tablet) {
+		max-width: 10.1rem;
+	}
+}
+
+.menu__nav-item {
+	counter-increment: menu-nav;
+	color: var(--fg-regular, #FFF);
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--ff-regular);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 115%;
+	letter-spacing: -0.8px;
+	margin-bottom: 3rem;
+	transition: var(--tr);
+
+	@media (max-width: $tablet) {
+		font-size: 1.6rem;
+		margin-bottom: 1.7rem;
+	}
+}
+
+.menu__nav-item:last-of-type {
+	margin-bottom: 0;
+}
+
+.menu__nav-link {
+	transition: inherit;
+	display: inline-block;
+}
+.menu__nav-link:hover {
+	@media (any-hover:hover) {
+		transform: translateX(1rem);
+	}
+}
+
+.menu__nav-link::before {
+	content: counters(menu-nav, '.', decimal-leading-zero);
+	color: var(--c-primary);
+	transition: var(--tr);
+	margin-right: 0.3em;
+}
+.menu__nav-link:hover::before {
+  text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 40px rgba(255,255,255,0.7), 0 0 1rem var(--c-primary), 0 0 70px var(--c-primary), 0 0 30px var(--c-primary);
+}
+
+.menu__button-callback {
+	width: 95%;
+
+	@media (max-width: $tablet) {
+		width: 100%;
+		font-size: 1rem;
+	}
+}
+
+.menu__footer {
+	margin-top: 11.6rem;
+	padding-top: 3.4rem;
+	border-top: 0.1rem solid var(--c-primary);
+
+	@media (max-width: $laptop-xlg) {
+		margin-top: 5.5rem;
+	}
+	@media (max-width: $tablet) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+			'links contacts'
+			'buttons contacts'
+			'footnote socials'
+		;
+		gap: 1rem 2rem;
+	}
+}
+
+.menu__linklist {
+	grid-area: links;
+	color: var(--c-primary);
+	leading-trim: both;
+	text-edge: cap;
+	font-variant-numeric: lining-nums tabular-nums;
+	font-family: var(--ff-regular);
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%;
+	margin-bottom: 2.5rem;
+
+	@media (max-width: $tablet) {
+		font-size: 1.2rem;
+		margin-bottom: 0;
+	}
+}
+.menu__linklist-link {
+	transition: var(--tr);
+}
+.menu__linklist-link:hover {
+	@media (any-hover:hover) {
+		color: var(--fg-regular);
+	}
+}
+
+.menu__contacts {
+	grid-area: contacts;
+	color: var(--fg-regular);
+	leading-trim: both;
+	text-edge: cap;
+	font-family: var(--ff-regular);
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 130%;
+	letter-spacing: -0.04rem;
+	margin-bottom: 3rem;
+
+	@media (max-width: $tablet) {
+		font-size: 1rem;
+		margin-bottom: 0;
+	}
+}
+
+.menu__contacts-item {
+	display: block;
+	margin-bottom: 1.2rem;
+	transition: var(--tr);
+
+	@media (max-width: $tablet) {
+		margin-bottom: 1.3rem;
+	}
+}
+.menu__contacts-item * {
+	transition: inherit;
+}
+
+a.menu__contacts-item:hover {
+	@media (any-hover:hover) {
+		color: var(--c-primary)
+	}
+}
+a.menu__contacts-item:hover > *:first-child {
+	@media (any-hover:hover) {
+		color: var(--fg-regular);
+	}
+}
+
+.menu__contacts-item:last-child {
+	margin-bottom: 0;
+}
+.menu__contacts-item > *:first-child {
+	margin-right: 0.3em;
+	display: inline-block;
+}
+
+.menu__footbuttons {
+	grid-area: buttons;
+	margin-bottom: 1.6rem;
+	@media (max-width: $tablet) {
+		margin-bottom: 0;
+	}
+}
+
+.menu__socials {
+	margin-bottom: 2rem;
+	padding-top: 2rem;
+	grid-area: socials;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 1rem;
+	}
+}
+
+.menu__footnotes {
+	align-self: center;
+	padding-top: 2rem;
+	grid-area: footnote;
+	color: rgba(255, 255, 255, 0.60);
+	leading-trim: both;
+	text-edge: cap;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 130%;
+	letter-spacing: -0.04rem;
+
+	@media (max-width: $tablet) {
+		font-size: 1rem;
+		padding-top: 2rem;
+	}
+}

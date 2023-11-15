@@ -1,0 +1,32 @@
+<div class="b_modal modal" id="@@id" data-closer-type="inner">
+	<header class="modal__head">
+		<div class="logo modal__logo">
+			<picture class="logo__pic">
+				<img src="./img/sklh_common/logo.svg" alt="Skillhouse" class="logo__img">
+			</picture>
+		</div>
+	</header>
+	<div class="modal__body">
+		<h3 class="modal__title">@@title</h3>
+		<p class="modal__desc"> @@desc </p>
+		<div class="modal__form form js_form">
+			<div class="form__hidden-fieldset">
+				<input type="text" name="page" hidden>
+			    <input type="text" name="formname" hidden>
+
+			    <input type="hidden" name="utm_source" value="">
+			    <input type="hidden" name="utm_medium" value="">
+			    <input type="hidden" name="utm_campaign" value="">
+			    <input type="hidden" name="utm_content" value="">
+			    <input type="hidden" name="utm_term" value="">
+			    <input type="hidden" name="referrer" value="">
+			    <input type="hidden" name="requestTime" value="">
+			</div>
+			<div class="form__fieldset">
+				@@include('../input/name.html', {placeholder: 'Ваше имя'})
+				@@include('../input/tel.html', {placeholder: 'Номер телефона'})
+			</div>
+			<div class="button-primary form__submit js_form__submit">@@button</div>
+		</div>
+	</div>
+</div>

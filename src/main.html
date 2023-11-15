@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+      @@include('tpls/b/meta-head.html',{
+        "title": "Skillhouse",
+        "desc": "",
+        "themeColor": "#1A1A1A",
+      })
+      <link rel="stylesheet" href="./css/style.css">
+  </head>
+  
+  <body class="page-home">
+
+    <div class="wrapper">
+      @@include('tpls/sections.insm/header.html',{})
+
+      <main class="main">
+        
+        <div class="screener">
+          
+          <section class="screener__layout" id="home">
+            
+          </section>
+
+        </div>
+
+      </main>
+
+      @@include('tpls/sections.insm/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+
+    <script src="./js/index.min.js"></script>
+  </body>
+</html>

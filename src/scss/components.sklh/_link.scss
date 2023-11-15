@@ -1,0 +1,39 @@
+ @import "../components.b/controls/link";
+
+.link {
+  --ff: var(--ff-regular);
+  --fz: 1.8rem;
+  --fw: 500;
+  --lh: initial;
+  --ls: -0.27px;
+
+  --padding-block: 1.25em;
+  --padding-inline: 1.5em;
+  --padding: 0;
+  --text-padding: 0.4em 0 0.44rem 0;
+
+  --fg: var(--c-primary);
+  --bg: transparent;
+
+  --border-width: 0.1rem;
+  // --border-color: transparent;
+  --border-color: var(--fg);
+  --border-radius: 0;
+
+  @media (max-width: $tablet) {
+    --fz: 1rem;
+    --lh: 1;
+    --ls: -0.15px;
+  }
+}
+
+.link:hover {
+	@media (any-hover:hover) {
+    background-position: 0 90%;
+    text-shadow: 0 0 15px rgba(215,191,127,.5), 0 0 10px rgba(215,191,127,.6);
+	}
+}
+
+.link:active {
+  --fw: 700; 
+}

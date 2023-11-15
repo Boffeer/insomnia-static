@@ -1,0 +1,29 @@
+ @import "../components.b/controls/input";
+
+ .input {
+  --bg: var(--bg-app);
+  --fg: var(--fg-regular);
+
+  --fz: 2rem;
+  --padding-block: 1.25em;
+  --padding-inline: 1.5em;
+  --padding: var(--padding-block) var(--padding-inline);
+  --letter-spacing: -0.08rem;
+
+  --border-color: var(--fg-regular);
+  --border-width: 0.1rem;
+  --border-radius: 9999px;
+  --border-focus: var(--c-primary);
+
+  --error-color: #FF3B30;
+  --error-fz: 1rem;
+
+  @media (max-width: $tablet) {
+      --fz: 1rem;
+      --padding-block: 1.08em;
+  }
+ }
+
+ .input__error {
+  // display: none;
+ }

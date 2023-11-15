@@ -1,0 +1,17 @@
+<label class="input js_form__control">
+  <span class="input__area">
+    <input
+      class="input__field"
+      name="user_tel"
+      type="tel"
+      maxlength="25"
+      minlength="10"
+      autocomplete="tel"
+      @@if (typeof context.placeholder != 'undefined') {
+      placeholder="@@placeholder"
+      }
+      required
+    >
+  </span>
+  <span class="input__error">Текст ошибки</span>
+</label>

@@ -1,0 +1,104 @@
+.project-shifter {
+	position: relative;
+	padding-top: 14rem;
+	padding-bottom: 14rem;
+
+	@media (max-width: $tablet) {
+		padding-top: 5.8rem;
+		padding-bottom: 5.8rem;
+	}
+}
+
+.project-shifter__media {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	pointer-events: none;
+}
+.project-shifter__media::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.project-shifter__media-pic {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.project-shifter__media-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.project-shifter__offer {
+	position: relative;
+	z-index: 2;
+	max-width: 60rem;
+}
+
+.project-shifter__suptitle {
+	leading-trim: both;
+	text-edge: cap;
+
+	font-family: var(--ff-regular);
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 115%;
+	letter-spacing: -0.096rem;
+
+	margin-bottom: 5.4rem;
+
+	@media (max-width: $tablet) {
+		font-size: 1.6rem;
+		line-height: 115%;
+		letter-spacing: -0.064rem;
+		margin-bottom: 3rem;
+	}
+}
+
+.project-shifter__title {
+	margin-bottom: 3.2rem;
+	@media (max-width: $tablet) {
+		letter-spacing: 0.05rem;
+		margin-bottom: 2.2rem;
+	}
+}
+
+.project-shifter__desc {
+	max-width: 34rem;
+	margin-bottom: 7rem;
+
+	@media (max-width: $tablet) {
+		max-width: 23rem;
+		margin-bottom: 3.5rem;
+	}
+}
+
+.project-shifter__buttons {
+	padding-bottom: 0;
+}
+
+.project-shifter__button .button__icon {
+	@media (min-width: $tablet + 1) {
+		--icon-width: 9rem;
+	    --icon-height: 3.5rem;
+	    margin-right: -2rem;
+	}
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+}

@@ -1,0 +1,52 @@
+.socials {
+  display: flex;
+  align-items: center;
+/*  --icon-size: 6rem;
+  --icon-gap: 2.3rem;
+  --link-padding: 1.4rem;
+  --icon-brad: 9999px;
+
+  @media (max-width: $mobile-lg) {
+    --icon-size: 4rem;
+    --icon-gap: 1.5rem;
+    --link-padding: 0.9rem;
+  }
+*/
+}
+
+.socials__link {
+  display: block;
+  width: var(--icon-size);
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+  min-height: var(--icon-size);
+  max-height: var(--icon-size);
+  margin-right: var(--icon-gap);
+  transition: var(--tr-regular);
+  border-radius: var(--icon-brad);
+  padding: var(--link-padding);
+  border: 1px solid var(--c-border);
+}
+.socials__link:last-child {
+  margin-right: 0;
+}
+.socials__link:hover {
+  @media (any-hover:hover) {
+    // transform: scale(1.1);
+  }
+}
+
+.socials__icon {
+  width: 100%;
+  height: 100%;
+}
+.socials__icon--whatsapp {
+  background: linear-gradient(0deg, #20B038 0%, #60D66A 100%);
+}
+.socials__icon--telegram {
+  background: linear-gradient(180deg, #2AABEE 0%, #229ED9 99.26%);
+}
+.socials__icon--vk {
+  background: linear-gradient(45deg, #025BC7 0.73%, #0089FD 91.97%);
+}

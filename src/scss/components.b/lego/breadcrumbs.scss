@@ -1,0 +1,109 @@
+.breadcrumbs {
+	color: #646464;
+	margin-bottom: 1.6rem;
+	font-size: 1.8rem;
+	line-height: 120%;
+	overflow: hidden;
+	width: 100%;
+	--mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 0.5rem, rgb(0, 0, 0) 1.8rem, rgb(0, 0, 0) calc(100% - 1.8rem), rgba(0, 0, 0, 0.25) calc(100% - 0.9rem), rgba(0, 0, 0, 0));
+  margin-left: -1.6rem;
+  font-size: 1.4rem;
+  z-index: 1;
+  position: relative;
+  margin-left: var(--p-container);
+
+	@media (max-width: $tablet-xlg) {
+		font-size: 1.4rem;
+	  // -webkit-mask-image: var(--mask);
+	  // mask: var(--mask);
+	  margin-left: 0;
+	}
+
+	@media (max-width: $mobile-xlg) {
+		font-size: 1.2rem;
+	  margin-left: 0;
+	}
+}
+
+.breadcrumbs ~ .main {
+	margin-top: -2.8rem;
+
+	@media (max-width: $mobile-xlg) {
+		margin-top: 0;
+	}
+}
+
+.header ~ .breadcrumbs {
+	padding-top: 5rem;
+	
+	@media (max-width: $mobile-xlg) {
+		padding-top: 3rem;
+	}
+	@media (max-width: $mobile-lg) {
+		margin-bottom: 0;
+	}
+}
+
+.breadcrumbs__container {
+	margin-bottom: -2rem;
+	overflow: hidden;
+}
+
+.breadcrumbs__list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: auto;
+	padding-bottom: 2rem;
+	padding-left: var(--p-container);
+	padding-right: var(--p-container);
+	margin-left: #{'calc(0px - var(--p-container))'};
+	margin-right: #{'calc(0px - var(--p-container))'};
+	margin-left: 0;
+	margin-right: 0;
+
+	@media (max-width: $tablet-xlg) {
+	  -webkit-mask-image: var(--mask);
+	  mask: var(--mask);
+	}
+}
+
+.breadcrumbs__item {
+	white-space: nowrap;
+}
+
+.breadcrumbs__item:first-child {
+	font-weight: 700;
+}
+
+.breadcrumbs__link {
+	transition: var(--tr-regular);
+}
+
+.breadcrumbs__link:hover {
+	@media (any-hover:hover) {
+		color: var(--c-second);
+	}
+}
+
+.breadcrumbs__link:after {
+	content: "";
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+	color: #646464;
+	display: inline-block;
+	--size: 0.9rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	background-image: url("../img/common/carousel-arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	transform: scaleX(-1);
+	@media (max-width: $mobile-xlg) {
+		margin-left: 0.1rem;
+		margin-right: 0.2rem;
+	}
+}

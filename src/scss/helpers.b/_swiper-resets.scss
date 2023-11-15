@@ -1,0 +1,32 @@
+.swiper-button-prev {
+	margin-top: unset;
+	position: static;
+	width: initial;
+	height: initial;
+	line-height: unset;
+}
+.swiper-button-next {
+	margin-top: unset;
+	position: static;
+	width: initial;
+	height: initial;
+	line-height: unset;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	display: none;
+}
+
+.b_swiper__buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.b_swiper__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}

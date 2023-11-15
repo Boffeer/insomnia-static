@@ -1,0 +1,109 @@
+<footer class="footer">
+	<div class="container">
+		<section class="section contacts" id="section-contacts">
+		  <div class="container contacts__container">
+		  	<div class="section__head contacts__head">
+			    <h2 class="section-title contacts__title">
+			    	Наши <span class="text-colored"> контакты</span>
+			    </h2>
+				@@include('../b/socials.html', {
+					className: 'contacts__head-socials',
+					socials: [
+		         {
+		         	 id: 'youtube',
+			         name: 'YT',
+				       href: 'https://youtube.com'
+		         },
+		         {
+		         	 id: 'instagram',
+			         name: 'IG',
+				       href: 'https://instagram.com'
+		         },
+		         {
+		         	 id: 'telegram',
+			         name: 'TG',
+				       href: 'https://t.me'
+		         },
+		         {
+		         	 id: 'whatsapp',
+			         name: 'WA',
+				       href: 'https://wa.me'
+		         },
+					],
+				})
+		  	</div>
+
+		  	<div class="contacts__list">
+		  		<ul class="contacts__linklist">
+		  			<li class="contacts__linklist-item">
+		  				<a href="tel:" class="contacts__linklist-link js_copyclicker">
+		  					7(925) 111-39-99
+		  				</a>
+		  			</li>
+		  			<li class="contacts__linklist-item">
+		  				<a href="tel:" class="contacts__linklist-link js_copyclicker">
+		  					+7(499) 111-39-99
+		  				</a>
+		  			</li>
+		  		</ul>
+		  		<div class="contacts__entries">
+		  			<a class="contacts__entries-item" href="#">
+		  				<span class="text-bold">Email: </span> <span class="js_copyclicker">info@skill-house.ru</span>
+		  			</a>
+		  			<a class="contacts__entries-item" href="#">
+		  				<span class="text-bold">Адрес: </span> 
+		  				<span class="js_copyclicker">г. Москва, ул. Большая Якиманка 31, офис 105</span>
+		  			</a>
+		  			<p class="contacts__entries-item">
+		  				<span class="text-bold">ИНН: </span> 9721188852
+		  				<br>
+		  				<span class="text-bold">ОГРН: </span> 1227700804891
+		  			</p>
+		  		</div>
+
+		  		<div class="contacts__footer">
+			  		<button class="button-secondary contacts__button-callback" type="button" data-b_modal-open="callback">
+			  			Заказать звонок
+			  		</button>
+					@@include('../b/socials.html', {
+						className: 'contacts__footer-socials',
+						socials: [
+			         {
+			         	 id: 'youtube',
+				         name: 'YT',
+					       href: 'https://youtube.com'
+			         },
+			         {
+			         	 id: 'instagram',
+				         name: 'IG',
+					       href: 'https://instagram.com'
+			         },
+			         {
+			         	 id: 'telegram',
+				         name: 'TG',
+					       href: 'https://t.me'
+			         },
+			         {
+			         	 id: 'whatsapp',
+				         name: 'WA',
+					       href: 'https://wa.me'
+			         },
+						],
+					})
+		  		</div>
+
+		  		<div class="contacts__footnotes">
+		  			<p>© 2023 СкилХаус</p>
+		  		</div>
+		  	</div>
+
+		  	<div class="contacts__media">
+		  		<picture class="contacts__media-pic">
+		  			<img src="./img/sklh_contacts/map.png" alt="" class="contacts__media-img">
+		  		</picture>
+		  	</div>
+		  </div>
+		</section>
+	</div>
+</footer>
+

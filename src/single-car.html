@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+      @@include('tpls/b/meta-head.html',{
+        "title": "Skillhouse",
+        "desc": "",
+        "themeColor": "#1A1A1A",
+      })
+      <link rel="stylesheet" href="./css/style.css">
+  </head>
+  
+  <body class="page-home">
+
+    <div class="wrapper">
+      @@include('tpls/sections.crrt/header.html',{})
+
+      <main class="main">
+
+        <section class="section product-hero">
+          <div class="container product-hero__container">
+            <div class="product-hero__carousel">
+              <div class="product-hero__gallery">
+                <div class="swiper product-hero__gallery-swiper">
+                  <div class="swiper-wrapper">
+                    @@for (var i = 0; i < 8; i++) {
+                      <div class="swiper-slide product-hero__gallery-slide">
+                        <picture class="product-hero__pic">
+                          <img src="./img/catalog/product-page.jpg" alt="" class="product-hero__img">
+                        </picture>
+                      </div>
+                    }
+                  </div>
+                </div>
+              </div>
+              <div class="product-hero__thumbs">
+                <div class="swiper-button-prev product-hero__thumbs-button-prev"></div>
+                <div class="swiper product-hero__thumbs-swiper">
+                  <div class="swiper-wrapper">
+                    @@for (var i = 0; i < 8; i++) {
+                      <div class="swiper-slide product-hero__thumbs-slide">
+                        <picture class="product-hero__pic">
+                          <img src="./img/catalog/product-page.jpg" alt="" class="product-hero__img">
+                        </picture>
+                      </div>
+                    }
+                  </div>
+                </div>
+                <div class="swiper-button-next product-hero__thumbs-button-next"></div>
+              </div>
+            </div>           
+            <div class="product-hero__info">
+              <p>Выберите свободную дату</p>
+              <div class="product-hero__bookform">
+                <div class="calendar"></div>
+                <div class="product-hero__bookform-tariffs">
+                  <h3 class="product-hero__bookform-tariffs-title">Тарифы</h3>
+                  @@for (var i = 0; i < 5; i++) {
+                  <div class="product-hero__bookform-tariff">
+                    <div class="product-hero__bookform-tariff-price">
+                      <span>40</span>
+                      <span class="currency">€</span>
+                    </div>
+                    <div class="product-hero__bookform-tariff-caption">
+                      цена за 1 день
+                    </div>
+                  </div>
+                  }
+                  <a href="#" class="button-primary product-hero__bookform-button">Оплатить бронь в Stripe</a>
+                  <p class="product-hero__bookform-caption wysiwyg">
+                    оплачивая, я соглашусь и принимаю <a href="#">политику конфиденциальности</a> и <a href="#">terms and conditions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('tpls/sections.crrt/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+
+    <script src="./js/index.min.js"></script>
+  </body>
+</html>

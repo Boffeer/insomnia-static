@@ -1,0 +1,16 @@
+.b_tabs-button.active {
+  color: #fff;
+}
+
+.b_tabs-page {
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.b_tabs-page.active {
+  opacity: 1;
+  overflow: initial;
+  display: unset;
+}

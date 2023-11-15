@@ -1,0 +1,224 @@
+.price-table {
+	padding-top: 2rem;
+	z-index: 1;
+	position: relative;
+
+	@media (max-width: $mobile) {
+		padding-top: 0.6rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (max-width: $mobile-lg) {
+		max-width: 26rem;
+	}
+}
+
+.price-table-swiper {
+	@media (min-width: $tablet + 1) {
+		overflow: visible;
+	}
+}
+
+.price-table-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1;
+	width: auto;
+	min-height: 51rem;
+	border-left: 0.1rem solid var(--c-primary);
+	border-right: 0.1rem solid var(--c-primary);
+	padding-top: 9.2rem;
+	padding-bottom: 7.5rem;
+	text-align: center;
+	transition: all 0.45s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet-xlg) {
+		min-height: initial;
+		padding-top: 3.7rem;
+		padding-bottom: 3.7rem;
+	}
+
+	@media (max-width: $mobile) {
+		flex: none;
+		border: none;
+		padding-top: 1.7rem;
+		padding-bottom: 1.7rem;
+	}
+}
+
+.price-table-slide__body {
+	transition: inherit;
+}
+
+.price-table-slide:first-of-type {
+	border-left: none;
+}
+
+.price-table-slide:nth-of-type(2) {
+	border: none
+}
+.price-table-slide:last-of-type {
+	border-right: none;
+}
+
+.price-table-slide:hover {
+	@media (any-hover:hover) and (min-width: $tablet + 1) {
+		flex: 1.1;
+		background: var(--Black, #1A1A1A);
+		box-shadow: 0px 0px 100px 0px rgba(1, 1, 1, 0.50);
+	}
+}
+
+.price-table-swiper {
+	border-left: 0.1rem solid var(--c-primary);
+	border-right: 0.1rem solid var(--c-primary);
+}
+
+.price-table-slide__title {
+	margin-bottom: 5.3rem;
+
+	color: var(--fg-regular, #FFF);
+	leading-trim: both;
+	text-edge: cap;
+
+	font-family: var(--ff-title);
+	font-size: 4rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%; /* 40px */
+	letter-spacing: 0.08rem;
+	transition: all 0.45s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		margin-bottom: 2.9rem;
+		font-size: 2rem;
+	}
+}
+
+.swiper-initialized .price-table-slide__title {
+	opacity: 0;
+	transform: translateY(-2rem);
+}
+.swiper-initialized .swiper-slide-active .price-table-slide__title {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+		
+
+.price-table-slide:hover .price-table-slide__title {
+	@media (any-hover:hover) {
+		font-weight: 700;
+		animation: minipulse 0.75s;
+	}
+}
+
+.price-table-slide__cost {
+	color: var(--c-primary);
+	leading-trim: both;
+	text-edge: cap;
+	font-variant-numeric: lining-nums tabular-nums;
+
+	font-family: var(--ff-regular);
+	font-size: 6rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 133.333%;
+	transition: all 0.55s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		font-size: 3rem;
+	}
+
+	@media (max-width: $mobile) {
+		font-size: 4rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.swiper-initialized .price-table-slide__cost {
+	opacity: 0;
+	transform: scale(0.6);
+}
+.swiper-initialized .swiper-slide-active .price-table-slide__cost {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.price-table-slide__cost-value {
+	margin-right: 0.1em;
+}
+
+.price-table-slide__cost .text-sub--square {
+	margin-left: 0.2em;
+}
+
+.price-table-slide__desc {
+	color: var(--fg-second, #BDBDBD);
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+
+	font-family: var(--ff-regular);
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: -0.072rem;
+	margin-bottom: 3rem;
+	transition: all 0.55s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		font-size: 1rem;
+		letter-spacing: -0.04rem;
+	}
+}
+.swiper-initialized .price-table-slide__desc {
+	opacity: 0;
+	transform: translateY(2rem);
+}
+.swiper-initialized .swiper-slide-active .price-table-slide__desc {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+.price-table-slide__button-more {
+	margin-top: auto;
+
+	@media (max-width: $tablet) {
+		margin-top: 5.3rem;
+	}
+}
+.price-table-slide__button-more::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.price-table-slide:hover {
+	@media (any-hover:hover) {
+	}
+}
+
+.price-table-swiper {
+	@media (max-width: $mobile) {
+		margin-bottom: 6rem;
+	}
+}
+
+.price-table__pagination {
+	@media (min-width: $mobile + 1) {
+		display: none;
+	}
+	@media (max-width: $mobile) {
+		max-width: 13.6rem;
+	}
+}

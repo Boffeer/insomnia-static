@@ -1,0 +1,29 @@
+ @import "../components.b/controls/radio";
+
+.radio {
+  --size-check: 2.4rem;
+  --border-width-check: 0.1rem;
+  --border-color-check: var(--fg-regular);
+  --margin-right-check: 0.5em;
+  --padding-check-active: 1.2rem;
+  --height-media: 40rem;
+
+  @media (max-width: $tablet) {
+    --height-media: 18rem;
+  }
+
+  --border-width-check--checked: 0.7rem;
+  --border-color-check--checked: var(--c-primary);
+
+  --fz-label: 2.4rem;
+  --fg-label: var(--fg-regular);
+  --fw-label: 500;
+  --lh-label: 1.15;
+  --ls-label: -0.096rem;
+
+  @media (max-width: $tablet) {
+    --fz-label: 1.6rem;
+    --size-check: 2rem;
+    --margin-right-check: 0.65em;
+  }
+}

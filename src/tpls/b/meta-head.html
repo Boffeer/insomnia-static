@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+@@if (typeof title != 'undefined') {
+	<title>@@title</title>
+	<meta property="og:title" content="@@title">
+}
+
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" type="image/png" href="./img/common/favicon.png">
+
+@@if (typeof desc != 'undefined') {
+    <meta property="og:description" content="@@desc">
+}
+              
+@@if (typeof ogImage == 'undefined') {
+  <meta property="og:image" content="./img/common/og.png">
+}
+@@if (typeof ogImage != 'undefined') {
+  <meta property="og:image" content="@@ogImage">
+}
+<meta property="twitter:card" content="summary_large_image">
+
+@@if (typeof siteName != 'undefined') {
+	<meta property="og:site_name" content="@@sitename">
+}
+@@if (typeof locale != 'undefined') {
+	<meta property="og:locale" content="ru_RU">
+}
+    
+@@if (typeof ogType != 'undefined') {
+	<meta property="og:type" content="@@ogType">
+}
+@@if (typeof ogType == 'undefined') {
+	<meta property="og:type" content="website">
+}
+
+@@if (typeof favicon != 'undefined') {
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/common/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/common/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/common/favicon-16x16.png">
+  <link rel="manifest" href="/img/common/site.webmanifest">
+  <link rel="shortcut icon" href="/img/common/favicon.ico">
+  <meta name="msapplication-config" content="/img/common/browserconfig.xml">
+	@@if (typeof themeColor != 'undefined') {
+	  <link rel="mask-icon" href="/img/common/safari-pinned-tab.svg" color="@@themeColor">
+	}
+}
+
+@@if (typeof themeColor != 'undefined') {
+  <meta name="msapplication-TileColor" content="@@themeColor">
+  <meta name="theme-color" content="@@themeColor">
+}
+
