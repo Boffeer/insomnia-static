@@ -1,22 +1,24 @@
-.home .blob {
+.page-home .blob {
 	font-size: 1rem;
 	display: block;
 	position: absolute;
 }
-.home .screener__particles-upper .blob:nth-child(1) {
+
+.page-home .screener__particles-upper .blob:nth-child(1) {
 	width: 46.5em;
 	height: 50.9em;
 	right: 0;
 	top: 0;
 }
-.home .screener__particles-upper .blob:nth-child(2) {
+
+.page-home .screener__particles-upper .blob:nth-child(2) {
 	width: 41.6em;
 	height: 56.7em;
 	left: 0;
 	top: 26.1em;
 }
 
-.home .screener__particles-bottom .blob:nth-child(1) {
+.page-home .screener__particles-bottom .blob:nth-child(1) {
 	width: 51.2em;
 	height: 56em;
 	left: 14.7em;

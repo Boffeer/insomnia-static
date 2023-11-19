@@ -1,25 +1,5 @@
-.section {
-	padding-top: 20rem;
-	padding-bottom: 20rem;
-
-	@media (max-width: $laptop-md) {
-		padding-top: 12rem;
-		padding-bottom: 12rem;
-	}
-
-	@media (max-width: $tablet) {
-		padding-top: 6rem;
-		padding-bottom: 6rem;
-	}
-}
-
-.section--convex {
-	background: linear-gradient(113deg, #303030 11.83%, #101010 87.31%);
-	// padding-top: 12rem;
-	// padding-bottom: 12rem;
-}
-
 .section-title {
+	margin-top: 0;
 	margin-bottom: 7rem;
 
 	font-family: var(--ff-title);
