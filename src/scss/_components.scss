@@ -9,9 +9,11 @@
 @import "./components.b/lego/wysiwyg";
 
 
-@import "./components.insm/round-button";
+@import "./components.b/lego/logo";
 
-// @import "./components.sklh/socials";
+
+@import "./components.insm/socials";
+@import "./components.insm/menu";
 // @import "./components.sklh/input";
 // @import "./components.sklh/button";
 // @import "./components.sklh/link";
@@ -31,3 +33,6 @@
 
 // @import "./components.sklh/blinds-carousel";
  // @import "./components.sklh/review-card";
+@import "./components.insm/blob-button";
+@import "./components.insm/round-button";
+@import "./components.insm/fixed-widget";

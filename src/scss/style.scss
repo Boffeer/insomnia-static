@@ -13,6 +13,7 @@
 @include font('Unbounded', normal, 400, '../resources/fonts/unbounded/unbounded-regular');
 @include font('Unbounded', normal, 500, '../resources/fonts/unbounded/unbounded-medium');
 @include font('Unbounded', normal, 700, '../resources/fonts/unbounded/unbounded-bold');
+@include font('Unbounded', normal, 800, '../resources/fonts/unbounded/unbounded-black');
 
 :root {
   --ff-regular: "Unbounded", sans-serif;

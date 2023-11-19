@@ -1,7 +1,7 @@
 import {bodyLock} from '../../helpers.b/action-helpers.js'
 import {getClickedNotBeyondElement} from '../../helpers.b/get-helpers.js'
 
-const burger = document.getElementById("burger");
+const burger = document.querySelector(".burger");
 const header = document.querySelector(".header");
 const menu = document.querySelector('.menu');
 const HEADER_OPENED_CLASS = "header--burger-opened";

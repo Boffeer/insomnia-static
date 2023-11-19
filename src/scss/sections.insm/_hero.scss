@@ -1,0 +1,97 @@
+.hero {
+	font-size: 1rem;
+	padding-top: 8.2em;
+}
+.hero__card {
+	position: relative;
+	max-width: 100em;
+	height: 26.4em;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero__card-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+.hero__card-logo {
+	max-width: 36.4em;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 2;
+}
+
+.hero__bullet-list {
+	font-size: 1rem;
+	max-width: 75.9em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 4.4em;
+	row-gap: 1.4em;
+}
+
+.hero__bullet {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	color: var(--c-secondary);
+	font-weight: 500;
+}
+
+.hero__bullet::before {
+	content: "";
+	display: block;
+	--size: 1.5em;
+	--width: var(--size);
+	--height: var(--size);
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	background-image: url('../img/common.insm/bullet.svg');
+	margin-top: -0.2em;
+	margin-right: 0.5em;
+}
+
+
+.hero__bullet-link {
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+
+.hero__button {
+	font-size: 1rem;
+	margin-left: auto;
+	display: block;
+	--width: 13em;
+	--height: 13em;
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	position: relative;
+	z-index: var(--z-header);
+}

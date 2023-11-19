@@ -2,6 +2,7 @@
 
 .header {
 	font-size: 1rem;
+	z-index: var(--z-header);
 }
 
 .header__container {
@@ -10,7 +11,8 @@
 	align-items: center;
 	background: var(--bg-panel);
 	color: var(--fg-panel);
-	border-radius: 0 0 5em 5em;
+	--brad: 5em;
+	border-radius: 0 0 var(--brad) var(--brad);
 	--p-container: 2.8em;
 	padding-top: 2em;
 	padding-bottom: 2em;
@@ -19,6 +21,7 @@
 .header__logo {
 	position: relative;
 	z-index: 2;
+	max-width: 6em;
 }
 
 .header__burger {
@@ -39,10 +42,4 @@
 
 
 .header__menu {
-	position: fixed;
-	background: var(--bg-panel);
-	width: 100%;
-	left: 0;
-	top: 0;
-	transform: translateY(-100%);
 }

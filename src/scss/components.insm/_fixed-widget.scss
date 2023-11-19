@@ -1,0 +1,77 @@
+.fixed-widget {
+	--offset-horizontal: 4.2em;
+	font-size: 1rem;
+	position: fixed;
+	bottom: 4.2em;
+	left: var(--offset-horizontal);
+	z-index: var(--z-header);
+	background-color: #fff;
+	border: 0.4em solid var(--c-secondary);
+	border-radius: 9999px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.fixed-widget--right {
+	left: unset;
+	right: var(--offset-horizontal);
+}
+
+.fixed-widget-phone {
+	padding: 2em 2em 1.7em;
+	transition: all 0.35s ease;
+	color: var(--c-secondary);
+}
+
+.fixed-widget-phone:hover {
+	@media (any-hover: hover) {
+		background: var(--c-secondary);
+		border-color: #fff;
+		color: #fff;
+	}
+}
+
+.fixed-widget__text {
+	font-size: 1.5em;
+	font-weight: 800;
+	line-height: 1;
+	color: inherit;
+}
+
+.fixed-widget__text::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+.fixed-widget__socials {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.8em;
+}
+
+.fixed-widget__socials .socials__link {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.8em;
+}
+
+.fixed-widget__socials .socials__link:first-of-type {
+	margin-top: 0;
+}
+.fixed-widget__socials .socials__link:last-of-type {
+	margin-right: auto;
+}
+
+
+.fixed-widget-phone {
+
+}
