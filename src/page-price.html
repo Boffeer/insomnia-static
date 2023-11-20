@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+      @@include('tpls/b/meta-head.html',{
+        "title": "Insomnia",
+        "desc": "",
+        "themeColor": "#F15A29",
+      })
+      <link rel="stylesheet" href="./css/style.css">
+  </head>
+  
+  <body class="">
+
+    <div class="wrapper">
+      @@include('tpls/sections.insm/header.html',{})
+
+      <main class="main">
+        
+        <div class="screener screener--colored">
+          <section class="price screener__layout page-pice" id="price">
+            <div class="screener__content screener__container">
+              <div class="screener__header">
+                <h1 class="screener__title">ЦЕНЫ</h1>
+              </div>
+              <div class="screener__body">
+                <div class="tabs price__tabs">
+                  <div class="tabs__button-list price__tabs-buttons" data-tabs="price">
+                    <button class="tabs__button price__tabs-button">вейкборд</button>
+                    <button class="tabs__button price__tabs-button">прокат</button>
+                    <button class="tabs__button price__tabs-button">курсы</button>
+                    <button class="tabs__button price__tabs-button">абонемент</button>
+                  </div>
+                  <div class="tabs__panel-list" data-tabs="price">
+                    <div class="tabs__panel">
+                      <div class="price-table">
+                        <div class="price-table__row price-table__head">
+                          <div class="price-table__cell">Услуга</div>
+                          <div class="price-table__cell">Будни</div>
+                          <div class="price-table__cell">Выходной</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">1 сет / 10 минут</div>
+                          <div class="price-table__cell">500₽</div>
+                          <div class="price-table__cell">800₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">3 сета / 30 минут</div>
+                          <div class="price-table__cell">1200₽</div>
+                          <div class="price-table__cell">1800₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">6 сетов / 1 час</div>
+                          <div class="price-table__cell">2000₽</div>
+                          <div class="price-table__cell">3000₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">12 сетов / 2 часа</div>
+                          <div class="price-table__cell">3800₽</div>
+                          <div class="price-table__cell">5500₽</div>
+                        </div>
+                      </div>
+                      <div class="price-table">
+                        <div class="price-table__row price-table__head">
+                          <div class="price-table__cell">Лебедка Lite</div>
+                          <div class="price-table__cell">Среда</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">5 часов / по очереди</div>
+                          <div class="price-table__cell">1300₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">10 часов /  по очереди</div>
+                          <div class="price-table__cell">2000₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">Семейная среда / 5 часов  / 3 персоны</div>
+                          <div class="price-table__cell">2300₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tabs__panel">
+                      <div class="price-table">
+                        <div class="price-table__row price-table__head">
+                          <div class="price-table__cell">Услуга</div>
+                          <div class="price-table__cell">Будни</div>
+                          <div class="price-table__cell">Выходной</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">1 sup board / 1 час</div>
+                          <div class="price-table__cell">500₽</div>
+                          <div class="price-table__cell">600₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">2 sup board / 1 час</div>
+                          <div class="price-table__cell">800₽</div>
+                          <div class="price-table__cell">1000₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">катамаран / 30 минут / 4 места </div>
+                          <div class="price-table__cell">1300₽</div>
+                          <div class="price-table__cell">1500₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">катамаран / 1 час / 4 места </div>
+                          <div class="price-table__cell">2000₽</div>
+                          <div class="price-table__cell">2500₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">катамаран / 2 часа / 4 места </div>
+                          <div class="price-table__cell">3500₽</div>
+                          <div class="price-table__cell">4500₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">гидрокостюм / весь день</div>
+                          <div class="price-table__cell">400₽</div>
+                          <div class="price-table__cell">500₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">оборудование/ весь день</div>
+                          <div class="price-table__cell">300₽</div>
+                          <div class="price-table__cell">300₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tabs__panel">
+                      <div class="price-table">
+                        <div class="price-table__row price-table__head">
+                          <div class="price-table__cell">Услуга</div>
+                          <div class="price-table__cell">Будни</div>
+                          <div class="price-table__cell">Выходной</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">
+                            <p>«Старт с нуля»  (30 минут)</p>
+                            <p>Курс для новичков, мы познакомим вас этим видом спорта и поставим на доску! Обучение проходит в формате: 10 минут инструктаж на берегу, 20 минут в воде. Все по Bluetooth гарнитуре с тренером. Прокат оборудования включен.</p>
+                          </div>
+                          <div class="price-table__cell">1500₽</div>
+                          <div class="price-table__cell">2000₽</div>
+                        </div>
+                        <div class="price-table__row">
+                          <div class="price-table__cell">
+                            <p>«ПУСТЬ ВОДЫ»  (30 минут)</p>
+                            <p>Курс для тех, кто хочет освоить базовые трюки и научиться новым техникам. Обучение проходит по Bluetooth гарнитуре с тренером. Прокат оборудования включен.
+                            </p>
+                          </div>
+                          <div class="price-table__cell">2300₽</div>
+                          <div class="price-table__cell">3000₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tabs__panel">
+                      <div class="price-offer">
+                        <div class="price-offer__media">
+                          <picture class="price-offer__media-pic">
+                              <img class="price-offer__media-img" src="./img/prices.insm/season-pass.png" alt="">
+                          </picture>
+                        </div>
+                        <div class="price-offer__content">
+                          <h2 class="price-offer__title">Season Pass 2023 включает:</h2>
+                          <div class="price-offer__card">
+                            <div class="price-offer__card-content">
+                              <h3 class="price-offer__card-title">Абонемент на 1 месяц</h3>
+                              <p class="price-offer__card-desc">
+                                30 минут катания в день,<br>
+                                сезонное хранение оборудования
+                              </p>
+                            </div>
+                            <p class="price-offer__card-cost">12 000₽</p>
+                          </div>
+                          <div class="price-offer__card">
+                            <div class="price-offer__card-content">
+                              <h3 class="price-offer__card-title">Абонемент на сезон</h3>
+                              <p class="price-offer__card-desc">
+                                30 минут катания в день, <br>
+                                сезонное хранение оборудования
+                              </p>
+                            </div>
+                            <p class="price-offer__card-cost">30 000₽</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screener__bg container">
+              <div class="screener__particles-upper">
+              </div>
+              <div class="screener__particles-bottom">
+                <div class="blob js_use-bg" data-use-bg="./img/prices.insm/blob-1.svg"></div>
+                <div class="blob js_use-bg" data-use-bg="./img/prices.insm/blob-2.svg"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </main>
+
+      @@include('tpls/sections.insm/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+
+    <script src="./js/index.min.js"></script>
+  </body>
+</html>

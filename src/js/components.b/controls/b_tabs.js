@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
  * У какой кнопки таба есть класс из js переменной TAB_ACTIVE_CLASS, тот таб и будет активным сразу
  *
  */
-const tabslist = document.querySelectorAll(".tabs__tablist");
+const tabslist = document.querySelectorAll(".tabs__button-list");
 const tabsPanels = document.querySelectorAll(".tabs__panel-list");
 const TAB_ACTIVE_CLASS = "active";
 const TAB_ANIMATED_CLASS = "tab--animated";

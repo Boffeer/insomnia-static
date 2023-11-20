@@ -1,0 +1,49 @@
+.price-table {
+	font-size: 1rem;
+	margin-bottom: 2.1em;
+}
+
+.price-table:last-of-type {
+	margin-bottom: 0;
+}
+
+.price-table__row {
+	display: grid;
+	grid-template-columns: auto 15em 15em;
+	gap: 2em;
+	margin-bottom: 2em;
+}
+
+.price-table__row:last-child {
+	margin-bottom: 0;
+}
+
+
+.price-table__cell {
+	font-size: 1.4em;
+}
+
+.price-table__cell p:not(:only-child):first-child {
+	font-size: 1.42em;
+	margin-bottom: 0.7em;
+	text-transform: uppercase;
+	color: var(--fg-accent);
+}
+.price-table__cell p:not(:only-child) {
+	margin-bottom: 1.2em;
+}
+
+.price-table__cell:nth-of-type(2),
+.price-table__cell:nth-of-type(3) {
+	text-align: center;
+	font-weight: 600;
+}
+
+.price-table__head {
+	color: var(--fg-accent);
+}
+
+.price-table__head .price-table__cell:nth-of-type(2),
+.price-table__head .price-table__cell:nth-of-type(3) {
+	font-weight: 400;
+}
