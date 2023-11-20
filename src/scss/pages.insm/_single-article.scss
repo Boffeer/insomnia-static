@@ -1,0 +1,123 @@
+.single-article {
+	font-size: 1rem;
+	display: grid;
+	grid-template-columns: 56.1em auto;
+	column-gap: 3.9em;
+}
+
+
+.single-article-carousel {
+	position: relative;
+}
+
+.single-article-carousel__buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+}
+
+.single-article-carousel__swiper {
+	margin-bottom: 2.4em;
+}
+
+.single-article-carousel__button-prev,
+.single-article-carousel__button-next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: static;
+	--size: 3em;
+	--width: var(--size);
+	--height: var(--size);
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	background: #fff;
+	border-radius: var(--size);
+	margin: 0;
+}
+
+.single-article-carousel__button-prev::after,
+.single-article-carousel__button-next::after {
+	content: "";
+	display: block;
+	width: 80%;
+	height: 80%;
+	background-image: url("../img/common.insm/arrow-right.svg")
+}
+
+.single-article-carousel__button-prev::after {
+	transform: scaleX(-1);
+}
+
+
+.single-article-carousel__media {
+	border-radius: 5em;
+	height: 31.5em;
+}
+
+.single-article-carousel__media-pic {
+	border-radius: inherit
+}
+
+.single-article-carousel__media-img {
+	border-radius: inherit
+}
+
+
+.single-article__body {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.single-article__title {
+	font-size: 1.4em;
+	font-weight: 600;
+	margin-bottom: 1.42em;
+	text-transform: uppercase;
+}
+
+.single-article__buttons {
+	margin-top: auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+.single-article__button {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 3.7em;
+}
+
+.single-article__button-icon {
+	margin-right: 2em;
+	display: block;
+	--size: 4.2em;
+	--width: var(--size);
+	--height: var(--size);
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	border-radius: var(--size);
+	background: #fff;
+	padding: 0.9em;
+}
+
+.single-article__button-text {
+	text-transform: uppercase;
+	font-size: 1.8em;
+	font-weight: 600;
+}

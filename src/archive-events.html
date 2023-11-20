@@ -20,24 +20,14 @@
           <section class="news screener__layout" id="news">
             <div class="screener__content screener__container">
               <div class="screener__header">
-                <h1 class="screener__title">События</h1>
+                <h1 class="screener__title">Ивенты</h1>
               </div>
               <div class="screener__body">
-                <div class="accordion-carousel">
-                  <div class="swiper accordion-carousel__swiper">
-                    <div class="swiper-wrapper">
-                      @@for (var i = 0; i < 5; i++) {
-                      <div class="swiper-slide accordion-carousel__slide">
-                        @@for (var i = 0; i < 6; i++) {
-                          @@include('./tpls/components.insm/news-card.html', {})
-                        }
-                      </div>
-                      }
-                    </div>
-                  </div>
-                  <div class="accordion-carousel__pagination swiper-pagination"></div>
+                <div class="events__gallery">
+                    @@include('./tpls/components.insm/news-card.html', {})
+                    @@include('./tpls/components.insm/news-card.html', {})
+                    @@include('./tpls/components.insm/news-card.html', {})
                 </div>
-                
               </div>
             </div>
             <div class="screener__bg container">

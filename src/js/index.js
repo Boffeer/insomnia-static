@@ -14,6 +14,7 @@ import "./components.b/spawners/b_modal.js";
 
 import "./components.b/controls/b_tabs.js";
 import "./components.insm/_accordion-carousel.js";
+import "./components.insm/_single-article.js";
 
 // import "./components.sklh/_price-table.js";
 // import "./components.sklh/_quiz.js";
