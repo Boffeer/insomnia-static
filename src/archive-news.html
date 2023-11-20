@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+      @@include('tpls/b/meta-head.html',{
+        "title": "Insomnia",
+        "desc": "",
+        "themeColor": "#F15A29",
+      })
+      <link rel="stylesheet" href="./css/style.css">
+  </head>
+  
+  <body class="">
+
+    <div class="wrapper">
+      @@include('tpls/sections.insm/header.html',{})
+
+      <main class="main">
+        
+        <div class="screener screener--colored-primary">
+          <section class="news screener__layout" id="news">
+            <div class="screener__content screener__container">
+              <div class="screener__header">
+                <h1 class="screener__title">События</h1>
+              </div>
+              <div class="screener__body">
+                <div class="accordion-carousel">
+                  <div class="swiper accordion-carousel__swiper">
+                    <div class="swiper-wrapper">
+                      @@for (var i = 0; i < 5; i++) {
+                      <div class="swiper-slide accordion-carousel__slide">
+                        @@for (var i = 0; i < 6; i++) {
+                          <article class="news-card">
+                            <h3 class="news-card__title">
+                              <a href="#" class="news-card__link">Summer contest 2023</a>
+                            </h3>
+                            <p class="news-card__exerpt">Как уже неоднократно упомянуто, многие известные личности, инициированные исключительно синтетически, представлены в исключительно положительном свете. </p>
+                            <div class="news-card__media">
+                              <picture class="news-card__media-pic">
+                                <img class="news-card__media-img" src="./img/news.insm/news-1.jpg" alt="">
+                              </picture>
+                            </div>
+                          </article>
+                        }
+                      </div>
+                      }
+                    </div>
+                  </div>
+                  <div class="accordion-carousel__pagination swiper-pagination"></div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="screener__bg container">
+              <div class="screener__particles-upper">
+              </div>
+              <div class="screener__particles-bottom">
+                <div class="blob js_use-bg" data-use-bg="./img/news.insm/blob-1.svg"></div>
+                <div class="blob js_use-bg" data-use-bg="./img/news.insm/blob-2.svg"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </main>
+
+      @@include('tpls/sections.insm/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+
+    <script src="./js/index.min.js"></script>
+  </body>
+</html>

@@ -55,18 +55,14 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 1.8em;
+	// padding: 1.8em;
 }
 
 .fixed-widget__socials .socials__link {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 2.8em;
 }
 
-.fixed-widget__socials .socials__link:first-of-type {
-	margin-top: 0;
-}
 .fixed-widget__socials .socials__link:last-of-type {
 	margin-right: auto;
 }

@@ -13,6 +13,7 @@ import "./components.b/controls/formich.js";
 // import "./components.b/lego/wysiwyg.js";
 
 import "./components.b/controls/b_tabs.js";
+import "./components.insm/_accordion-carousel.js";
 
 // import "./components.sklh/_price-table.js";
 // import "./components.sklh/_quiz.js";

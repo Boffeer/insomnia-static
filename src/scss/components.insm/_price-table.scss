@@ -12,6 +12,11 @@
 	grid-template-columns: auto 15em 15em;
 	gap: 2em;
 	margin-bottom: 2em;
+	text-transform: uppercase;
+}
+
+.price-table__row p {
+	text-transform: initial;
 }
 
 .price-table__row:last-child {
