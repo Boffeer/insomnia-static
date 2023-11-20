@@ -7,11 +7,13 @@
   --c-b_modal-closer-hover: #ff3b30;
   --z-b_modal: 1234567890;
 
-  --bg-overlay: rgba(0, 0, 0, 0);
+  --overlay-bg: rgba(241, 87, 63, 0);
+  --overlay-bg-visible: rgba(241, 87, 63, 0.52);
+  --overlay-bg-filter: blur(0.2em);
 
-  --bg-overlay-visible: rgba(0, 0, 0, 0.8);
-
-  --bg-b_modal-closer: rgba(222,222,222, 0.5);
+  --bg-b_modal-closer: #fff;
+  --closer-radius: 9999px;
+  --closer-icon-color: var(--c-secondary);
 }
 
 .b_modal__storage {
@@ -32,12 +34,12 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background-color: var(--bg-overlay);
+  background-color: var(--overlay-bg);
   transition: all 0.5s var(--tr-jolly-leave);
 }
 .b_modal__overlay._show {
   pointer-events: initial;
-  background-color: var(--bg-overlay-visible);
+  background-color: var(--overlay-bg-visible);
   transition: all 0.5s var(--tr-jolly-enter);
 }
 
@@ -83,7 +85,7 @@
   color: transparent;
   transition: all 0.3s ease;
   background-color: var(--bg-b_modal-closer);
-  border-radius: 1rem;
+  border-radius: var(--closer-radius, 1rem);
   transform: scale(0);
 }
 
@@ -93,15 +95,18 @@
 
 .b_modal__closer::before,
 .b_modal__closer::after {
-  --closer-color: rgba(0,0,0, 1);//#fff;
+  --closer-color: var(--closer-icon-color, rgba(0,0,0, 1));//#fff;
   content: "";
   position: absolute;
-  top: 44%;
+  // top: 44%;
+  top: 47%;
   right: 0;
   left: 0;
   display: block;
-  width: 80%;
-  height: 13%;//8%;
+  // width: 80%;
+  // height: 13%;//8%;
+  width: 68%;
+  height: 9%;
   margin-right: auto;
   margin-left: auto;
   border-radius: 1em;

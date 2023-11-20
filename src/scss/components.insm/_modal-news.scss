@@ -1,0 +1,69 @@
+.modal-news {
+	position: relative;
+	--padding: 2em;
+	font-size: 1rem;
+	max-width: 43.9em;
+	min-height: 62.8em;
+	background: var(--c-secondary);
+	border-radius: 2.5em;
+	margin-top: 11em;
+}
+
+.modal-news__media {
+	border-radius: inherit;
+	margin-bottom: 2.2em;
+}
+.modal-news__media-pic {
+	border-radius: inherit;
+}
+.modal-news__media-img {
+	border-radius: inherit;
+}
+
+.modal-news__body {
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+.modal-news__title {
+	font-size: 1.6em;
+	margin-bottom: 1.25em;
+	text-transform: uppercase;
+}
+
+.modal-news__content {
+	font-size: 1.4em;
+}
+
+.modal-news__buttons {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: var(--padding);
+}
+
+.modal-news__button {
+	background-color: #fff;
+	--size: 3.6em;
+	--width: var(--size);
+	--height: var(--size);
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	border-radius: var(--size);
+}
+
+.modal-news__button-icon {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: translateX(0.1em);
+}
+
+.modal-news__button-prev .modal-news__button-icon {
+	transform: translateX(-0.1em) scaleX(-1);
+}
