@@ -15,6 +15,7 @@ import "./components.b/spawners/b_modal.js";
 import "./components.b/controls/b_tabs.js";
 import "./components.insm/_accordion-carousel.js";
 import "./components.insm/_single-article.js";
+import "./components.insm/_training.js";
 
 // import "./components.sklh/_price-table.js";
 // import "./components.sklh/_quiz.js";
@@ -28,6 +29,22 @@ import "./components.insm/_single-article.js";
 
 // import "./sections.sklh/_content-reviews.js";
 
+import barba from '@barba/core';
+
+window.barba = barba
+// barba.init({
+// 	transitions: [{
+//     name: 'default-transition',
+//     leave(data) {
+//     	console.log(data)
+//       // create your stunning leave animation here
+//     },
+//     enter(data) {
+//     	console.log(data)
+//       // create your amazing enter animation here
+//     }
+//   }]
+// });
 
 window.addEventListener('DOMContentLoaded', (event) => {
 });

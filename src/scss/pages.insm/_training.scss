@@ -1,0 +1,87 @@
+.training {
+
+}
+
+.training__body {
+	display: grid;
+	grid-template-columns: 44em 49em;
+	gap: 4em;
+}
+
+
+.training-carousel {
+	max-width: 44em;
+	width: 100%;
+}
+
+.training .screener__particles-bottom .blob:nth-child(1) {
+	position: absolute;
+	width: 69.4em;
+	height: 67.5em;
+	top: 0;
+	right: 0;
+}
+
+.training .screener__particles-bottom .blob:nth-child(2) {
+	position: absolute;
+	width: 15.8em;
+	height: 8.6em;
+	left: 22.8em;
+	bottom: 0;
+	top: unset;
+}
+
+
+.training__content {
+	padding-top: 0.7em;
+}
+
+.training__title {
+	font-size: 2.4em;
+	font-weight: 900;
+	color: var(--fg-accent);
+	margin-bottom: 1.45em;
+	text-transform: uppercase;
+}
+
+.training__course-card {
+	margin-bottom: 3.1em;
+}
+
+.training__course-card-title {
+	font-size: 1.4em;
+	font-weight: 700;
+	color: var(--fg-accent);
+	margin-bottom: 0.6em;
+	text-transform: uppercase;
+}
+
+.training__course-card-desc {
+	font-size: 1.2em;
+	line-height: initial;
+	margin-bottom: 2.58em;
+}
+
+.training__course-card-plan-list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.training__course-card-plan {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 1.4em;
+	margin-right: 5em;
+}
+
+.training__course-card-plan-name {
+	color: var(--fg-accent);
+	margin-right: 0.7em;
+	font-weight: 400;
+}
+
+.training__course-card-plan-price {
+	font-weight: 700;
+}

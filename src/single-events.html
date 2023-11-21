@@ -9,13 +9,12 @@
       <link rel="stylesheet" href="./css/style.css">
   </head>
   
-  <body class="">
+  <body data-barba="wrapper">
 
     <div class="wrapper">
       @@include('tpls/sections.insm/header.html',{})
 
-      <main class="main">
-        
+      <main class="main" data-barba="container" data-barba-namespace="home">
         <div class="screener screener--colored-primary">
           <section class="news screener__layout" id="news">
             <div class="screener__content screener__container">
@@ -51,7 +50,7 @@
                       </p>
                     </div>
                     <div class="single-article__buttons">
-                      <a href="#" class="single-article__button">
+                      <a href="main.html" class="single-article__button">
                         <img class="single-article__button-icon" src="./img/single-event.insm/food.svg" alt="">
                         <span class="single-article__button-text">Menu</span>
                       </a>
