@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		autoHeight: true,
 		speed: 450,
 		slidesPerView: 3,
+		slidesPerGroup: 3,
 		modules: [Navigation, Pagination, EffectCreative],
 		spaceBetween: 30,
 		// effect: "creative",

@@ -1,4 +1,46 @@
 .swiper-pagination {
+	position: static;
+	display: flex;
+	font-size: 1rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	--size: 2.6em;
+	--width: var(--size);
+	--height: var(--size);
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	margin-right: 2em;
+	background: #fff;
+	border-radius: var(--size);
+}
+
+.swiper-pagination .swiper-pagination-bullet::before {
+	content: "";
+	width: 1.4em;
+	height: 1.4em;
+	display: block;
+	background-color: var(--c-secondary);
+	border-radius: inherit;
+	transition: all 0.35s var(--tr-jolly-enter);
+	opacity: 0;
+	transform: scale(0);
+}
+
+.swiper-pagination .swiper-pagination-bullet-active::before {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/*
+.swiper-pagination {
 	display: flex;
 	justify-content: space-between;
 	max-width: 44rem;
@@ -87,3 +129,5 @@
 		opacity: 0.5;
 	}
 }
+
+*/

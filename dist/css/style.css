@@ -1737,6 +1737,139 @@ body._lock {
   transform: translateX(0);
 }
 
+.swiper-pagination {
+  position: static;
+  display: flex;
+  font-size: 1rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --size: 2.6em;
+  --width: var(--size);
+  --height: var(--size);
+  width: var(--width);
+  min-width: var(--width);
+  max-width: var(--width);
+  height: var(--height);
+  min-height: var(--height);
+  max-height: var(--height);
+  margin-right: 2em;
+  background: #fff;
+  border-radius: var(--size);
+}
+
+.swiper-pagination .swiper-pagination-bullet::before {
+  content: "";
+  width: 1.4em;
+  height: 1.4em;
+  display: block;
+  background-color: var(--c-secondary);
+  border-radius: inherit;
+  transition: all 0.35s var(--tr-jolly-enter);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.swiper-pagination .swiper-pagination-bullet-active::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*
+.swiper-pagination {
+	display: flex;
+	justify-content: space-between;
+	max-width: 44rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.swiper-pagination-bullet  {
+	width: 100%;
+	display: block;
+	height: 0.2rem;
+	background-color: rgba(255, 255, 255, 0.20);
+	transition: var(--tr);
+	margin-left: 0.8rem;
+	margin-right: 0.8rem;
+	border-radius: 0.2rem;
+
+	@media (max-width: $tablet) {
+		margin-left: 0.4rem;
+		margin-right: 0.4rem;
+	}
+}
+
+.swiper-pagination-bullet:first-child  {
+	margin-left: 0;
+}
+.swiper-pagination-bullet:last-child  {
+	margin-right: 0;
+}
+
+
+.swiper-pagination-bullet-active {
+	background-color: var(--c-primary);
+}
+
+.swiper-button-next:empty,
+.swiper-button-prev:empty {
+	width: 5rem;
+	height: 2.4rem;
+	position: relative;
+}
+.swiper-button-next:empty::before,
+.swiper-button-prev:empty::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.swiper-button-prev {
+}
+.swiper-button-prev:empty::before {
+	background-image: url("../img/sklh_common/arrow-left.svg");
+}
+
+.swiper-button-next {
+}
+.swiper-button-next:empty::before {
+	background-image: url("../img/sklh_common/arrow-right.svg");
+}
+
+
+.swiper-button-next:empty::after,
+.swiper-button-prev:empty::after {
+	content: "";
+	z-index: 1;
+	left: 0;
+	top: 0;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	filter: blur(0.7rem);
+	transition: all 0.3s ease;
+	background: rgba(215, 191, 127, 0.80);
+}
+
+.swiper-button-next:empty:hover::after,
+.swiper-button-prev:empty:hover::after {
+	@media (any-hover:hover) {
+		opacity: 0.5;
+	}
+}
+
+*/
 .wysiwyg {
   --wysiwyg-fz: 1rem;
   --accent: var(--c-primary);
@@ -2336,7 +2469,7 @@ body._lock {
 }
 
 .fixed-widget {
-  --offset-horizontal: 4.2em;
+  --offset-horizontal: 6em;
   font-size: 1rem;
   position: fixed;
   bottom: 4.2em;
@@ -2484,47 +2617,6 @@ body._lock {
 
 .accordion-carousel__slide .news-card:last-of-type {
   margin-right: 0;
-}
-
-.accordion-carousel__pagination {
-  position: static;
-  display: flex;
-  font-size: 1rem;
-}
-
-.accordion-carousel__pagination .swiper-pagination-bullet {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  --size: 2.6em;
-  --width: var(--size);
-  --height: var(--size);
-  width: var(--width);
-  min-width: var(--width);
-  max-width: var(--width);
-  height: var(--height);
-  min-height: var(--height);
-  max-height: var(--height);
-  margin-right: 2em;
-  background: #fff;
-  border-radius: var(--size);
-}
-
-.accordion-carousel__pagination .swiper-pagination-bullet::before {
-  content: "";
-  width: 1.4em;
-  height: 1.4em;
-  display: block;
-  background-color: var(--c-secondary);
-  border-radius: inherit;
-  transition: all 0.35s var(--tr-jolly-enter);
-  opacity: 0;
-  transform: scale(0);
-}
-
-.accordion-carousel__pagination .swiper-pagination-bullet-active::before {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .accordion-carousel__slide .news-card.active {
@@ -2875,9 +2967,10 @@ body._lock {
 .header__burger {
   --c-burger-line: var(--c-primary);
   --line-width: 100%;
+  --line-height: 0.6em;
   --line-offset: 1.1rem;
-  --burger-width: 4rem;
-  --burger-height: 2.8rem;
+  --burger-width: 6rem;
+  --burger-height: 4.8rem;
   margin: 0;
   z-index: 3;
   transition: all 0.3s ease;
@@ -3430,6 +3523,10 @@ body._lock {
   left: 22.8em;
   bottom: 0;
   top: unset;
+}
+
+.training-carousel__swiper {
+  margin-bottom: 7em;
 }
 
 .training__content {
