@@ -43,7 +43,7 @@
       <link rel="stylesheet" href="./css/style.css?_v=20231126130755">
   </head>
   
-  <body class="">
+  <body data-barba="wrapper">
 
     <div class="wrapper">
       <header class="header">
@@ -108,55 +108,70 @@
 </header>
 
 
-      <main class="main">
-        
+      <main class="main" data-barba="container" data-barba-namespace="home">
         <div class="screener screener--colored-primary">
-          <section class="news screener__layout" id="news">
+          <section class="about screener__layout" id="about">
             <div class="screener__content screener__container">
               <div class="screener__header">
-                <h1 class="screener__title">Ивенты</h1>
+                <h1 class="screener__title">Меню</h1>
               </div>
               <div class="screener__body">
-                <div class="events__gallery">
-                    <article class="news-card">
-	<h3 class="news-card__title">
-		<img class="news-card__icon" src="./img/common.insm/bullet.svg" alt="">
-		<a href="#" class="news-card__link">Summer contest 2023</a>
-	</h3>
-	<p class="news-card__exerpt">Как уже неоднократно упомянуто, многие известные личности, инициированные исключительно синтетически, представлены в исключительно положительном свете. </p>
-	<div class="news-card__media">
-		<picture class="news-card__media-pic">
-			<img class="news-card__media-img" src="./img/news.insm/news-1.jpg" alt="">
-		</picture>
-	</div>
-</article>
-
-                    <article class="news-card">
-	<h3 class="news-card__title">
-		<img class="news-card__icon" src="./img/common.insm/bullet.svg" alt="">
-		<a href="#" class="news-card__link">Summer contest 2023</a>
-	</h3>
-	<p class="news-card__exerpt">Как уже неоднократно упомянуто, многие известные личности, инициированные исключительно синтетически, представлены в исключительно положительном свете. </p>
-	<div class="news-card__media">
-		<picture class="news-card__media-pic">
-			<img class="news-card__media-img" src="./img/news.insm/news-1.jpg" alt="">
-		</picture>
-	</div>
-</article>
-
-                    <article class="news-card">
-	<h3 class="news-card__title">
-		<img class="news-card__icon" src="./img/common.insm/bullet.svg" alt="">
-		<a href="#" class="news-card__link">Summer contest 2023</a>
-	</h3>
-	<p class="news-card__exerpt">Как уже неоднократно упомянуто, многие известные личности, инициированные исключительно синтетически, представлены в исключительно положительном свете. </p>
-	<div class="news-card__media">
-		<picture class="news-card__media-pic">
-			<img class="news-card__media-img" src="./img/news.insm/news-1.jpg" alt="">
-		</picture>
-	</div>
-</article>
-
+                <div class="single-article single-article--reverse">
+                  <div class="single-article-carousel">
+                    <div class="swiper single-article-carousel__swiper">
+                      <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide single-article-carousel__slide">
+                          <div class="single-article-carousel__media">
+                            <picture class="single-article-carousel__media-pic">
+                              <img class="single-article-carousel__media-img" src="./img/events.insm/single-events-hero.jpg" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        
+                        <div class="swiper-slide single-article-carousel__slide">
+                          <div class="single-article-carousel__media">
+                            <picture class="single-article-carousel__media-pic">
+                              <img class="single-article-carousel__media-img" src="./img/events.insm/single-events-hero.jpg" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        
+                        <div class="swiper-slide single-article-carousel__slide">
+                          <div class="single-article-carousel__media">
+                            <picture class="single-article-carousel__media-pic">
+                              <img class="single-article-carousel__media-img" src="./img/events.insm/single-events-hero.jpg" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="b_swiper__buttons single-article-carousel__buttons">
+                      <div class="swiper-button-prev single-article-carousel__button-prev"></div>
+                      <div class="swiper-button-next single-article-carousel__button-next"></div>
+                    </div>
+                  </div>
+                  <div class="single-article__body">
+                    <h2 class="single-article__title single-article__title--big">
+                      Вкусные и сытные блюда для всей семьи
+                    </h2>
+                    <div class="single-article__content wysiwyg">
+                      <p>
+                        Бистро – это место, где каждый найдет блюдо по своему вкусу. Здесь представлены разнообразные блюда: от классических супов до горячих блюд на гриле и десертов. В меню можно найти пиццу на любой вкус. Кроме того, в бистро представлен широкий ассортимент напитков: кофе, чай, соки и алкогольные напитки, чтобы каждый мог выбрать то, что ему больше нравится.
+                      </p>
+                    </div>
+                    <div class="single-article__buttons">
+                      <a href="main.html" class="single-article__button">
+                        <img class="single-article__button-icon" src="./img/single-event.insm/food.svg" alt="">
+                        <span class="single-article__button-text">Menu</span>
+                      </a>
+                      <a href="#" class="single-article__button">
+                        <img class="single-article__button-icon" src="./img/single-event.insm/bar.svg" alt="">
+                        <span class="single-article__button-text">BAR</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -164,8 +179,8 @@
               <div class="screener__particles-upper">
               </div>
               <div class="screener__particles-bottom">
-                <div class="blob js_use-bg" data-use-bg="./img/news.insm/blob-1.svg"></div>
-                <div class="blob js_use-bg" data-use-bg="./img/news.insm/blob-2.svg"></div>
+                <div class="blob js_use-bg" data-use-bg="./img/about.insm/blob-1.svg"></div>
+                <div class="blob js_use-bg" data-use-bg="./img/about.insm/blob-2.svg"></div>
               </div>
             </div>
           </section>

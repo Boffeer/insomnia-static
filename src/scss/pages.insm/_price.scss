@@ -8,8 +8,7 @@
 	text-transform: uppercase;
 	font-weight: 600;
 	display: block;
-	padding: 0.6em 2em;
-	// padding: 0.6em 3em;
+	padding: 0.5em 2.6em;
 	border-radius: 2.5em;
 	border: 0.15em solid #FFF;
 	transition: all 0.3s ease;
@@ -33,7 +32,7 @@
 
 .price .screener__particles-bottom .blob:nth-child(1) {
 	position: absolute;
-	width: 69.4em;
+	width: 71.4em;
 	height: 67.5em;
 	top: 0;
 	right: 0;
@@ -43,7 +42,7 @@
 	position: absolute;
 	width: 15.8em;
 	height: 8.6em;
-	left: 22.8em;
+	left: 21.8em;
 	bottom: 0;
 	top: unset;
 }
@@ -84,23 +83,25 @@
 	color: var(--fg-accent);
 	font-weight: 500;
 	text-transform: uppercase;
-	margin-bottom: 1em;
+	margin-bottom: 1.2em;
 }
 
 .price-offer__card {
 	display: grid;
-	grid-template-columns: auto 10em;
+	grid-template-columns: auto 12em;
 	align-items: center;
 	margin-bottom: 2em;
 }
+
 .price-offer__card-title {
 	font-size: 1.6em;
 	color: var(--fg-accent);
 	font-weight: 500;
 	text-transform: uppercase;
-	margin-bottom: 0.625em;
+	margin-bottom: 0.9em;
 	line-height: 1;
 }
+
 .price-offer__card-desc {
 	font-size: 1.4em;
 	line-height: initial;
@@ -112,4 +113,11 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+
+.price .screener__title {
+	margin-bottom: 0;
 }

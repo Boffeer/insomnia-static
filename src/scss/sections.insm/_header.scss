@@ -13,7 +13,7 @@
 	color: var(--fg-panel);
 	--brad: 5em;
 	border-radius: 0 0 var(--brad) var(--brad);
-	--p-container: 2.8em;
+	--p-container: 3.2em;
 	padding-top: 2em;
 	padding-bottom: 2em;
 }
@@ -35,6 +35,14 @@
 	z-index: 3;
 	transition: all 0.3s ease;
 	display: block;
+	margin-top: 2em;
+	margin-left: 2em;
+}
+.burger.is-active .burger__line:nth-child(1) {
+    transform: translate(-50%, calc(-50% - 0px)) rotate(30deg);
+}
+.burger.is-active .burger__line:nth-child(3) {
+    transform: translate(-50%, calc(-50% - 0px)) rotate(30deg);
 }
 
 .header__burger .burger__line:nth-of-type(2) {

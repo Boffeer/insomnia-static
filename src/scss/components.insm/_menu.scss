@@ -19,9 +19,9 @@
 .menu__nav {
 	background: var(--bg-panel);
 	border-radius: 0 0 var(--brad) var(--brad);
-	padding-top: 14.2em;
-	padding-left: 15.8em;
-	padding-bottom: 10.5em;
+	padding-top: 18.2em;
+  padding-left: 15.3em;
+  padding-bottom: 9.4em;
 	transform: translateY(-100%);
 	transition: all 0.3s var(--tr-jolly-enter);
 }
@@ -37,7 +37,8 @@
 
 .menu__nav-item {
 	font-size: 6.8em;
-	line-height: 1.17em;
+	line-height: 1.17;
+  margin-bottom: -0.045em;
 }
 
 .menu__nav-item:nth-of-type(2),

@@ -1,10 +1,16 @@
 .single-article {
+	--carousel-width: 56.1em;
 	font-size: 1rem;
 	display: grid;
-	grid-template-columns: 56.1em auto;
+	grid-template-columns: var(--carousel-width) auto;
 	column-gap: 3.9em;
 }
 
+.single-article--reverse {
+	@media (min-width: $tablet + 1) {
+		grid-template-columns: 32em var(--carousel-width);
+	}
+}
 
 .single-article-carousel {
 	position: relative;
@@ -77,11 +83,19 @@
 	flex-direction: column;
 }
 
+.single-article--reverse .single-article__body {
+	width: 100%;
+	order: -1;
+}
+
 .single-article__title {
 	font-size: 1.4em;
 	font-weight: 600;
 	margin-bottom: 1.42em;
 	text-transform: uppercase;
+}
+.single-article__title--big {
+	font-size: 1.8em;
 }
 
 .single-article__buttons {

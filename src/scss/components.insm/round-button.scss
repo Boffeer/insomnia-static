@@ -15,10 +15,9 @@
 
 .round-button__text {
 	fill: none;
-	font-size: 70%;
-	animation: spin 10s infinite linear;
+	animation: spin 25s infinite linear;
 	text-transform: uppercase;
-	font-size: 1.05em;
+	font-size: 1.4em;
 }
 @keyframes spin {
   100% {transform: rotate(360deg)}
@@ -30,11 +29,11 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 50%;
-	height: 50%;
+	width: 60%;
+	height: 60%;
 	border-radius: 99999px;
 	z-index: 2;
 	border: 0.4em solid;
 	margin: auto;
-	padding: 0.6em;
+	padding: 0.8em;
 }
