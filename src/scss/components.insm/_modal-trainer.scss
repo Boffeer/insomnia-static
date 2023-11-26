@@ -1,11 +1,12 @@
 .modal-trainer {
 	position: relative;
-	--padding: 2em;
+	// --padding: 2em;
+	--padding: 1.6em;
 	font-size: 1rem;
 	max-width: 32em;
 	background: var(--c-accent-second);
 	border-radius: 2.5em;
-	margin-top: 11em;
+	margin-top: 4em;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -45,11 +46,12 @@
 .modal-trainer__title {
 	font-size: 1.6em;
 	margin-bottom: 1.25em;
-	text-transform: uppercase;
+	line-height: 1.1;
 }
 
 .modal-trainer__content {
-	font-size: 1em;
+	font-size: 0.85714em;
+	--lh-regular: 1.15;
 }
 
 .modal-trainer__buttons {

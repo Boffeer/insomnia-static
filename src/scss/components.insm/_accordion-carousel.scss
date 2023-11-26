@@ -33,7 +33,7 @@
 	flex: 4;
 }
 
-.accordion-carousel__slide .news-card__media.active::before {
+.accordion-carousel__slide .news-card.active .news-card__media::before {
 	opacity: 1;
 }
 

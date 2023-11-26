@@ -40,7 +40,7 @@
 	line-height: initial;
 	text-transform: uppercase;
 	color: var(--c-secondary);
-	margin-right: 4rem;
+	margin-right: 0.55em;
 	margin-bottom: 0.15em;
 	font-family: var(--ff-title);
 }
@@ -54,11 +54,12 @@
 .screener__header-columns {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	column-gap: 4.2em;
+	column-gap: 7.4em;
+	margin-top: -2.1em;
 }
 .screenser__header-column-title {
 	font-size: 1.2em;
-	margin-bottom: 0.8em;
+	margin-bottom: 0.9em;
 	color: var(--c-accent-second);
 	font-weight: 400;
 	line-height: 1;

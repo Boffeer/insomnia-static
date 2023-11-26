@@ -14,16 +14,23 @@
 .map .screener__particles-bottom .blob:nth-child(1) {
 	width: 71.1em;
 	height: 61.9em;
+	position: absolute;
 	right: 0;
-	left: unset;
-	top:unset;
-	bottom: 0;
+	top: 21.8em;
 }
 
 .map .screener__particles-bottom .blob:nth-child(2) {
 	width: 15.9em;
 	height: 17em;
-	left: 8.4em;
-	top: unset;
-	bottom: 27.5em;
+	position: absolute;
+    left: 8em;
+    top: 47%;
+}
+
+.map .screener__bg {
+	overflow: visible;
+}
+
+.map .screener__title {
+	margin-bottom: 0;
 }

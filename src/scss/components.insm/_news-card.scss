@@ -29,6 +29,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+	opacity: 0;
 	border-radius: inherit;
 	display: block;
 	width: 100%;
@@ -94,7 +95,8 @@
 
 .news-card__exerpt {
 	--transition: 0.35s var(--tr-jolly-enter);
-	--padding: 2.36em;
+	// --padding: 2.36em;
+	--padding: 3em 2.1em;
 	padding: var(--padding);
 	z-index: 2;
 	width: 100%;

@@ -1,30 +1,32 @@
-<div class="fixed-widget">
-	@@include('../b/socials.html', {
-		className: 'fixed-widget__socials',
-		socials: [
-			{
-				id: 'telegram',
-				name: 'TG',
-				href: 'https://t.me'
-			},
-			{
-				id: 'whatsapp',
-				name: 'WA',
-				href: 'https://wa.me'
-			},
-			{
-				id: 'instagram',
-				name: 'IG',
-				href: 'https://instagram.com'
-			},
-			{
-				id: 'tel',
-				name: 'tel',
-				href: 'tel:+711111111'
-			},
-		],
-	})
+<div class="fixed-widget-list">
+	<div class="fixed-widget">
+		@@include('../b/socials.html', {
+			className: 'fixed-widget__socials',
+			socials: [
+				{
+					id: 'telegram',
+					name: 'TG',
+					href: 'https://t.me'
+				},
+				{
+					id: 'whatsapp',
+					name: 'WA',
+					href: 'https://wa.me'
+				},
+				{
+					id: 'instagram',
+					name: 'IG',
+					href: 'https://instagram.com'
+				},
+				{
+					id: 'tel',
+					name: 'tel',
+					href: 'tel:+711111111'
+				},
+			],
+		})
+	</div>
+	<div class="fixed-widget fixed-widget--right fixed-widget-phone">
+		<a href="tel:+790000000" class="fixed-widget__text">+7 900 00 00 00</a>
 </div>
-<div class="fixed-widget fixed-widget--right fixed-widget-phone">
-	<a href="tel:+790000000" class="fixed-widget__text">+7 900 00 00 00</a>
 </div>

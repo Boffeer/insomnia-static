@@ -4,7 +4,7 @@
 
 .news .screener__particles-bottom .blob:nth-child(1) {
 	position: absolute;
-	bottom: -1em;
+	bottom: 0em;
 	left: 1.7em;
 	width: 79.3em;
 	height: 75.8em;
@@ -12,8 +12,12 @@
 
 .news .screener__particles-bottom .blob:nth-child(2) {
 	position: absolute;
-	top: 8em;
+	top: 14.9em;
 	right: -3em;
 	width: 42.5em;
-	height: 63em;
+	height: 56.5em;
+}
+
+.news .screener__title {
+	margin-bottom: 0;
 }

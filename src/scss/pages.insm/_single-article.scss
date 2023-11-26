@@ -3,7 +3,8 @@
 	font-size: 1rem;
 	display: grid;
 	grid-template-columns: var(--carousel-width) auto;
-	column-gap: 3.9em;
+	column-gap: 4.4em;
+	// column-gap: 3.9em;
 }
 
 .single-article--reverse {
@@ -75,6 +76,9 @@
 	border-radius: inherit
 }
 
+.single-article__content {
+	max-width: 32rem;
+}
 
 .single-article__body {
 	display: flex;
@@ -91,11 +95,13 @@
 .single-article__title {
 	font-size: 1.4em;
 	font-weight: 600;
-	margin-bottom: 1.42em;
+	margin-bottom: 1.6em;
 	text-transform: uppercase;
+	line-height: 1.2;
 }
 .single-article__title--big {
 	font-size: 1.8em;
+	margin-bottom: 1.2em;
 }
 
 .single-article__buttons {
@@ -103,6 +109,7 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	margin-bottom: -0.6em;
 }
 
 

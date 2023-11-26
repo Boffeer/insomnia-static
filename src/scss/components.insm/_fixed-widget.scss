@@ -1,9 +1,25 @@
+.fixed-widget-list {
+	font-size: 1em;
+	max-width: 77.2em;
+	margin-left: auto;
+	margin-right: auto;
+	position: fixed;
+	bottom: 2.8em;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: var(--z-header);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	pointer-events: none;
+}
+
 .fixed-widget {
+	pointer-events: initial;
 	--offset-horizontal: 6em;
 	font-size: 1rem;
-	position: fixed;
-	bottom: 4.2em;
-	left: var(--offset-horizontal);
+	position: relative;
 	z-index: var(--z-header);
 	background-color: #fff;
 	border: 0.4em solid var(--c-secondary);
@@ -15,8 +31,8 @@
 }
 
 .fixed-widget--right {
-	left: unset;
-	right: var(--offset-horizontal);
+	// left: unset;
+	// right: var(--offset-horizontal);
 }
 
 .fixed-widget-phone {

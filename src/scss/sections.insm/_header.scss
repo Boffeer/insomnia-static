@@ -42,7 +42,7 @@
     transform: translate(-50%, calc(-50% - 0px)) rotate(30deg);
 }
 .burger.is-active .burger__line:nth-child(3) {
-    transform: translate(-50%, calc(-50% - 0px)) rotate(30deg);
+    transform: translate(-50%, calc(-50% - 0px)) rotate(-30deg);
 }
 
 .header__burger .burger__line:nth-of-type(2) {

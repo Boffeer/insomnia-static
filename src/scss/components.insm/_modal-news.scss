@@ -15,7 +15,7 @@
 
 .modal-news__media {
 	border-radius: inherit;
-	margin-bottom: 2.2em;
+	margin-bottom: 3.3em;
 }
 .modal-news__media-pic {
 	border-radius: inherit;
@@ -27,17 +27,17 @@
 .modal-news__body {
 	padding-left: var(--padding);
 	padding-right: var(--padding);
-	padding-bottom: #{'calc(4 * var(--padding))'};
+	// padding-bottom: #{'calc(4 * var(--padding))'};
 }
 
 .modal-news__title {
 	font-size: 1.6em;
-	margin-bottom: 1.25em;
+	margin-bottom: 1em;
 	text-transform: uppercase;
 }
 
 .modal-news__content {
-	font-size: 0.85714em;
+	font-size: 1em;
 }
 
 .modal-news__buttons {

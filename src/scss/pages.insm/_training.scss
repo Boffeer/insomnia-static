@@ -5,7 +5,7 @@
 .training__body {
 	display: grid;
 	grid-template-columns: 44em 49em;
-	gap: 4em;
+	gap: 4.5em;
 }
 
 
@@ -43,7 +43,7 @@
 	font-size: 2.4em;
 	font-weight: 900;
 	color: var(--fg-accent);
-	margin-bottom: 1.45em;
+	margin-bottom: 1.5em;
 	text-transform: uppercase;
 }
 
@@ -63,6 +63,7 @@
 	font-size: 1.2em;
 	line-height: initial;
 	margin-bottom: 2.58em;
+	max-width: 37em;
 }
 
 .training__course-card-plan-list {
@@ -81,7 +82,7 @@
 
 .training__course-card-plan-name {
 	color: var(--fg-accent);
-	margin-right: 0.7em;
+	margin-right: 0.4em;
 	font-weight: 400;
 }
 

@@ -14,6 +14,8 @@
   --bg-b_modal-closer: #fff;
   --closer-radius: 9999px;
   --closer-icon-color: var(--c-secondary);
+  --closer-right: 1.5rem;
+  --closer-top: 1.5rem;
 }
 
 .b_modal__storage {
@@ -76,8 +78,8 @@
 
 .b_modal__closer {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: var(--closer-top);
+  right: var(--closer-right);
   display: block;
   width: 2.5em;
   height: 2.5em;
