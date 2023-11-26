@@ -2773,6 +2773,10 @@ body._lock {
   background: var(--c-secondary);
   border-radius: 2.5em;
   margin-top: 11em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .modal-news__media {
@@ -2791,6 +2795,7 @@ body._lock {
 .modal-news__body {
   padding-left: var(--padding);
   padding-right: var(--padding);
+  padding-bottom: calc(4 * var(--padding));
 }
 
 .modal-news__title {
@@ -2800,12 +2805,11 @@ body._lock {
 }
 
 .modal-news__content {
-  font-size: 1.4em;
+  font-size: 0.85714em;
 }
 
 .modal-news__buttons {
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -2834,6 +2838,93 @@ body._lock {
 }
 
 .modal-news__button-prev .modal-news__button-icon {
+  transform: translateX(-0.1em) scaleX(-1);
+}
+
+.modal-trainer {
+  position: relative;
+  --padding: 2em;
+  font-size: 1rem;
+  max-width: 32em;
+  background: var(--c-accent-second);
+  border-radius: 2.5em;
+  margin-top: 11em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.modal-trainer__media {
+  position: relative;
+  border-radius: inherit;
+  margin-bottom: 1.1em;
+  padding-top: 100%;
+  width: 100%;
+}
+
+.modal-trainer__media-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+}
+
+.modal-trainer__media-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.modal-trainer__body {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+}
+
+.modal-trainer__title {
+  font-size: 1.6em;
+  margin-bottom: 1.25em;
+  text-transform: uppercase;
+}
+
+.modal-trainer__content {
+  font-size: 1em;
+}
+
+.modal-trainer__buttons {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+}
+
+.modal-trainer__button {
+  background-color: #fff;
+  --size: 3.6em;
+  --width: var(--size);
+  --height: var(--size);
+  width: var(--width);
+  min-width: var(--width);
+  max-width: var(--width);
+  height: var(--height);
+  min-height: var(--height);
+  max-height: var(--height);
+  border-radius: var(--size);
+}
+
+.modal-trainer__button-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0.1em);
+}
+
+.modal-trainer__button-prev .modal-trainer__button-icon {
   transform: translateX(-0.1em) scaleX(-1);
 }
 

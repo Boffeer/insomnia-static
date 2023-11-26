@@ -1,10 +1,9 @@
-.modal-news {
+.modal-trainer {
 	position: relative;
 	--padding: 2em;
 	font-size: 1rem;
-	max-width: 43.9em;
-	min-height: 62.8em;
-	background: var(--c-secondary);
+	max-width: 32em;
+	background: var(--c-accent-second);
 	border-radius: 2.5em;
 	margin-top: 11em;
 	display: flex;
@@ -13,34 +12,47 @@
 	align-items: flex-start;
 }
 
-.modal-news__media {
+.modal-trainer__media {
+	position: relative;
 	border-radius: inherit;
-	margin-bottom: 2.2em;
+	margin-bottom: 1.1em;
+	padding-top: 100%;
+	width: 100%;
 }
-.modal-news__media-pic {
-	border-radius: inherit;
-}
-.modal-news__media-img {
+
+.modal-trainer__media-pic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
 	border-radius: inherit;
 }
 
-.modal-news__body {
+.modal-trainer__media-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.modal-trainer__body {
 	padding-left: var(--padding);
 	padding-right: var(--padding);
-	padding-bottom: #{'calc(4 * var(--padding))'};
 }
 
-.modal-news__title {
+.modal-trainer__title {
 	font-size: 1.6em;
 	margin-bottom: 1.25em;
 	text-transform: uppercase;
 }
 
-.modal-news__content {
-	font-size: 0.85714em;
+.modal-trainer__content {
+	font-size: 1em;
 }
 
-.modal-news__buttons {
+.modal-trainer__buttons {
 	margin-top: auto;
 	width: 100%;
 	display: flex;
@@ -48,7 +60,7 @@
 	padding: var(--padding);
 }
 
-.modal-news__button {
+.modal-trainer__button {
 	background-color: #fff;
 	--size: 3.6em;
 	--width: var(--size);
@@ -62,13 +74,13 @@
 	border-radius: var(--size);
 }
 
-.modal-news__button-icon {
+.modal-trainer__button-icon {
 	display: block;
 	width: 100%;
 	height: 100%;
 	transform: translateX(0.1em);
 }
 
-.modal-news__button-prev .modal-news__button-icon {
+.modal-trainer__button-prev .modal-trainer__button-icon {
 	transform: translateX(-0.1em) scaleX(-1);
 }
