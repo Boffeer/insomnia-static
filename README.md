@@ -1,8 +1,5 @@
 # Skillhouse
 
-- [репо](https://github.com/beefheads/skillhouse-static)
-- [макет]()
-
 ## Куда посмотреть что умеет сборка?
 - _quickfix.js — js полезности
 

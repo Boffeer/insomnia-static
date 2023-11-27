@@ -13,8 +13,11 @@
 	align-items: flex-start;
 
 	@media (max-width: $tablet) {
-		margin-top: 14.5em;
+		margin-top: 7.5em;
 		margin-bottom: 10em;
+	}
+	@media (max-width: $mobile) {
+		margin-top: 14.5em;
 	}
 }
 

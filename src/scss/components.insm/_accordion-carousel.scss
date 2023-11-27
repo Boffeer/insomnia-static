@@ -4,6 +4,9 @@
 
 .accordion-carousel__swiper {
 	@media (min-width: $tablet + 1) {
+		margin-bottom: 3.4em;
+	}
+	@media (min-width: $laptop-xlg + 1) {
 		margin-bottom: 5.8em;
 	}
 }

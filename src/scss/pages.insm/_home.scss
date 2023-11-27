@@ -17,10 +17,14 @@
     top: -0.7em;
 
     @media (max-width: $tablet) {
-    	width: 17.1em;
-	    height: 18.9em;
+    	width: 22.1em;
+	    height: 23.9em;
 	    right: -8.4em;
 	    top: -1.7em;
+    }
+    @media (max-width: $mobile) {
+    	width: 17.1em;
+	    height: 18.9em;
     }
 }
 
@@ -31,6 +35,12 @@
     top: 28.1em;
 
     @media (max-width: $tablet) {
+	    width: 24.1em;
+	    height: 17.2em;
+	    left: -6em;
+	    top: 19.6em;
+    }
+    @media (max-width: $mobile) {
 	    width: 22.1em;
 	    height: 17.2em;
 	    left: -9em;
@@ -45,9 +55,14 @@
 	top: 0;
 
 	@media (max-width: $tablet) {
+	    width: 32.2em;
+	    height: 54em;
+	    left: -2.1em;
+	    top: -9.5em;
+	}
+	@media (max-width: $mobile) {
 	    width: 22.2em;
 	    height: 44em;
-	    left: -2.1em;
 	    top: -8.5em;
 	}
 }

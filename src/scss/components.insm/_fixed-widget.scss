@@ -15,6 +15,10 @@
 	pointer-events: none;
 
 	@media (max-width: $tablet) {
+		bottom: 1.6em;
+	}
+
+	@media (max-width: $tablet) {
 		bottom: 3.5em;
 		justify-content: center;
 	}

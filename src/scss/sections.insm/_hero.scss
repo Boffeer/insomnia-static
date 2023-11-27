@@ -20,6 +20,9 @@
 	align-items: center;
 
 	@media (max-width: $tablet) {
+		height: 18.5em;
+	}
+	@media (max-width: $mobile) {
 		height: 9.5em;
 	}
 }
@@ -33,6 +36,8 @@
 	z-index: 1;
 
 	@media (max-width: $tablet) {
+	}
+	@media (max-width: $mobile) {
 		transform: scale(1.1);
 	}
 }
@@ -45,6 +50,9 @@
 	z-index: 2;
 
 	@media (max-width: $tablet) {
+		max-width: 22.6em;
+	}
+	@media (max-width: $mobile) {
 		max-width: 11.6em;
 	}
 }
@@ -61,8 +69,13 @@
     row-gap: 1.2em;
 
     @media (max-width: $tablet) {
-		grid-template-columns: 100%;
 	    row-gap: 1.9em;
+		grid-template-columns: 100%;
+		max-width: 28rem;
+		margin-left: auto;
+		margin-right: auto;
+    }
+    @media (max-width: $mobile) {
     }
 }
 

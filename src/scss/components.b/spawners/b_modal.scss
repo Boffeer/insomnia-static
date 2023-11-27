@@ -144,9 +144,12 @@
   padding-bottom: 0;
 }
 .b_modal--scrollable._show .b_modal__aligner  {
-  align-items: flex-start;
   overflow-x: hidden;
   overflow-y: auto;
+
+  @media (max-width: $tablet) {
+    align-items: flex-start;
+  }
 }
 
 .b_modal--slide-left {

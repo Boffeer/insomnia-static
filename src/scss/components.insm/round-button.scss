@@ -27,13 +27,36 @@
 		font-size: 1.25em;
 	}
 	@media (min-width: $desktop-md) {
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 	@media (min-width: $desktop-lg) {
-		font-size: 92%;
+		font-size: 103%;
 	}
 	@media (min-width: $desktop-xlg) {
-		font-size: 55%;
+		font-size: 75%;
+	}
+	@media (min-width: $desktop-xxlg) {
+		font-size: 50%;
+	}
+
+	@media (max-width: $laptop-lg) {
+		font-size: 1.6em;
+	}
+	@media (max-width: $laptop-sm) {
+		font-size: 1.8em;
+	}
+
+	@media (max-width: $tablet) {
+		font-size: 1em;
+	}
+	@media (max-width: $mobile) {
+		font-size: 0.9em;
+	}
+	@media (max-width: $mobile-xlg) {
+		font-size: 1.25em;
+	}
+	@media (max-width: $mobile-sm) {
+		font-size: 1.4em;
 	}
 	
 }
