@@ -1,4 +1,4 @@
-# Skillhouse
+# Starter
 
 ## Куда посмотреть что умеет сборка?
 - _quickfix.js — js полезности
