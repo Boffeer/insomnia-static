@@ -31,6 +31,10 @@
 	// display: block;
 	max-height: 100rem;
 	pointer-events: initial;
+
+	@media (max-width: $tablet) {
+		max-height: 200rem;
+	}
 }
 
 .tabs__panel.tab--animated {
@@ -54,4 +58,28 @@
 	@media (max-width: $tablet) {
 		height: 2rem;
 	}
+}
+
+
+.tabs__button-list-wrap {
+  @media (max-width: $tablet) {
+    overflow: hidden;
+    width: #{'calc(100% + 2 * 1.6rem)'};
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+  }
+}
+.tabs__button-list {
+  @media (max-width: $tablet) {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    overflow: auto;
+    margin-bottom: -2rem;
+  }
+}
+
+.tabs__button {
+  @media (max-width: $tablet) {
+  	margin-bottom: 2rem;
+  }
 }

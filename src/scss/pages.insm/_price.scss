@@ -1,6 +1,9 @@
 .price {
 	overflow: hidden;
-	max-height: 80vh
+
+	@media (min-width: $tablet + 1) {
+		max-height: 80vh;
+	}
 }
 
 .price__tabs-button {
@@ -13,6 +16,12 @@
 	border: 0.15em solid #FFF;
 	transition: all 0.3s ease;
 	margin-right: 1.3em;
+
+	@media (max-width: $tablet) {
+		font-size: 1.2em;
+		padding: 0.5em 1.9em;
+		margin-right: 0.8em;
+	}
 }
 
 .price__tabs-button:last-of-type {
@@ -23,11 +32,18 @@
 	background: #FF7A00;
 }
 
+.price__tabs-buttons-wrap {
+	margin-bottom: 3em;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 5em;
+	}
+}
+
 .price__tabs-buttons {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	margin-bottom: 3em;
 }
 
 .price .screener__particles-bottom .blob:nth-child(1) {
@@ -36,6 +52,12 @@
 	height: 67.5em;
 	top: 0;
 	right: 0;
+
+	@media (max-width: $tablet) {
+	    width: 36.4em;
+	    top: -4em;
+	    right: -4em;
+	}
 }
 
 .price .screener__particles-bottom .blob:nth-child(2) {
@@ -45,6 +67,10 @@
 	left: 21.8em;
 	bottom: 0;
 	top: unset;
+
+	@media (max-width: $tablet) {
+		display: none;
+	}
 }
 
 
@@ -53,6 +79,10 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 4em;
 	padding-bottom: 3em;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+	}
 }
 
 .price-offer__media  {
@@ -76,6 +106,10 @@
 
 .price-offer__content {
 	padding-top: 3.4em;
+
+	@media (max-width: $tablet) {
+		padding-top: 0;
+	}
 }
 
 .price-offer__title {
@@ -84,6 +118,11 @@
 	font-weight: 500;
 	text-transform: uppercase;
 	margin-bottom: 1.2em;
+
+	@media (max-width: $tablet) {
+		font-size: 1.4em;
+		margin-bottom: 1.5em;
+	}
 }
 
 .price-offer__card {
@@ -91,6 +130,11 @@
 	grid-template-columns: auto 12em;
 	align-items: center;
 	margin-bottom: 2em;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+		row-gap: 1.2em;
+	}
 }
 
 .price-offer__card-title {
@@ -100,11 +144,20 @@
 	text-transform: uppercase;
 	margin-bottom: 0.9em;
 	line-height: 1;
+
+	@media (max-width: $tablet) {
+		font-size: 1.4em;
+		margin-bottom: 1.1em;
+	}
 }
 
 .price-offer__card-desc {
 	font-size: 1.4em;
 	line-height: initial;
+
+	@media (max-width: $tablet) {
+		font-size: 1.2em;
+	}
 }
 
 .price-offer__card-cost {
@@ -115,9 +168,16 @@
 	line-height: normal;
 	text-align: right;
 	padding-right: 0.5em;
+
+	@media (max-width: $tablet) {
+		text-align: left;
+	}
 }
 
 
 .price .screener__title {
 	margin-bottom: 0;
+	@media (max-width: $tablet) {
+		margin-bottom: 0.45em;
+	}
 }
