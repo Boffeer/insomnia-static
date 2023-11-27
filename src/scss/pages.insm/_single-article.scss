@@ -84,7 +84,7 @@
 	border-radius: 5em;
 	height: 31.5em;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $mobile) {
 		height: 16em;
 		border-radius: 3.2em;
 	}
@@ -108,6 +108,10 @@
 .single-article__content {
 	max-width: 32rem;
 	margin-bottom: 1.8em;
+
+	@media (max-width: $tablet) and (min-width: $mobile + 1)  {
+		max-width: 100%;
+	}
 }
 
 .single-article__body {
@@ -145,7 +149,6 @@
 	margin-bottom: -0.6em;
 
 	@media (max-width: $tablet) {
-		justify-content: space-between;
 		width: 100%;
 		padding-right: 2em;
 	}
@@ -159,8 +162,12 @@
 	margin-right: 3.7em;
 
 	@media (max-width: $tablet) {
-		margin-right: 0;
+		margin-right: 4em;
 	}
+}
+
+.single-article__button:last-child {
+	margin-right: 0;
 }
 
 .single-article__button-icon {

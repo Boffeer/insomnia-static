@@ -82,6 +82,7 @@
 
 	@media (max-width: $tablet) {
 		grid-template-columns: 100%;
+		padding-bottom: 0;
 	}
 }
 
@@ -131,7 +132,7 @@
 	align-items: center;
 	margin-bottom: 2em;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $mobile) {
 		grid-template-columns: 100%;
 		row-gap: 1.2em;
 	}

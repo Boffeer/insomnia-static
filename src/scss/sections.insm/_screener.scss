@@ -41,9 +41,11 @@
 	align-items: center;
 	justify-content: flex-start;
 
+	@media (max-width: $laptop-sm) {
+		padding-top: 3.1em;
+	}
 	@media (max-width: $tablet) {
 		flex-direction: column;
-		padding-top: 3.1em;
 	}
 }
 
@@ -75,16 +77,8 @@
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 7.4em;
 	margin-top: -2.1em;
-
-	@media (max-width: $tablet) {
-		margin-top: 29.7em;
-	    grid-template-columns: 100%;
-	    width: 100%;
-	    padding-left: 1.6rem;
-	    padding-right: 1.6rem;
-	    row-gap: 2.1em;
-	}
 }
+
 .screenser__header-column-title {
 	font-size: 1.2em;
 	margin-bottom: 0.9em;

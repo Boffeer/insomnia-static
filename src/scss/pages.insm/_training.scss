@@ -21,6 +21,7 @@
 		margin-right: -1.6rem;
 		margin-left: -1.6rem;
 		width: #{'calc(100% + 1.6rem * 2)'};
+		max-width: #{'calc(100% + 1.6rem * 2)'};
 	}
 }
 
@@ -129,10 +130,14 @@
 	margin-right: 5em;
 
 	@media (max-width: $tablet) {
-		margin-right: 0;
+		margin-right: 2.5em;
 		margin-bottom: 0.85em;
 	}
+	@media (max-width: $mobile) {
+		margin-right: 0;
+	}
 }
+
 
 .training__course-card-plan-name {
 	color: var(--fg-accent);

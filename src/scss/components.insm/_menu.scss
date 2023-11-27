@@ -39,6 +39,10 @@
 .menu__nav-links {
 	font-family: var(--ff-title);
 	max-width: 56em;
+
+	@media (max-width: $tablet) {
+		max-width: 32em;
+	}
 }
 
 .menu__nav-item {
