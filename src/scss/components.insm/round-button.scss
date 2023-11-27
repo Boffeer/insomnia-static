@@ -11,6 +11,10 @@
 	max-height: var(--size);
 	font-size: 1rem;
 	color: var(--fg);
+
+	@media (max-width: $tablet) {
+		--size: 6em;
+	}
 }
 
 .round-button__text {
@@ -18,7 +22,22 @@
 	animation: spin 25s infinite linear;
 	text-transform: uppercase;
 	font-size: 1.4em;
+
+	@media (min-width: $desktop-lgz) {
+		font-size: 1.25em;
+	}
+	@media (min-width: $desktop-md) {
+		font-size: 1.1em;
+	}
+	@media (min-width: $desktop-lg) {
+		font-size: 92%;
+	}
+	@media (min-width: $desktop-xlg) {
+		font-size: 55%;
+	}
+	
 }
+
 @keyframes spin {
   100% {transform: rotate(360deg)}
 }

@@ -6,6 +6,9 @@
   --tr-regular: all var(--tr) ease;
 
   --p-container: 2.65rem;
+  @media (max-width: $tablet) {
+    --p-container: 1.6rem;
+  }
 
 
   // Widths

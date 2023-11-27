@@ -66,6 +66,9 @@ html {
   @media (max-width: $mobile-xxs) {
     --fz-modifier: 2.777777; // 360
   }
+  @media (max-width: $mobile-xxx) {
+    --fz-modifier: 3.125; // 360
+  }
   background-color: var(--bg-app);
 }
 
@@ -77,6 +80,10 @@ body {
   line-height: 145%;
   background: inherit;
   overscroll-behavior: none;
+
+  @media (min-width: $tablet + 1) {
+    overflow: hidden;
+  }
 }
 
 body._lock {
@@ -105,12 +112,6 @@ body._lock {
   margin-right: auto;
   padding-left: var(--p-container);
   padding-right: var(--p-container);
-}
-
-.main {
-  @media (max-width: $laptop-md) {
-    margin-top: auto;
-  }
 }
 
 // Библиотеки

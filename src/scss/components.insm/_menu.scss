@@ -24,6 +24,12 @@
   padding-bottom: 9.4em;
 	transform: translateY(-100%);
 	transition: all 0.3s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		padding-top: 12.1em;
+    padding-left: 1.6em;
+    min-height: 96.9vh;
+	}
 }
 
 .menu--visible .menu__nav {
@@ -39,6 +45,11 @@
 	font-size: 6.8em;
 	line-height: 1.17;
   margin-bottom: -0.045em;
+
+  @media (max-width: $tablet) {
+  	font-size: 3.5em;
+	  margin-bottom: 0.1em;
+  }
 }
 
 .menu__nav-item:nth-of-type(2),

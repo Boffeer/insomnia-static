@@ -16,12 +16,23 @@
 	--p-container: 3.2em;
 	padding-top: 2em;
 	padding-bottom: 2em;
+
+	@media (max-width: $tablet) {
+		--brad: 2.5em;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		--p-container: 1.6em;
+	}
 }
 
 .header__logo {
 	position: relative;
 	z-index: 2;
 	max-width: 6em;
+
+	@media (max-width: $tablet) {
+		max-width: 3.9em;
+	}
 }
 
 .header__burger {
@@ -37,7 +48,15 @@
 	display: block;
 	margin-top: 2em;
 	margin-left: 2em;
+
+	@media (max-width: $tablet) {
+	    --line-height: 0.3em;
+	    --line-offset: 0.7rem;
+	    --burger-width: 3.3rem;
+	    --burger-height: 4.6rem;
+	}
 }
+
 .burger.is-active .burger__line:nth-child(1) {
     transform: translate(-50%, calc(-50% - 0px)) rotate(30deg);
 }

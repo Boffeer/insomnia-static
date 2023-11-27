@@ -13,6 +13,11 @@
 	justify-content: space-between;
 	align-items: flex-end;
 	pointer-events: none;
+
+	@media (max-width: $tablet) {
+		bottom: 3.5em;
+		justify-content: center;
+	}
 }
 
 .fixed-widget {
@@ -39,6 +44,10 @@
 	padding: 2em 1.5em 1.7em;
 	transition: all 0.35s ease;
 	color: var(--c-secondary);
+
+	@media (max-width: $tablet) {
+		display: none;
+	}
 }
 
 .fixed-widget-phone:hover {
@@ -72,6 +81,13 @@
 	justify-content: center;
 	align-items: center;
 	// padding: 1.8em;
+
+	@media (max-width: $tablet) {
+		flex-direction: row;
+	    --icon-size: 2.6rem;
+	    --icon-gap: 0rem;
+	    --link-padding: 1.3rem;
+	}
 }
 
 .fixed-widget__socials .socials__link {

@@ -71,8 +71,7 @@
 
 
 .socials__link--tel {
-	display: none;
-	@media (max-width: $mobile) {
-		
+	@media (min-width: $tablet + 1) {
+		display: none;
 	}
 }

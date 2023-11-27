@@ -4,11 +4,24 @@
 	position: absolute;
 }
 
+.page-home .screener__particles-upper {
+	@media (max-width: $tablet) {
+		overflow: hidden
+	}
+}
+
 .page-home .screener__particles-upper .blob:nth-child(1) {
 	width: 39.1em;
     height: 50.9em;
     right: 2em;
     top: -0.7em;
+
+    @media (max-width: $tablet) {
+    	width: 17.1em;
+	    height: 18.9em;
+	    right: -8.4em;
+	    top: -1.7em;
+    }
 }
 
 .page-home .screener__particles-upper .blob:nth-child(2) {
@@ -16,6 +29,13 @@
     height: 57.2em;
     left: 0;
     top: 28.1em;
+
+    @media (max-width: $tablet) {
+	    width: 22.1em;
+	    height: 17.2em;
+	    left: -9em;
+	    top: 16.6em;
+    }
 }
 
 .page-home .screener__particles-bottom .blob:nth-child(1) {
@@ -23,4 +43,11 @@
 	height: 56em;
 	left: 14.7em;
 	top: 0;
+
+	@media (max-width: $tablet) {
+	    width: 22.2em;
+	    height: 44em;
+	    left: -2.1em;
+	    top: -8.5em;
+	}
 }

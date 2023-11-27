@@ -27,6 +27,14 @@
 	max-height: var(--height);
 	border: 0.4em solid #fff;
 	border-radius: 999em;
+
+	@media (max-width: $tablet) {
+	    --size: 3.8em;
+	    background-size: 2em;
+	    border-width: 0.3em;
+	    top: 1.3em;
+	    left: 0.4em;
+	}
 }
 
 .blob-button__text {
@@ -44,4 +52,11 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	z-index: 3;
+
+	@media (max-width: $tablet) {
+	    width: 4em;
+	    height: 1.9em;
+        top: 0.7em;
+        right: 135%;
+	}
 }
