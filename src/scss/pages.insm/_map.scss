@@ -3,7 +3,18 @@
 	display: block;
 	height: 38.9rem;
 	border-radius: 5em;
+
+	@media (max-width: $tablet) {
+		position: absolute;
+		top: 9.4em;
+		left: 0;
+		right: 0;
+		padding-left: 1.6em;
+		padding-right: 1.6em;
+		height: 23.5rem;
+	}
 }
+
 .map__frame iframe {
 	width: 100%;
 	height: 100%;
@@ -17,6 +28,16 @@
 	position: absolute;
 	right: 0;
 	top: 21.8em;
+
+	@media (max-width: $tablet) {
+		width: 32.1em;
+	    height: 49.9em;
+	    position: absolute;
+	    right: 0;
+	    top: 2.3em;
+	    top: -0.7em;
+	    background-image: url('../img/map.insm/blob-2-mobile.svg') !important;
+	}
 }
 
 .map .screener__particles-bottom .blob:nth-child(2) {
@@ -25,12 +46,29 @@
 	position: absolute;
     left: 8em;
     top: 47%;
+
+    @media (max-width: $tablet) {
+	    width: 9.9em;
+	    height: 10em;
+	    position: absolute;
+	    left: 18.7em;
+	    top: 37.4em;
+    }
 }
 
 .map .screener__bg {
 	overflow: visible;
+
+	@media (max-width: $tablet) {
+		overflow: hidden auto;
+	}
 }
 
 .map .screener__title {
 	margin-bottom: 0;
+}
+
+
+.map .screener__header-columns {
+	margin-bottom: 12rem;
 }

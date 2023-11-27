@@ -2,7 +2,7 @@
 import Swiper, { Navigation, Pagination, EffectCreative } from "swiper";
 
 window.addEventListener('DOMContentLoaded', (event) => {
-	const priceTable = document.querySelectorAll('.price-table');
+const priceTable = document.querySelectorAll('.price-table');
 	if (priceTable.length == 0) return;
 
 	const RERENDER_BREAKPOINT = 601;

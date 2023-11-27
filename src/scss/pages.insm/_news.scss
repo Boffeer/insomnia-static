@@ -8,6 +8,15 @@
 	left: 1.7em;
 	width: 79.3em;
 	height: 75.8em;
+
+	@media (max-width: $tablet) {
+		background-image: url('../img/about.insm/blob-1-mobile.svg') !important;
+	    top: 9.4em;
+	    right: -15em;
+	    width: 60.2em;
+	    left: unset;
+	    height: 40em;
+	}
 }
 
 .news .screener__particles-bottom .blob:nth-child(2) {
@@ -16,8 +25,16 @@
 	right: -3em;
 	width: 42.5em;
 	height: 56.5em;
+
+	@media (max-width: $tablet) {
+		display: none;
+	}
 }
 
 .news .screener__title {
 	margin-bottom: 0;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 0.45em;
+	}
 }

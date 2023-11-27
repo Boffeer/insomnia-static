@@ -179,6 +179,9 @@ class b_modal {
       const popupBody = pop.querySelector('.b_modal');
       if (popupBody.getBoundingClientRect().height > window.innerHeight) {
         pop.classList.add('b_modal--scrollable')
+      } else if (popupBody.classList.contains('b_modal--scrollable')) {
+        popupBody.classList.remove('b_modal--scrollable')
+        pop.classList.add('b_modal--scrollable')
       }
     }, 600)
 

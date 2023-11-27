@@ -6,12 +6,22 @@
 	display: grid;
 	grid-template-columns: 44em 49em;
 	gap: 4.5em;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+	}
 }
 
 
 .training-carousel {
 	max-width: 44em;
 	width: 100%;
+
+	@media (max-width: $tablet) {
+		margin-right: -1.6rem;
+		margin-left: -1.6rem;
+		width: #{'calc(100% + 1.6rem * 2)'};
+	}
 }
 
 .training .screener__particles-bottom .blob:nth-child(1) {
@@ -20,6 +30,12 @@
 	height: 67.5em;
 	top: 0;
 	right: 0;
+
+	@media (max-width: $tablet) {
+		width: 35.4em;
+	    height: 57.5em;
+	    right: -4em;
+	}
 }
 
 .training .screener__particles-bottom .blob:nth-child(2) {
@@ -29,14 +45,31 @@
 	left: 22.8em;
 	bottom: 0;
 	top: unset;
+
+	@media (max-width: $tablet) {
+		background-image: url('../img/prices.insm/blob-2-mobile.svg') !important;
+		bottom: unset;
+		top: 34em;
+	    width: 23.8em;
+	    height: 18.6em;
+	    left: 14.4em;
+	}
 }
 
 .training-carousel__swiper {
 	margin-bottom: 7em;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 4.3em;
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
 }
 
 .training__content {
-	padding-top: 0.7em;
+	@media (min-width: $tablet + 1) {
+		padding-top: 0.7em;
+	}
 }
 
 .training__title {
@@ -45,10 +78,20 @@
 	color: var(--fg-accent);
 	margin-bottom: 1.5em;
 	text-transform: uppercase;
+
+	@media (max-width: $tablet) {
+		font-weight: 700;
+		font-size: 2em;
+		line-height: 1.1;
+	}
 }
 
 .training__course-card {
 	margin-bottom: 3.1em;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 2em;
+	}
 }
 
 .training__course-card-title {
@@ -57,6 +100,7 @@
 	color: var(--fg-accent);
 	margin-bottom: 0.6em;
 	text-transform: uppercase;
+
 }
 
 .training__course-card-desc {
@@ -64,6 +108,11 @@
 	line-height: initial;
 	margin-bottom: 2.58em;
 	max-width: 37em;
+
+	@media (max-width: $tablet) {
+		line-height: 1.25;
+		margin-bottom: 1.78em;
+	}
 }
 
 .training__course-card-plan-list {
@@ -78,14 +127,30 @@
 	align-items: center;
 	font-size: 1.4em;
 	margin-right: 5em;
+
+	@media (max-width: $tablet) {
+		margin-right: 0;
+		margin-bottom: 0.85em;
+	}
 }
 
 .training__course-card-plan-name {
 	color: var(--fg-accent);
 	margin-right: 0.4em;
 	font-weight: 400;
+
+	@media (max-width: $tablet) {
+		margin-right: 0.6em;
+	}
 }
 
 .training__course-card-plan-price {
 	font-weight: 700;
+}
+
+
+.training .screener__title {
+	@media (max-width: $tablet) {
+		margin-bottom: 0.4em;
+	}
 }

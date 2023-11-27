@@ -11,6 +11,18 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+
+	@media (max-width: $tablet) {
+		margin-top: 14.5em;
+		margin-bottom: 10em;
+	}
+}
+
+.b_modal__overlay--modal-trainer .b_modal__aligner {
+	@media (max-width: $tablet) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .modal-trainer__media {
@@ -19,6 +31,10 @@
 	margin-bottom: 1.1em;
 	padding-top: 100%;
 	width: 100%;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 1.5em;
+	}
 }
 
 .modal-trainer__media-pic {
@@ -47,11 +63,21 @@
 	font-size: 1.6em;
 	margin-bottom: 1.25em;
 	line-height: 1.1;
+
+	@media (max-width: $tablet) {
+		font-weight: 500;
+		margin-bottom: 1.45em;
+	}
 }
 
 .modal-trainer__content {
 	font-size: 0.85714em;
 	--lh-regular: 1.15;
+
+	@media (max-width: $tablet) {
+		--lh-regular: 1.25;
+		font-size: 1em;
+	}
 }
 
 .modal-trainer__buttons {

@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 
+	const RERENDER_BREAKPOINT = 991;
 	const swiperConfig = {
 		autoHeight: true,
 		speed: 450,
@@ -58,9 +59,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		    loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
 		    loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
 		},
+	
 	}
 
-	let accordionSwiper = new Swiper(`.accordion-carousel__swiper`, swiperConfig);
+	let accordionSwiper = new Swiper('.accordion-carousel__swiper', swiperConfig);
+
+	function isSwiperDestroyed() {
+		let swiperDestroyed = accordionSwiper.destroyed === true;
+	  	return swiperDestroyed;
+	}
+
+	function initSwiper() {
+		let swiperDestroyed = isSwiperDestroyed();
+
+	  if (window.innerWidth > RERENDER_BREAKPOINT && swiperDestroyed) {
+	    accordionSwiper = new Swiper('.accordion-carousel__swiper', swiperConfig);
+	  } else if (window.innerWidth <= RERENDER_BREAKPOINT && !swiperDestroyed) {
+	    // accordionSwiper = new Swiper('.accordion-carousel__swiper', swiperConfig);
+	  	const destroy = accordionSwiper.destroy();
+	  }
+	}
+	window.addEventListener('resize', function() {
+	  initSwiper();
+	});
+	initSwiper();
 
 
 	initCards(carouselCards)

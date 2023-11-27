@@ -3,7 +3,9 @@
 }
 
 .accordion-carousel__swiper {
-	margin-bottom: 5.8em;
+	@media (min-width: $tablet + 1) {
+		margin-bottom: 5.8em;
+	}
 }
 
 .accordion-carousel__slide {
@@ -12,11 +14,21 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @media (max-width: $tablet) {
+    	display: grid;
+		gap: var(--gap);
+    }
 }
 
 .accordion-carousel__slide .news-card {
 	margin-left: 2em;
 	margin-right: 2em;
+
+	@media (max-width: $tablet) {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .accordion-carousel__slide .news-card:first-of-type {
@@ -30,40 +42,71 @@
 
 
 .accordion-carousel__slide .news-card.active {
-	flex: 4;
+	@media (min-width: $tablet + 1) {
+		flex: 4;
+	}
 }
 
 .accordion-carousel__slide .news-card.active .news-card__media::before {
-	opacity: 1;
+	@media (min-width: $tablet + 1) {
+		opacity: 1;
+	}
 }
 
 .accordion-carousel__slide .news-card.active .news-card__title {
-	opacity: 0;
+	@media (min-width: $tablet + 1) {
+		opacity: 0;
+	}
 }
 
 .accordion-carousel__slide .news-card .news-card__title {
-	max-width: 1em;
-	transform: translateY(-2em);
-	opacity: 0;
+	@media (min-width: $tablet + 1) {
+		max-width: 1em;
+		transform: translateY(-2em);
+		opacity: 0;
+	}
 }
 
 .accordion-carousel__slide .news-card.active .news-card__title {
-	transition: opacity var(--transition) 0.3s, transform var(--transition) 0.3s;
-	opacity: 1;
-	max-width: 100%;
-	transform: translateY(0);
+	@media (min-width: $tablet + 1) {
+		transition: opacity var(--transition) 0.3s, transform var(--transition) 0.3s;
+		opacity: 1;
+		max-width: 100%;
+		transform: translateY(0);
+	}
 }
 
 .accordion-carousel__slide .news-card .news-card__exerpt {
-	max-width: 1em;
-	opacity: 0;
-	transform: translateY(2em);
+	@media (min-width: $tablet + 1) {
+		max-width: 1em;
+		opacity: 0;
+		transform: translateY(2em);
+	}
 }
 
 .accordion-carousel__slide .news-card.active .news-card__exerpt {
-	--transition: 0.35s var(--tr-jolly-enter);
-	transition: opacity var(--transition) 0.3s, transform var(--transition) 0.3s;
-	opacity: 1;
-	max-width: 100%;
-	transform: translateY(0);
+	@media (min-width: $tablet + 1) {
+		--transition: 0.35s var(--tr-jolly-enter);
+		transition: opacity var(--transition) 0.3s, transform var(--transition) 0.3s;
+		opacity: 1;
+		max-width: 100%;
+		transform: translateY(0);
+	}
+}
+
+
+.accordion-carousel .swiper-wrapper {
+	@media (max-width: $tablet) {
+		display: grid;
+		--gap: 3em;
+		gap: var(--gap);
+	}
+}
+
+
+
+.accordion-carousel__pagination {
+	@media (max-width: $tablet) {
+		display: none;
+	}
 }

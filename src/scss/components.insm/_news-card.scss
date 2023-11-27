@@ -12,6 +12,11 @@
 	height: 39em;
 	flex: 1;
 	transition: all 0.45s var(--tr-jolly-enter);
+
+	@media (max-width: $tablet) {
+		height: 28em;
+		border-radius: 3em;
+	}
 }
 
 .news-card__media {
@@ -63,6 +68,10 @@
 	font-size: 1.6em;
 	font-weight: 500;
 	transition: opacity var(--transition) 0.2, transform var(--transition) 0.2;
+
+	@media (max-width: $tablet) {
+		--padding: 1.6em 1.325em;
+	}
 }
 
 .news-card__icon {
@@ -104,4 +113,9 @@
 	line-height: initial;
 	font-weight: 400;
 	transition: opacity var(--transition) 0.2, transform var(--transition) 0.2;
+
+	@media (max-width: $tablet) {
+		--padding: 2.3em 2.1em;
+		font-size: 1em;
+	}
 }

@@ -9,10 +9,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const swiperConfig = {
 		autoHeight: true,
 		speed: 450,
-		slidesPerView: 3,
-		slidesPerGroup: 3,
+		slidesPerView: 2.2,
+		slidesPerGroup: 2,
 		modules: [Navigation, Pagination, EffectCreative],
-		spaceBetween: 30,
+		spaceBetween: 20,
 		// effect: "creative",
 		// creativeEffect: {
 		// 	prev: {
@@ -35,6 +35,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		    loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
 		    loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
 		},
+
+		breakpoins: {
+			991: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 30,
+			}
+		}
 	}
 
 	let swiperCarousel = new Swiper(`.training-carousel__swiper`, swiperConfig);

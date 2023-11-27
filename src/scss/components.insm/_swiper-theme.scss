@@ -2,6 +2,10 @@
 	position: static;
 	display: flex;
 	font-size: 1rem;
+
+	@media (max-width: $tablet) {
+		justify-content: center;
+	}
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -20,6 +24,10 @@
 	margin-right: 2em;
 	background: #fff;
 	border-radius: var(--size);
+
+	@media (max-width: $tablet) {
+		--size: 1.6em;
+	}
 }
 
 .swiper-pagination .swiper-pagination-bullet::before {
@@ -32,6 +40,11 @@
 	transition: all 0.35s var(--tr-jolly-enter);
 	opacity: 0;
 	transform: scale(0);
+
+	@media (max-width: $tablet) {
+		width: 0.8em;
+		height: 0.8em;
+	}
 }
 
 .swiper-pagination .swiper-pagination-bullet-active::before {

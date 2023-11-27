@@ -30,6 +30,10 @@
 	font-weight: 700;
 	margin-bottom: 1.1em;
 	line-height: initial;
+
+	@media (max-width: $tablet) {
+		text-transform: uppercase;
+	}
 }
 
 .trainer-card__desc {
