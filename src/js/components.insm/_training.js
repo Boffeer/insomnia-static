@@ -36,8 +36,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		    loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
 		},
 
-		breakpoins: {
-			991: {
+    breakpoints: {
+			992: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
 				spaceBetween: 30,
