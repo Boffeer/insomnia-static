@@ -8,6 +8,10 @@
 	height: 26.2em;
 	border-radius: 5em;
 	margin-bottom: 2em;
+
+  @media (min-width: $laptop-xlg) {
+    height: 22.2em;
+  }
 }
 
 .trainer-card__media-pic {

@@ -2411,17 +2411,11 @@ body._lock {
   transform: scale(0.7);
 }
 
-@media (min-width: 992px) {
-  .tabs__panel-list {
-    min-height: 30vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-}
-
 .tabs__panel.active {
-  max-height: 100rem;
+  max-height: 41vh;
   pointer-events: initial;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 @media (max-width: 991px) {
   .tabs__panel.active {
@@ -2815,6 +2809,9 @@ body._lock {
 .price-table__head {
   color: var(--fg-accent);
   text-transform: initial;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-app-secondary);
 }
 
 .price-table__head .price-table__cell:nth-of-type(2),
@@ -3344,6 +3341,11 @@ body._lock {
   height: 26.2em;
   border-radius: 5em;
   margin-bottom: 2em;
+}
+@media (min-width: 1365px) {
+  .trainer-card__media {
+    height: 22.2em;
+  }
 }
 
 .trainer-card__media-pic {
@@ -4006,12 +4008,6 @@ body._lock {
 .price {
   overflow: hidden;
 }
-@media (min-width: 992px) {
-  .price {
-    max-height: 80vh;
-  }
-}
-
 .price__tabs-button {
   font-size: 2em;
   text-transform: uppercase;
@@ -4522,6 +4518,11 @@ body._lock {
 
 .training-carousel__swiper {
   margin-bottom: 7em;
+}
+@media (min-width: 1365px) {
+  .training-carousel__swiper {
+    margin-bottom: 2.3em;
+  }
 }
 @media (max-width: 991px) {
   .training-carousel__swiper {

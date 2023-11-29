@@ -79,6 +79,9 @@
 .price-table__head {
 	color: var(--fg-accent);
 	text-transform: initial;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-app-secondary);
 }
 
 .price-table__head .price-table__cell:nth-of-type(2),
