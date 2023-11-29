@@ -81,7 +81,13 @@
 	text-transform: initial;
   position: sticky;
   top: 0;
-  background-color: var(--bg-app-secondary);
+}
+
+.price-table__head .price-table__cell {
+  //background-color: var(--bg-app-secondary);
+}
+.price-table__head .price-table__cell:first-child {
+  justify-self: start;
 }
 
 .price-table__head .price-table__cell:nth-of-type(2),

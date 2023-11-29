@@ -17,7 +17,7 @@ window.addEventListener('click', (e) => {
   if (getClickedNotBeyondElement(e, 'menu') != false) return;
 
   closeBurger();
-  
+
 })
 
 export function openMenu() {
@@ -67,3 +67,11 @@ if (header && burger) {
     }
   });
 }
+
+const menuLinks = document.querySelectorAll('.menu__nav-link');
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeBurger();
+  })
+})
+

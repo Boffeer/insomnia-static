@@ -1,5 +1,9 @@
 "use strict";
 
+window.barba = barba
+import barba from '@barba/core';
+import barbaCss from '@barba/css';
+
 // Важно подключить первым, чтобы все быстрее отработало
 import "./helpers.b/_quickfix.js"
 
@@ -29,9 +33,6 @@ import "./components.insm/_training.js";
 
 // import "./sections.sklh/_content-reviews.js";
 
-import barba from '@barba/core';
-
-window.barba = barba
 // barba.init({
 // 	transitions: [{
 //     name: 'default-transition',
@@ -47,4 +48,32 @@ window.barba = barba
 // });
 
 window.addEventListener('DOMContentLoaded', (event) => {
+  barba.use(barbaCss);
+  barba.init({
+    debug: true,
+    views: [{
+      namespace: 'clip',
+      beforeEnter() {
+        // update the menu based on user navigation
+        // menu.update();
+        console.log('before endter')
+      },
+      afterEnter() {
+        // refresh the parallax based on new page content
+        // parallax.refresh();
+        console.log('after endter')
+      }
+    }],
+    transitions: [
+      {
+        name: "clip",
+        sync: !0,
+        to: {
+          namespace: ["clip"]
+        },
+        leave: function(data) {},
+        enter: function(data) {}
+      }
+    ],
+  });
 });
