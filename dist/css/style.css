@@ -3222,6 +3222,12 @@ body._lock {
   transform: translateX(-0.1em) scaleX(-1);
 }
 
+.modal-news--loading {
+  transform: scale(0.7);
+  filter: blur(2em);
+  transition: all 0.45s ease;
+}
+
 .modal-trainer {
   position: relative;
   --padding: 1.6em;

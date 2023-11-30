@@ -37,6 +37,47 @@ import "./components.insm/_training.js";
 window.addEventListener('DOMContentLoaded', (event) => {
   let enableBarbaTransitions = true;
 
+
+  async function fetchNews(id) {
+    const formData = new FormData();
+    formData.append('action', 'get_modal_news');
+    formData.append('id', id);
+    // formData.append('id', card.dataset.id);
+
+    let request = await fetch(window.m_ajax.url, {
+      method: "POST",
+      body: formData,
+    });
+    let response = await request.json();
+
+    updateSlug(response.post.slug);
+
+    return response;
+  }
+
+
+  function placeNewsModal(response) {
+    let {thumb, title, content, next, prev} = response.post;
+
+    const modalNews = document.querySelector('#modal-news');
+    const img = modalNews.querySelector('.modal-news__media-img')
+    if (thumb) {
+      img.closest('.modal-news__media').classList.remove('is-hidden');
+    } else {
+      img.closest('.modal-news__media').classList.add('is-hidden');
+    }
+    img.src = thumb;
+    modalNews.querySelector('.modal-news__title').innerHTML =  title;
+    modalNews.querySelector('.modal-news__content').innerHTML = content;
+
+
+    modalNews.querySelector('.modal-news__button-prev').dataset.id = prev;
+    modalNews.querySelector('.modal-news__button-next').dataset.id = next;
+  }
+  const CARD_LOADING = 'modal-news--loading'
+
+
+
   barba.use(barbaCss);
 
   const BARBA_CONFIG = {
@@ -61,33 +102,48 @@ window.addEventListener('DOMContentLoaded', (event) => {
           const newsCards= [...document.querySelectorAll('.accordion-carousel__slide .news-card')];
           newsCards.forEach(card => {
             card.addEventListener('click', async () => {
-              const formData = new FormData();
-              formData.append('action', 'get_modal_news');
-              formData.append('id', card.dataset.id);
 
-              let request = await fetch(window.m_ajax.url, {
-                method: "POST",
-                body: formData,
-              });
-              let response = await request.json();
-              let {thumb, title, content, slug} = response.post;
-
-              const modalNews = document.querySelector('#modal-news');
-              const img = modalNews.querySelector('.modal-news__media-img')
-              if (thumb) {
-                img.closest('.modal-news__media').classList.remove('is-hidden');
-              } else {
-                img.closest('.modal-news__media').classList.add('is-hidden');
-              }
-              img.src = thumb;
-              modalNews.querySelector('.modal-news__title').innerHTML =  title;
-              modalNews.querySelector('.modal-news__content').innerHTML = content;
-
-              updateSlug(slug)
-
+              const response = await fetchNews(card.dataset.id);
+              placeNewsModal(response);
               b_modal.openPop('modal-news');
             })
           })
+
+          const modalNews = document.querySelector('#modal-news');
+          const buttonPrev = modalNews.querySelector('.modal-news__button-prev');
+          const buttonNext = modalNews.querySelector('.modal-news__button-next');
+          const blurCard = ()  => {
+            modalNews.classList.add(CARD_LOADING)
+          }
+          const focusCard = () => {
+            setTimeout(() => {
+              modalNews.classList.remove(CARD_LOADING)
+            }, 100);
+
+            let modalElement = document.querySelector('.b_modal__overlay._show .b_modal__aligner');
+            modalElement.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
+          }
+
+          buttonPrev.addEventListener('click', async () => {
+            blurCard();
+
+            let response = await fetchNews(buttonPrev.dataset.id);
+            placeNewsModal(response);
+
+            focusCard();
+          });
+          buttonNext.addEventListener('click', async () => {
+            blurCard();
+
+            let response = await fetchNews(buttonNext.dataset.id);
+            placeNewsModal(response);
+
+            focusCard();
+          });
+
         }
       }
     }],
