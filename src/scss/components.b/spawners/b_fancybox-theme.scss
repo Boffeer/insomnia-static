@@ -51,7 +51,7 @@
 }
 .fancybox__nav .carousel__button::after {
   content: "";
-  @include getmask("../img/common/arrow-left-mask.svg");
+  //@include getmask("../img/common/arrow-left-mask.svg");
   display: block;
   width: 100%;
   height: 100%;

@@ -76,6 +76,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
   const CARD_LOADING = 'modal-news--loading'
 
+  const modalNews = document.querySelector('#modal-news');
+  const blurCard = ()  => {
+    modalNews.classList.add(CARD_LOADING)
+  }
+  const focusCard = () => {
+    setTimeout(() => {
+      modalNews.classList.remove(CARD_LOADING)
+
+      let modalElement = document.querySelector('.b_modal__overlay.b_modal--scrollable._show .b_modal__aligner');
+      modalElement?.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }, 100);
+  }
 
 
   barba.use(barbaCss);
@@ -94,6 +109,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // }
       },
       afterEnter(e) {
+        if (!e.next.url.path.startsWith('/news/')) {
+          if (b_modal.getLastOpenedId()) {
+            b_modal.closePop(b_modal.getLastOpenedId());
+          }
+        }
+
         if (e.next.url.path.startsWith('/news/') && e.next.url.path.indexOf('/news/') !== e.next.url.path.length - '/news/'.length) {
           b_modal.openPop('modal-news');
         }
@@ -109,23 +130,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             })
           })
 
-          const modalNews = document.querySelector('#modal-news');
           const buttonPrev = modalNews.querySelector('.modal-news__button-prev');
           const buttonNext = modalNews.querySelector('.modal-news__button-next');
-          const blurCard = ()  => {
-            modalNews.classList.add(CARD_LOADING)
-          }
-          const focusCard = () => {
-            setTimeout(() => {
-              modalNews.classList.remove(CARD_LOADING)
-            }, 100);
-
-            let modalElement = document.querySelector('.b_modal__overlay._show .b_modal__aligner');
-            modalElement.scrollTo({
-              top: 0,
-              behavior: 'smooth',
-            });
-          }
 
           buttonPrev.addEventListener('click', async () => {
             blurCard();
@@ -145,6 +151,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
           });
 
         }
+
+        const heroBullets = document.querySelectorAll('.hero__bullet-link');
+        heroBullets.forEach(bullet => {
+          const modalNews = document.querySelector('#modal-news');
+          bullet.addEventListener('click', async () => {
+            blurCard();
+
+            const response = await fetchNews(bullet.dataset.id);
+            placeNewsModal(response);
+
+            focusCard();
+          })
+        })
       }
     }],
     transitions: [

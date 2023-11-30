@@ -48,6 +48,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "@barba/css": "^2.1.15",
+    "@fancyapps/ui": "^5.0.28",
     "aos": "^2.3.4",
     "js-cookie": "^3.0.5",
     "swiper": "^8.3.1",
