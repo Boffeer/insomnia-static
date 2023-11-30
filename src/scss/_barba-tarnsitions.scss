@@ -18,15 +18,21 @@
   }
 }
 
+body._lock-fixer .main .screener__bg {
+  animation-duration: 0.0001s;
+}
 .main .screener__bg {
   animation-name: slide-down;
   animation-duration: 0.35s;
+}
+
+body._lock-fixer .main .screener__content {
+  animation-duration: 0.0001s;
 }
 .main .screener__content {
   animation-name: fade-down;
   animation-duration: 0.45s;
 }
-
 
 .barba-container {
   opacity: 0;

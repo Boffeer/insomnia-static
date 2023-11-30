@@ -9,3 +9,7 @@
 		gap: 3.1em;
 	}
 }
+.events__gallery .news-card__media::before {
+  content: "";
+  opacity: 1;
+}

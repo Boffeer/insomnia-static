@@ -78,7 +78,6 @@
 }
 
 .news-card__icon {
-	content: "";
 	display: block;
 	--size: 1.5em;
 	--width: var(--size);
@@ -89,11 +88,14 @@
 	height: var(--height);
 	min-height: var(--height);
 	max-height: var(--height);
-	background-image: url('../img/common.insm/bullet.svg');
+	//background-image: url('../img/common.insm/bullet.svg');
 	margin-top: -0.2em;
 	margin-right: 0.5em;
 }
 
+.news-card__link {
+  cursor: pointer;
+}
 .news-card__link::before {
 	content: "";
 	position: absolute;
@@ -116,6 +118,7 @@
 	line-height: initial;
 	font-weight: 400;
 	transition: opacity var(--transition) 0.2, transform var(--transition) 0.2;
+  pointer-events: none;
 
 	@media (max-width: $tablet) {
 		--padding: 2.3em 2.1em;

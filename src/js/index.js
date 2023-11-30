@@ -33,35 +33,62 @@ import "./components.insm/_training.js";
 
 // import "./sections.sklh/_content-reviews.js";
 
-// barba.init({
-// 	transitions: [{
-//     name: 'default-transition',
-//     leave(data) {
-//     	console.log(data)
-//       // create your stunning leave animation here
-//     },
-//     enter(data) {
-//     	console.log(data)
-//       // create your amazing enter animation here
-//     }
-//   }]
-// });
 
 window.addEventListener('DOMContentLoaded', (event) => {
+  let enableBarbaTransitions = true;
+
   barba.use(barbaCss);
-  barba.init({
-    debug: true,
+
+  const BARBA_CONFIG = {
+    // debug: true,
     views: [{
       namespace: 'clip',
-      beforeEnter() {
-        // update the menu based on user navigation
-        // menu.update();
-        console.log('before endter')
+      beforeEnter(e) {
+        // console.log(e)
+        // if (!enableBarbaTransitions) {
+        //   console.log('prevent')
+        //   enableBarbaTransitions = true;
+        //   e.next.transition.prevent();
+        //   return;
+        // }
       },
-      afterEnter() {
-        // refresh the parallax based on new page content
-        // parallax.refresh();
-        console.log('after endter')
+      afterEnter(e) {
+        if (e.next.url.path.startsWith('/news/') && e.next.url.path.indexOf('/news/') !== e.next.url.path.length - '/news/'.length) {
+          b_modal.openPop('modal-news');
+        }
+
+        if (e.next.url.path.startsWith('/news/')) {
+          const newsCards= [...document.querySelectorAll('.accordion-carousel__slide .news-card')];
+          newsCards.forEach(card => {
+            card.addEventListener('click', async () => {
+              const formData = new FormData();
+              formData.append('action', 'get_modal_news');
+              formData.append('id', card.dataset.id);
+
+              let request = await fetch(window.m_ajax.url, {
+                method: "POST",
+                body: formData,
+              });
+              let response = await request.json();
+              let {thumb, title, content, slug} = response.post;
+
+              const modalNews = document.querySelector('#modal-news');
+              const img = modalNews.querySelector('.modal-news__media-img')
+              if (thumb) {
+                img.closest('.modal-news__media').classList.remove('is-hidden');
+              } else {
+                img.closest('.modal-news__media').classList.add('is-hidden');
+              }
+              img.src = thumb;
+              modalNews.querySelector('.modal-news__title').innerHTML =  title;
+              modalNews.querySelector('.modal-news__content').innerHTML = content;
+
+              updateSlug(slug)
+
+              b_modal.openPop('modal-news');
+            })
+          })
+        }
       }
     }],
     transitions: [
@@ -75,5 +102,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
         enter: function(data) {}
       }
     ],
-  });
+  }
+
+  barba.init(BARBA_CONFIG);
+
+  function updateSlug(slug) {
+    enableBarbaTransitions = false;
+    let currentPath = window.location.pathname;
+    let newPath;
+    if (currentPath === '/news/') {
+      newPath = '/news/' + slug;
+    } else {
+      newPath = currentPath.replace(/\/news\/[^\/]+/, '/news/' + slug);
+    }
+    window.history.pushState({}, '', newPath + window.location.hash);
+  }
+
 });

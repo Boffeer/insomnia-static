@@ -91,11 +91,19 @@ function lockBody() {
   const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
   document.body.classList.add("_lock");
   document.body.style.paddingRight = `${DEFAULT_SCROLLBAR_WIDTH}px`;
+
+  document.body.classList.add("_lock-fixer");
 }
 function unlockBody() {
   const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
   document.body.classList.remove("_lock");
   document.body.style.paddingRight = '';
+
+  // document.body.classList.add("_lock-fixer");
+  setTimeout(() => {
+    console.log('fix')
+    document.body.classList.remove("_lock-fixer");
+  }, 600)
 }
 function getScrollbarWidth() {
   return window.innerWidth - document.body.offsetWidth;
