@@ -101,7 +101,6 @@ function unlockBody() {
 
   // document.body.classList.add("_lock-fixer");
   setTimeout(() => {
-    console.log('fix')
     document.body.classList.remove("_lock-fixer");
   }, 600)
 }

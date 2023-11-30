@@ -39,12 +39,92 @@ window.addEventListener('DOMContentLoaded', (event) => {
     swiperCarousel.slideTo(0);
   }
 
+  async function fetchTrainer(id) {
+    const formData = new FormData();
+    formData.append('action', 'get_trainer');
+    formData.append('id', id);
+
+    let request = await fetch(window.m_ajax.url, {
+      method: "POST",
+      body: formData,
+    });
+    let response = await request.json();
+
+    return response;
+  }
+
+  function placeTrainerData(modal, response) {
+    let {thumb, name, content, prev, next} = response.post;
+    modal.querySelector('.modal-trainer__media-img').src = thumb;
+    modal.querySelector('.modal-trainer__title').innerHTML = name;
+    modal.querySelector('.modal-trainer__content').innerHTML = content;
+
+    const buttonPrev = modal.querySelector('.modal-trainer__button-prev');
+    const buttonNext = modal.querySelector('.modal-trainer__button-next');
+
+    buttonPrev.dataset.id = prev;
+    buttonNext.dataset.id = next;
+  }
+
+  function initTrainerCards() {
+    const cards = document.querySelectorAll('.trainer-card');
+    cards.forEach(card => {
+      card.addEventListener('click', async () => {
+        const modalTrainer = document.querySelector('#modal-trainer');
+
+        let response = await fetchTrainer(card.dataset.id);
+        placeTrainerData(modalTrainer, response);
+
+        const buttonPrev = modalTrainer.querySelector('.modal-trainer__button-prev');
+        const buttonNext = modalTrainer.querySelector('.modal-trainer__button-next');
+        const CARD_LOADING = 'modal-trainer--loading'
+        const blurCard = ()  => {
+          modalTrainer.classList.add(CARD_LOADING)
+        }
+
+        const focusCard = () => {
+          setTimeout(() => {
+            modalTrainer.classList.remove(CARD_LOADING)
+          }, 100);
+
+          let modalElement = document.querySelector('.b_modal__overlay._show .b_modal__aligner');
+          modalElement.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        }
+
+        buttonPrev.addEventListener('click', async () => {
+          blurCard();
+
+          let response = await fetchTrainer(buttonPrev.dataset.id);
+          placeTrainerData(modalTrainer, response);
+
+          focusCard();
+        });
+        buttonNext.addEventListener('click', async () => {
+          blurCard();
+
+          let response = await fetchTrainer(buttonNext.dataset.id);
+          placeTrainerData(modalTrainer, response);
+
+          focusCard();
+        });
+
+
+        b_modal.openPop('modal-trainer');
+      })
+    })
+  }
   initCarousel();
+  initTrainerCards();
+
   window.barba.hooks.after((e) => {
     if (!e.next.url.path.includes('training')) return;
 
     setTimeout(() => {
       initCarousel();
+      initTrainerCards();
     }, 100)
   });
 });
