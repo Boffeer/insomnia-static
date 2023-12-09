@@ -3,7 +3,7 @@
   // --tr-enter-jolly: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   --tr-jolly-enter: cubic-bezier(0.5, 0, 0.5, 1);
   --tr-jolly-leave: cubic-bezier(0.5, 0, 0.5, 1);
-  
+
   --c-b_modal-closer-hover: #ff3b30;
   --z-b_modal: 1234567890;
 
@@ -43,6 +43,7 @@
   pointer-events: initial;
   background-color: var(--overlay-bg-visible);
   transition: all 0.5s var(--tr-jolly-enter);
+  backdrop-filter: blur(0.2em);
 }
 
 .b_modal__aligner {
@@ -107,8 +108,8 @@
   display: block;
   // width: 80%;
   // height: 13%;//8%;
-  width: 68%;
-  height: 9%;
+  width: 53%;
+  height: 6%;
   margin-right: auto;
   margin-left: auto;
   border-radius: 1em;
@@ -144,6 +145,7 @@
   padding-bottom: 0;
 }
 .b_modal--scrollable._show .b_modal__aligner  {
+  padding-top: 10em;
   overflow-x: hidden;
   overflow-y: auto;
 

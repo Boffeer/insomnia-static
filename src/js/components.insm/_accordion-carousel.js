@@ -56,6 +56,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
           translate: ["130%", 0, 0],
         },
       },
+      on: {
+        slideChange: function() {
+          this.el.querySelectorAll('.news-card').forEach(card => card.classList.remove('active'))
+          this.slides[this.activeIndex].querySelector('.news-card').classList.add('active');
+        }
+      },
+
 
       pagination: {
         el: `.accordion-carousel__pagination`,

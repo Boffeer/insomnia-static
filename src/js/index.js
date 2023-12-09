@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
   function placeNewsModal(response) {
-    let {thumb, title, content, next, prev} = response.post;
+    let {thumb, title, content, next, prev, id} = response.post;
 
     const modalNews = document.querySelector('#modal-news');
     const img = modalNews.querySelector('.modal-news__media-img')
@@ -71,8 +71,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
     modalNews.querySelector('.modal-news__content').innerHTML = content;
 
 
-    modalNews.querySelector('.modal-news__button-prev').dataset.id = prev;
-    modalNews.querySelector('.modal-news__button-next').dataset.id = next;
+    modalNews.querySelector('.modal-news__button-prev').dataset.id = next;
+    modalNews.querySelector('.modal-news__button-next').dataset.id = prev;
+
+    const newsCards = document.querySelectorAll('.news-card')
+    newsCards.forEach((card, index, arr) => {
+      if (card.dataset.id === id) {
+        card.classList.add('active');
+        const cardsPerPage = card.closest('.accordion-carousel__slide').childElementCount;
+
+        const currentPageIndex = Math.floor(index / cardsPerPage) + 1;
+        const carousel = card.closest('.accordion-carousel__swiper');
+        carousel.swiper.slideTo(currentPageIndex - 1);
+
+        return;
+      }
+      card.classList.remove('active');
+    });
+
   }
   const CARD_LOADING = 'modal-news--loading'
 
@@ -109,6 +125,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // }
       },
       afterEnter(e) {
+        console.log(e)
         if (!e.next.url.path.startsWith('/news/')) {
           if (b_modal.getLastOpenedId()) {
             b_modal.closePop(b_modal.getLastOpenedId());
@@ -116,7 +133,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         if (e.next.url.path.startsWith('/news/') && e.next.url.path.indexOf('/news/') !== e.next.url.path.length - '/news/'.length) {
-          b_modal.openPop('modal-news');
+          if (e.trigger !== 'popstate') {
+            b_modal.openPop('modal-news');
+          }
         }
 
         if (e.next.url.path.startsWith('/news/')) {
@@ -126,6 +145,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
               const response = await fetchNews(card.dataset.id);
               placeNewsModal(response);
+              console.log(response)
               b_modal.openPop('modal-news');
             })
           })

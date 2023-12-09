@@ -170,3 +170,10 @@
 		margin-bottom: 0.4em;
 	}
 }
+
+@media (min-width: $mobile + 1) {
+  .training-carousel__pagination {
+    position: absolute;
+    bottom: 3.2em
+  }
+}
