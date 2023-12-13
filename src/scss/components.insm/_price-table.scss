@@ -32,10 +32,10 @@
 
 .price-table__cell {
 	font-size: 1.4em;
+  font-weight: 700;
 
 	@media (max-width: $tablet) {
 		font-size: 1.2em;
-		font-weight: 700;
 	}
 }
 
@@ -90,8 +90,7 @@
   justify-self: start;
 }
 
-.price-table__head .price-table__cell:nth-of-type(2),
-.price-table__head .price-table__cell:nth-of-type(3) {
+.price-table__head .price-table__cell {
 	font-weight: 400;
 }
 
@@ -133,4 +132,12 @@
 
 .price-table--columned .price-table__cell:first-child {
 	margin-bottom: 1em;
+}
+
+.price-table--columned .price-table__cell:first-child p {
+  font-weight: 400;
+}
+
+.price-table--columned .price-table__cell p:not(:only-child):first-child {
+  font-weight: 500;
 }

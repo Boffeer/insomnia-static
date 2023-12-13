@@ -24,11 +24,12 @@
   padding-bottom: 9.4em;
 	transform: translateY(-100%);
 	transition: all 0.3s var(--tr-jolly-enter);
+  min-height: 96.6vh;
+  height: calc(100% - 1.6em);
 
 	@media (max-width: $tablet) {
 		padding-top: 12.1em;
     padding-left: 1.6em;
-    min-height: 96.9vh;
     height: 100%;
 	}
 }

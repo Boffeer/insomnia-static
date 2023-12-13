@@ -3641,12 +3641,13 @@ html.with-fancybox body.hide-scrollbar {
   padding-bottom: 9.4em;
   transform: translateY(-100%);
   transition: all 0.3s var(--tr-jolly-enter);
+  min-height: 96.6vh;
+  height: calc(100% - 1.6em);
 }
 @media (max-width: 991px) {
   .menu__nav {
     padding-top: 12.1em;
     padding-left: 1.6em;
-    min-height: 96.9vh;
     height: 100%;
   }
 }
@@ -4079,11 +4080,11 @@ html.with-fancybox body.hide-scrollbar {
 
 .price-table__cell {
   font-size: 1.4em;
+  font-weight: 700;
 }
 @media (max-width: 991px) {
   .price-table__cell {
     font-size: 1.2em;
-    font-weight: 700;
   }
 }
 
@@ -4132,8 +4133,7 @@ html.with-fancybox body.hide-scrollbar {
   justify-self: start;
 }
 
-.price-table__head .price-table__cell:nth-of-type(2),
-.price-table__head .price-table__cell:nth-of-type(3) {
+.price-table__head .price-table__cell {
   font-weight: 400;
 }
 
@@ -4175,6 +4175,14 @@ html.with-fancybox body.hide-scrollbar {
 
 .price-table--columned .price-table__cell:first-child {
   margin-bottom: 1em;
+}
+
+.price-table--columned .price-table__cell:first-child p {
+  font-weight: 400;
+}
+
+.price-table--columned .price-table__cell p:not(:only-child):first-child {
+  font-weight: 500;
 }
 
 .accordion-carousel {
@@ -4677,12 +4685,15 @@ html.with-fancybox body.hide-scrollbar {
   min-height: var(--height);
   max-height: var(--height);
   border-radius: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-trainer__button-icon {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   transform: translateX(0.1em);
 }
 
@@ -4812,6 +4823,11 @@ html.with-fancybox body.hide-scrollbar {
 .header {
   font-size: 1rem;
   z-index: var(--z-header);
+}
+
+.header--burger-opened {
+  position: sticky;
+  top: 0;
 }
 
 .header__container {
@@ -5017,10 +5033,12 @@ html.with-fancybox body.hide-scrollbar {
 .screener__bg {
   height: calc(100% - 1.6em);
   overflow: hidden;
-}
-
-.screener__bg {
   z-index: 1;
+}
+@media (max-width: 991px) {
+  .screener__bg {
+    height: 100%;
+  }
 }
 
 .screener__particles-upper {
@@ -5305,6 +5323,7 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width: 575px) {
   .map .screener__header-columns {
     margin-top: 29.7em;
+    margin-bottom: 0;
   }
 }
 
@@ -5388,7 +5407,7 @@ html.with-fancybox body.hide-scrollbar {
   text-transform: uppercase;
   font-weight: 600;
   display: block;
-  padding: 0.5em 2.6em;
+  padding: 0.5em 2.6em 0.35em;
   border-radius: 2.5em;
   border: 0.15em solid #FFF;
   transition: all 0.3s ease;
@@ -6059,6 +6078,18 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width: 991px) {
   .about .screener__title {
     margin-bottom: 0.45em;
+  }
+}
+
+.about .screener__bg {
+  height: calc(100% - 12rem);
+  top: unset;
+  bottom: 0;
+  border-radius: 5em 5em 0 0;
+}
+@media (max-width: 991px) {
+  .about .screener__bg {
+    height: calc(100% - 7.7rem);
   }
 }
 

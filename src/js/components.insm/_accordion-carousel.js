@@ -65,6 +65,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         },
         init: function () {
           setTimeout(() => {
+            if (this.el === undefined) return;
+
             if (!this.el.querySelector('.active')) {
               this.slides[0].querySelector('.news-card').classList.add('active');
             }

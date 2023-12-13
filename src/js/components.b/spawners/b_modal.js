@@ -109,7 +109,7 @@ class b_modal {
 
     const closer = document.createElement("button");
     closer.classList.add("b_modal__closer");
-    closer.innerText = "Закрыть";
+    closer.innerText = "";
     closer.dataset.b_modalClose = id;
     const handleClose = () => {
       this.handleClose(closer);

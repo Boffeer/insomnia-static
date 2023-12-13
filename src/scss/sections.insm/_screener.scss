@@ -124,12 +124,12 @@
 .screener__bg {
 	height: #{'calc(100% - 1.6em)'};
 	overflow: hidden;
-}
+  z-index: 1;
 
-.screener__bg {
-	z-index: 1;
+  @media (max-width: $tablet) {
+    height: 100%;
+  }
 }
-
 
 .screener__particles-upper {
 	z-index: 4;

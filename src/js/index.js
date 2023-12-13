@@ -82,6 +82,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         const currentPageIndex = Math.floor(index / cardsPerPage) + 1;
         const carousel = card.closest('.accordion-carousel__swiper');
+
+        if (carousel.swiper === null) return;
         carousel.swiper.slideTo(currentPageIndex - 1);
 
         return;
@@ -111,7 +113,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   function initNewsCards(e) {
     if (!e.next.url.path.startsWith('/news/'))  return;
     const newsCards = [...document.querySelectorAll('.accordion-carousel__slide .news-card')];
-    console.log(newsCards)
+    // console.log(newsCards)
     newsCards.forEach(card => {
       card.addEventListener('click', async () => {
 
@@ -170,14 +172,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
            // }
         },
         afterEnter(e) {
-          console.log(e)
-          /*
+          // console.log(e)
           if (!e.next.url.path.startsWith('/news/')) {
             if (b_modal.getLastOpenedId()) {
               b_modal.closePop(b_modal.getLastOpenedId());
             }
           }
-           */
 
           /*
           if (e.next.url.path.startsWith('/news/') && e.next.url.path.indexOf('/news/') !== e.next.url.path.length - '/news/'.length) {

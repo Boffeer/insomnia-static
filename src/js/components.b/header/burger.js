@@ -7,7 +7,7 @@ const menu = document.querySelector('.menu');
 const HEADER_OPENED_CLASS = "header--burger-opened";
 const BURGER_OPENED = "is-active";
 const MENU_OPENED_CLASS = "menu--visible";
-const OPENED_BURGER_LOCKS_SCROLL = false;
+const OPENED_BURGER_LOCKS_SCROLL = true;
 
 window.addEventListener('click', (e) => {
   if (!menu.classList.contains(MENU_OPENED_CLASS)) return;
