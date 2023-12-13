@@ -58,8 +58,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
       },
       on: {
         slideChange: function() {
-          this.el.querySelectorAll('.news-card').forEach(card => card.classList.remove('active'))
-          this.slides[this.activeIndex].querySelector('.news-card').classList.add('active');
+          if (!this.slides[this.activeIndex].querySelector('.active')) {
+            this.el.querySelectorAll('.news-card').forEach(card => card.classList.remove('active'))
+            this.slides[this.activeIndex].querySelector('.news-card').classList.add('active');
+          }
+        },
+        init: function () {
+          if (!this.slides[0].querySelector('.active')) {
+            this.slides[0].querySelector('.news-card').classList.add('active');
+          }
         }
       },
 

@@ -145,7 +145,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
               const response = await fetchNews(card.dataset.id);
               placeNewsModal(response);
-              console.log(response)
               b_modal.openPop('modal-news');
             })
           })

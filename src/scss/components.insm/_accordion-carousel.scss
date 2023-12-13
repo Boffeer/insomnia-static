@@ -14,7 +14,7 @@
 .accordion-carousel__slide {
 	font-size: 1rem;
 	display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
 
@@ -32,6 +32,14 @@
 		margin-left: 0;
 		margin-right: 0;
 	}
+  @media (min-width: $tablet + 1) {
+    max-width: 8em;
+  }
+}
+.accordion-carousel__slide .news-card.active {
+  @media (min-width: $tablet + 1) {
+    max-width: 32em;
+  }
 }
 
 .accordion-carousel__slide .news-card:first-of-type {

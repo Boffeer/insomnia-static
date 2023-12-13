@@ -3647,6 +3647,7 @@ html.with-fancybox body.hide-scrollbar {
     padding-top: 12.1em;
     padding-left: 1.6em;
     min-height: 96.9vh;
+    height: 100%;
   }
 }
 
@@ -4194,7 +4195,7 @@ html.with-fancybox body.hide-scrollbar {
 .accordion-carousel__slide {
   font-size: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
@@ -4213,6 +4214,17 @@ html.with-fancybox body.hide-scrollbar {
   .accordion-carousel__slide .news-card {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .accordion-carousel__slide .news-card {
+    max-width: 8em;
+  }
+}
+
+@media (min-width: 992px) {
+  .accordion-carousel__slide .news-card.active {
+    max-width: 32em;
   }
 }
 
@@ -5334,7 +5346,7 @@ html.with-fancybox body.hide-scrollbar {
     left: 8.7em;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1366px) {
   .map .screener__particles-bottom .blob:nth-child(2) {
     left: 18.7em;
   }
