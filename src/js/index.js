@@ -108,83 +108,103 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 100);
   }
 
+  function initNewsCards(e) {
+    if (!e.next.url.path.startsWith('/news/'))  return;
+    const newsCards = [...document.querySelectorAll('.accordion-carousel__slide .news-card')];
+    console.log(newsCards)
+    newsCards.forEach(card => {
+      card.addEventListener('click', async () => {
+
+        const response = await fetchNews(card.dataset.id);
+        placeNewsModal(response);
+        b_modal.openPop('modal-news');
+      })
+    })
+
+    const buttonPrev = modalNews.querySelector('.modal-news__button-prev');
+    const buttonNext = modalNews.querySelector('.modal-news__button-next');
+
+    buttonPrev.addEventListener('click', async () => {
+      blurCard();
+
+      let response = await fetchNews(buttonPrev.dataset.id);
+      placeNewsModal(response);
+
+      focusCard();
+    });
+    buttonNext.addEventListener('click', async () => {
+      blurCard();
+
+      let response = await fetchNews(buttonNext.dataset.id);
+      placeNewsModal(response);
+
+      focusCard();
+    });
+  }
 
   barba.use(barbaCss);
 
   const BARBA_CONFIG = {
     // debug: true,
-    views: [{
-      namespace: 'clip',
-      beforeEnter(e) {
-        // console.log(e)
-        // if (!enableBarbaTransitions) {
-        //   console.log('prevent')
-        //   enableBarbaTransitions = true;
-        //   e.next.transition.prevent();
-        //   return;
-        // }
-      },
-      afterEnter(e) {
-        console.log(e)
-        if (!e.next.url.path.startsWith('/news/')) {
-          if (b_modal.getLastOpenedId()) {
-            b_modal.closePop(b_modal.getLastOpenedId());
-          }
-        }
-
-        if (e.next.url.path.startsWith('/news/') && e.next.url.path.indexOf('/news/') !== e.next.url.path.length - '/news/'.length) {
-          if (e.trigger !== 'popstate') {
-            b_modal.openPop('modal-news');
-          }
-        }
-
-        if (e.next.url.path.startsWith('/news/')) {
-          const newsCards= [...document.querySelectorAll('.accordion-carousel__slide .news-card')];
-          newsCards.forEach(card => {
-            card.addEventListener('click', async () => {
-
-              const response = await fetchNews(card.dataset.id);
-              placeNewsModal(response);
+    views: [
+      {
+        namespace: 'news',
+        afterEnter(e) {
+          if (e.next.url.path.startsWith('/news/') && e.next.url.path.indexOf('/news/') !== e.next.url.path.length - '/news/'.length) {
+            if (e.trigger !== 'popstate') {
               b_modal.openPop('modal-news');
-            })
-          })
-
-          const buttonPrev = modalNews.querySelector('.modal-news__button-prev');
-          const buttonNext = modalNews.querySelector('.modal-news__button-next');
-
-          buttonPrev.addEventListener('click', async () => {
-            blurCard();
-
-            let response = await fetchNews(buttonPrev.dataset.id);
-            placeNewsModal(response);
-
-            focusCard();
-          });
-          buttonNext.addEventListener('click', async () => {
-            blurCard();
-
-            let response = await fetchNews(buttonNext.dataset.id);
-            placeNewsModal(response);
-
-            focusCard();
-          });
-
+            }
+          }
+          initNewsCards(e)
         }
+      },
+      {
+        namespace: 'clip',
+        beforeEnter(e) {
+           // console.log(e)
+           // if (!enableBarbaTransitions) {
+           //   console.log('prevent')
+           //   enableBarbaTransitions = true;
+           //   e.next.transition.prevent();
+           //   return;
+           // }
+        },
+        afterEnter(e) {
+          console.log(e)
+          /*
+          if (!e.next.url.path.startsWith('/news/')) {
+            if (b_modal.getLastOpenedId()) {
+              b_modal.closePop(b_modal.getLastOpenedId());
+            }
+          }
+           */
 
-        const heroBullets = document.querySelectorAll('.hero__bullet-link');
-        heroBullets.forEach(bullet => {
-          const modalNews = document.querySelector('#modal-news');
-          bullet.addEventListener('click', async () => {
-            blurCard();
+          /*
+          if (e.next.url.path.startsWith('/news/') && e.next.url.path.indexOf('/news/') !== e.next.url.path.length - '/news/'.length) {
+            if (e.trigger !== 'popstate') {
+              b_modal.openPop('modal-news');
+            }
+          }
+           */
 
-            const response = await fetchNews(bullet.dataset.id);
-            placeNewsModal(response);
+          initNewsCards(e)
 
-            focusCard();
+          // handleHeroBullets()
+          const heroBullets = document.querySelectorAll('.hero__bullet-link');
+          heroBullets.forEach(bullet => {
+             const modalNews = document.querySelector('#modal-news');
+             bullet.addEventListener('click', async () => {
+             blurCard();
+
+             const response = await fetchNews(bullet.dataset.id);
+             placeNewsModal(response);
+
+             focusCard();
+             })
           })
-        })
-      }
-    }],
+        }
+      },
+    ],
     transitions: [
       {
         name: "clip",
@@ -194,7 +214,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         },
         leave: function(data) {},
         enter: function(data) {}
-      }
+      },
     ],
   }
 

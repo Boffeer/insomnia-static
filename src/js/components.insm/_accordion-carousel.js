@@ -64,9 +64,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
           }
         },
         init: function () {
-          if (!this.slides[0].querySelector('.active')) {
-            this.slides[0].querySelector('.news-card').classList.add('active');
-          }
+          setTimeout(() => {
+            if (!this.el.querySelector('.active')) {
+              this.slides[0].querySelector('.news-card').classList.add('active');
+            }
+          }, 300);
         }
       },
 
