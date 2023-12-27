@@ -1,5 +1,5 @@
 "use strict"
-import Swiper, { Navigation, Pagination, EffectCreative } from "swiper";
+import Swiper, { Navigation, Pagination, EffectFade } from "swiper";
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
@@ -11,19 +11,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       autoHeight: true,
       speed: 450,
       slidesPerView: 1,
-      modules: [Navigation, Pagination, EffectCreative],
+      modules: [Navigation, Pagination, EffectFade],
       spaceBetween: 100,
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: ["-20%", 0, -1],
-          opacity: 0,
-        },
-        next: {
-          translate: ["130%", 0, 0],
-        },
-      },
+      effect: "fade",
 
       navigation: {
         nextEl: ".single-article-carousel__button-next",

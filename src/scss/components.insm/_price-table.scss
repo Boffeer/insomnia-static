@@ -9,7 +9,8 @@
 
 .price-table__row {
 	display: grid;
-	grid-template-columns: 60% 15% 32%;
+	//grid-template-columns: 60% 15% 32%;
+  grid-template-columns: 60% 14% 24%;
 	gap: 2em;
 	margin-bottom: 1.5em;
 	text-transform: uppercase;
@@ -73,7 +74,7 @@
 .price-table__cell:nth-of-type(2),
 .price-table__cell:nth-of-type(3) {
 	text-align: center;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .price-table__head {

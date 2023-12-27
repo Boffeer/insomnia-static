@@ -6,21 +6,22 @@
 	min-height: 62.8em;
 	background: var(--c-secondary);
 	border-radius: 2.5em;
-	margin-top: 11em;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+  max-height: 80vh;
 
 	@media (max-width: $tablet) {
 		min-height: initial;
-		margin-top: 16em;
 		margin-bottom: 10em;
 	}
 }
 
 .b_modal__overlay--modal-news .b_modal__aligner {
+  padding-top: 8em;
 	@media (max-width: $tablet) {
+    padding-top: 3em;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -65,6 +66,10 @@
 
 .modal-news__content {
 	font-size: 1em;
+  max-height: 25vh;
+  overflow: auto;
+  @include scrollbar;
+  padding-right: 0.5em;
 }
 
 .modal-news__buttons {
@@ -109,6 +114,6 @@
   transition: all 0.45s ease;
 }
 
-.b_modal--scrollable._show.b_modal__overlay--modal-news .b_modal {
-  margin-top: 2em;
-}
+//.b_modal--scrollable._show.b_modal__overlay--modal-news .b_modal {
+//  margin-top: 8em;
+//}

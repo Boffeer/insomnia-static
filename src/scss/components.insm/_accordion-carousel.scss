@@ -9,6 +9,9 @@
 	@media (min-width: $laptop-xlg + 1) {
 		margin-bottom: 5.8em;
 	}
+  @media (min-width: $laptop-xxlg + 1) {
+    margin-bottom: 1.8em;
+  }
 }
 
 .accordion-carousel__slide {
@@ -126,6 +129,9 @@
 
 
 .accordion-carousel__pagination {
+  position: fixed;
+  bottom: 4.8em;
+
 	@media (max-width: $tablet) {
 		display: none;
 	}

@@ -166,7 +166,11 @@
     background-repeat: repeat-x;
     background-size: 0.1rem 0.1rem;
     text-decoration: none;
+    transition: all 0.3s ease;
 	}
+  a:hover {
+    color: var(--c-accent-second);
+  }
 
 	/* Стили для цитат */
 	blockquote {

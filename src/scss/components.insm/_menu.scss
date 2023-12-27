@@ -17,9 +17,11 @@
 }
 
 .menu__nav {
+  opacity: 0;
 	background: var(--bg-panel);
 	border-radius: 0 0 var(--brad) var(--brad);
-	padding-top: 18.2em;
+	padding-top: 14.2em;
+  //padding-top: 18.2em;
   padding-left: 15.3em;
   padding-bottom: 9.4em;
 	transform: translateY(-100%);
@@ -27,34 +29,62 @@
   min-height: 96.6vh;
   height: calc(100% - 1.6em);
 
-	@media (max-width: $tablet) {
+  @media (max-width: $tablet) {
 		padding-top: 12.1em;
     padding-left: 1.6em;
     height: 100%;
 	}
+  @media (min-width: $desktop-xlg) {
+    padding-top: 11.2em;
+  }
 }
 
 .menu--visible .menu__nav {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .menu__nav-links {
 	font-family: var(--ff-title);
 	max-width: 56em;
+  overflow: auto;
+  @include scrollbar;
+  height: 100%;
+
+  @media (max-width: $laptop-xxlg) {
+    max-width: 64em;
+  }
 
 	@media (max-width: $tablet) {
 		max-width: 32em;
 	}
+  @media (max-width: $mobile) {
+    max-width: 100%;
+  }
 }
 
 .menu__nav-item {
 	font-size: 6.8em;
 	line-height: 1.17;
   margin-bottom: -0.045em;
+  transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease 0.35s;
 
+  @media (max-width: $laptop-xxlg) {
+    font-size: 6.5em;
+  }
   @media (max-width: $tablet) {
   	font-size: 3.5em;
 	  margin-bottom: 0.1em;
+  }
+  @media (min-width: $desktop-xlg + 1) {
+    font-size: 5.5em;
+  }
+}
+
+.menu__nav-item:hover {
+  @media (any-hover: hover) {
+    color: var(--c-accent-second);
+    letter-spacing: 13.6px;
   }
 }
 
@@ -64,6 +94,55 @@
 	text-align: right;
 }
 
+.menu__nav-item:nth-of-type(1):hover .menu__nav-text {
+  @media (any-hover: hover) {
+    transform: translateX(5.8rem);
+  }
+}
+
+.menu__nav-item:nth-of-type(2):hover .menu__nav-text {
+  @media (any-hover: hover) {
+    transform: translateX(-7.2rem);
+  }
+}
+
+
+.menu__nav-item:nth-of-type(3):hover .menu__nav-text {
+  @media (any-hover: hover) {
+    transform: translateX(6.2rem);
+  }
+}
+
+.menu__nav-item:nth-of-type(4):hover .menu__nav-text {
+  @media (any-hover: hover) {
+    transform: translateX(9.1rem);
+  }
+}
+
+.menu__nav-item:nth-of-type(5):hover .menu__nav-text {
+  @media (any-hover: hover) {
+    transform: translateX(-5.7rem);
+  }
+}
+
+.menu__nav-item:nth-of-type(6):hover .menu__nav-text {
+  @media (any-hover: hover) {
+    transform: translateX(5.4rem);
+  }
+}
+
+.menu__nav-item:nth-of-type(7):hover .menu__nav-text {
+  @media (any-hover: hover) {
+    transform: translateX(-6rem);
+  }
+}
+
+.menu__nav-text {
+  display: block;
+  transition: inherit;
+}
+
+
 .menu__nav-item--active {
 
 }
@@ -72,5 +151,6 @@
 	line-height: inherit;
 	font-size: inherit;
 	display: block;
+  transition: inherit;
 }
 

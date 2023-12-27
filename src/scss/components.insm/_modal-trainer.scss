@@ -11,6 +11,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+  max-height: 80vh;
 
 	@media (max-width: $tablet) {
 		margin-top: 7.5em;
@@ -22,7 +23,9 @@
 }
 
 .b_modal__overlay--modal-trainer .b_modal__aligner {
+  padding-top: 8em;
 	@media (max-width: $tablet) {
+    padding-top: 3em;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -77,6 +80,10 @@
 .modal-trainer__content {
 	font-size: 0.85714em;
 	--lh-regular: 1.15;
+  max-height: 25vh;
+  overflow: auto;
+  @include scrollbar;
+  padding-right: 0.5em;
 
 	@media (max-width: $tablet) {
 		--lh-regular: 1.25;

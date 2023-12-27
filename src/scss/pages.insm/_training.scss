@@ -16,6 +16,9 @@
 .training-carousel {
 	max-width: 44em;
 	width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 	@media (max-width: $tablet) {
 		margin-right: -1.6rem;
@@ -60,6 +63,7 @@
 
 .training-carousel__swiper {
 	margin-bottom: 7em;
+  width: 100%;
 
   @media (min-width: $laptop-xlg) {
     margin-bottom: 2.3em;
@@ -80,7 +84,7 @@
 
 .training__title {
 	font-size: 2.4em;
-	font-weight: 900;
+	font-weight: 700;
 	color: var(--fg-accent);
 	margin-bottom: 1.5em;
 	text-transform: uppercase;
@@ -172,8 +176,18 @@
 }
 
 @media (min-width: $mobile + 1) {
-  .training-carousel__pagination {
-    position: absolute;
-    bottom: 3.2em
+  //.training-carousel__pagination {
+    //position: absolute;
+    //bottom: 3.2em
+  //}
+}
+
+.training-carousel__pagination {
+  position: fixed;
+  bottom: 4.8em;
+
+  @media (max-width: $tablet) {
+    position: static;
+    //display: none;
   }
 }

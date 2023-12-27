@@ -7,11 +7,11 @@
 }
 
 .price__tabs-button {
-	font-size: 2em;
+	font-size: 1.9em;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 500;
 	display: block;
-	padding: 0.5em 2.6em 0.35em;
+	padding: 0.5em 2.3em 0.35em;
 	border-radius: 2.5em;
 	border: 0.15em solid #FFF;
 	transition: all 0.3s ease;
@@ -19,7 +19,7 @@
 
 	@media (max-width: $tablet) {
 		font-size: 1.2em;
-		padding: 0.5em 1.9em;
+		padding: 0.5em 1.9em 0.3em;
 		margin-right: 0.8em;
 	}
 }
@@ -51,7 +51,7 @@
 	width: 71.4em;
 	height: 67.5em;
 	top: 0;
-	right: 0;
+	right: -1em;
 
 	@media (max-width: $tablet) {
 	    width: 36.4em;
@@ -78,7 +78,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 4em;
-	padding-bottom: 3em;
+	padding-bottom: 2em;
 
 	@media (max-width: $tablet) {
 		grid-template-columns: 100%;
@@ -165,7 +165,7 @@
 	color: var(--fg-on);
 	font-size: 1.4em;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	line-height: normal;
 	text-align: right;
 	padding-right: 0.5em;

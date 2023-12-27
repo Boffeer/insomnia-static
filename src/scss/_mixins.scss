@@ -3,7 +3,7 @@
 /*
   Подключает шфрит
   @include font('Inter', normal, 400, '../resources/fonts/Inter/Inter-Regular');
- */ 
+ */
 @mixin font($fname, $fstyle, $fweight, $furl) {
   @font-face {
     font-family: $fname;
@@ -19,7 +19,7 @@
 
 /*
   Создает грид
- */ 
+ */
 @mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
   display: grid;
   grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
@@ -62,12 +62,12 @@
 
 /*
   Создать цвет rgba из hex
-*/ 
+*/
 @function create-rgba($color, $opacity) {
   @return adjust-color($color, $alpha: -1 + $opacity);
 }
 
-// ЕДИНИЦЫ ИЗМЕРЕНИЯ 
+// ЕДИНИЦЫ ИЗМЕРЕНИЯ
 //Percent
 @function percent($px, $from) {
   $result: math.div($px, $from) * 100%;
@@ -117,12 +117,12 @@
 
 /*
  Кастомизирует скроллбар
-*/ 
+*/
 @mixin scrollbar(
-  $width: 16px,
+  $width: 5px,
   $height: 100%,
-  $thumb: #cecece,
-  $track: transparent
+  $thumb: #FFE600,
+  $track: #fff
 ) {
   &::-webkit-scrollbar {
     width: $width;
@@ -131,10 +131,12 @@
 
   &::-webkit-scrollbar-track {
     background: $track;
+    border-radius: $width;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: $thumb;
+    border-radius: $width;
   }
 }
 

@@ -8,6 +8,7 @@ const HEADER_OPENED_CLASS = "header--burger-opened";
 const BURGER_OPENED = "is-active";
 const MENU_OPENED_CLASS = "menu--visible";
 const OPENED_BURGER_LOCKS_SCROLL = true;
+const OPENED_MENU = "is-menu-opened";
 
 window.addEventListener('click', (e) => {
   if (!menu.classList.contains(MENU_OPENED_CLASS)) return;
@@ -23,11 +24,13 @@ window.addEventListener('click', (e) => {
 export function openMenu() {
   if (!menu) return;
   menu.classList.add(MENU_OPENED_CLASS);
+  document.body.classList.add(OPENED_MENU)
 }
 
 export function closeMenu() {
   if (!menu) return;
   menu.classList.remove(MENU_OPENED_CLASS);
+  document.body.classList.remove(OPENED_MENU)
 }
 
 export function openBurger() {

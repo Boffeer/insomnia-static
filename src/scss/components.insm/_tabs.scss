@@ -24,16 +24,15 @@
 	max-height: 0.01rem;
 	opacity: 0;
 	pointer-events: none;
-	transition: all 0.45s var(--tr-jolly-enter);
+	transition: all 0.45s var(--tr-jolly-enter), overflow 1s ease 0.65s;
 	transform: scale(0.7);
 }
 
 .tabs__panel.active {
 	// display: block;
-	max-height: 41vh;
+	max-height: 46vh;
 	pointer-events: initial;
-  overflow-y: auto;
-  overflow-x: hidden;
+  @include scrollbar;
 
   @media (max-width: $tablet) {
 		max-height: 200rem;
@@ -43,6 +42,8 @@
 .tabs__panel.tab--animated {
 	opacity: 1;
 	transform: scale(1);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .tabs__button {

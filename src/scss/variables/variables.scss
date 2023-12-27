@@ -12,7 +12,8 @@
 
 
   // Widths
-  --w-container: 122.7rem;
+  //--w-container: 122.7rem;
+  --w-container: #{'calc(100% - 3.2rem)'};
   @media (max-width: $tablet-xlg) {
     --w-container: 100%;
   }

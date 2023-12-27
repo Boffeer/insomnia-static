@@ -1,6 +1,8 @@
 .fixed-widget-list {
 	font-size: 1em;
-	max-width: 77.2em;
+	max-width: var(--w-container);
+  padding-left: var(--p-container);
+  padding-right: var(--p-container);
 	margin-left: auto;
 	margin-right: auto;
 	position: fixed;
@@ -15,6 +17,7 @@
 	pointer-events: none;
 
 	@media (max-width: $tablet) {
+    padding: 0;
 		bottom: 1.6em;
 	}
 

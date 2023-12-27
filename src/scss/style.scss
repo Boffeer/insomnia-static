@@ -46,11 +46,15 @@ fieldset {
 html {
   overscroll-behavior: none;
   // --fz-modifier: 0.520834; 1920 - 1rem 10px
-  --fz-modifier: 0.70834;
+  --fz-modifier: 0.80834;
   font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
 
+  @media (max-width: $desktop-xlg) {
+    --fz-modifier: 0.72834;
+  }
+
   @media (max-width: $desktop-lg) {
-    --fz-modifier: 0.60834;
+    --fz-modifier: 0.70834;
   }
 
   @media (max-width: $laptop-xxlg) {
@@ -122,7 +126,6 @@ body._lock {
 @import "./libs/vanilla-datepicker";
 @import "./libs/swiper";
 @import "./libs/fancybox";
-
 
 .js_use-bg {
   background-size: contain;

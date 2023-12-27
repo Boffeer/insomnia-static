@@ -3,8 +3,9 @@
 	display: block;
 	height: 38.9rem;
 	border-radius: 5em;
+  filter: grayscale(100%);
 
-	@media (max-width: $tablet) {
+  @media (max-width: $tablet) {
 		position: absolute;
 		top: 9.4em;
 		left: 0;

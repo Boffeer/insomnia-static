@@ -1,6 +1,6 @@
 .round-button {
 	--fg: var(--c-primary);
-	--size: 8em;
+	--size: 7em;
 	position: relative;
 	display: block;
 	width: var(--size);
@@ -17,62 +17,26 @@
 	}
 }
 
-.round-button__text {
-	fill: none;
-	animation: spin 25s infinite linear;
-	text-transform: uppercase;
-	font-size: 1.4em;
-
-	@media (min-width: $desktop-lgz) {
-		font-size: 1.25em;
-	}
-	@media (min-width: $desktop-md) {
-		font-size: 1.2em;
-	}
-	@media (min-width: $desktop-lg) {
-		font-size: 103%;
-	}
-	@media (min-width: $desktop-xlg) {
-		font-size: 75%;
-	}
-	@media (min-width: $desktop-xxlg) {
-		font-size: 50%;
-	}
-
-  @media (max-width: $laptop-xxlg) {
-    font-size: 1.45em;
-  }
-
-  @media (max-width: $laptop-xlg) {
-    font-size: 1.4em;
-  }
-
-  @media (max-width: $laptop-lg) {
-		font-size: 1.5em;
-	}
-
-  @media (max-width: $laptop-md) {
-    font-size: 1.7em;
-  }
-
-	@media (max-width: $laptop-sm) {
-		font-size: 1.8em;
-	}
-
-	@media (max-width: $tablet) {
-		font-size: 0.9em;
-	}
-	@media (max-width: $mobile-xlg) {
-		font-size: 1.25em;
-	}
-	@media (max-width: $mobile-sm) {
-		font-size: 1.4em;
-	}
-
-}
-
 @keyframes spin {
   100% {transform: rotate(360deg)}
+}
+
+.round-button__text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/common.insm/order-now.svg");
+  background-size: contain;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.round-button:hover .round-button__text {
+  @media (any-hover: hover) {
+    transform: rotate(360deg) scale(0.9);
+  }
 }
 
 .round-button__icon {
@@ -88,4 +52,12 @@
 	border: 0.4em solid;
 	margin: auto;
 	padding: 0.8em;
+  transition: all 0.3s ease;
+}
+
+.round-button:hover .round-button__icon {
+  @media (any-hover: hover) {
+    background: var(--fg);
+    --icon-color: var(--fg-on);
+  }
 }
