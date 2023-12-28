@@ -3,7 +3,8 @@
 	--padding: 2em;
 	font-size: 1rem;
 	max-width: 43.9em;
-	min-height: 62.8em;
+	//min-height: 62.8em;
+  min-height: 55.8em;
 	background: var(--c-secondary);
 	border-radius: 2.5em;
 	display: flex;
@@ -21,7 +22,7 @@
 .b_modal__overlay--modal-news .b_modal__aligner {
   padding-top: 8em;
 	@media (max-width: $tablet) {
-    padding-top: 3em;
+    padding-top: 14em;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -70,6 +71,10 @@
   overflow: auto;
   @include scrollbar;
   padding-right: 0.5em;
+
+  @media (max-width: $mobile) {
+    max-height: 21vh;
+  }
 }
 
 .modal-news__buttons {

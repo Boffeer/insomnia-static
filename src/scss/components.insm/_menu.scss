@@ -47,8 +47,6 @@
 .menu__nav-links {
 	font-family: var(--ff-title);
 	max-width: 56em;
-  overflow: auto;
-  @include scrollbar;
   height: 100%;
 
   @media (max-width: $laptop-xxlg) {

@@ -46,36 +46,53 @@ fieldset {
 html {
   overscroll-behavior: none;
   // --fz-modifier: 0.520834; 1920 - 1rem 10px
-  --fz-modifier: 0.80834;
-  font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
-
-  @media (max-width: $desktop-xlg) {
-    --fz-modifier: 0.72834;
-  }
+  //--fz-modifier: 0.28834;
+  --fz-modifier: 0.34;
+  font-size: #{'calc(var(--fz-modifier) * var(--base-size))'}; //calc(0.342466 * var(--base-size)); //10px for 1920×1000
 
   @media (max-width: $desktop-lg) {
-    --fz-modifier: 0.70834;
+    --fz-modifier: 0.31;
+  }
+  @media (max-width: $desktop-lgz) {
+    --fz-modifier: 0.34;
   }
 
-  @media (max-width: $laptop-xxlg) {
-    --fz-modifier: 0.6949267;
-  }
   @media (max-width: $laptop-xlg) {
-    --fz-modifier: 0.78125;
+    --fz-modifier: 0.36;
   }
+
+  //@media (max-width: $laptop-md) {
+  //  --fz-modifier: 0.24834;
+  //}
+  //@media (max-width: $desktop-xlg) {
+  //  --fz-modifier: 0.25834;
+  //}
+
+  //@media (max-width: $desktop-lg) {
+  //  --fz-modifier: 0.50834;
+  //}
+
+  //@media (max-width: $laptop-xxlg) {
+  //  --fz-modifier: 0.6949267;
+  //}
+  //@media (max-width: $laptop-xlg) {
+  //  --fz-modifier: 0.78125;
+  //}
 
   @media (max-width: $tablet) {
-    --fz-modifier: 1.763894;
+    //--fz-modifier: 0.363894;
+    --fz-modifier: 0.63894;
   }
-  @media (max-width: $mobile-xxlg) {
-    --fz-modifier: 2.666666;
-  }
+  //@media (max-width: $mobile-xxlg) {
+  //  --fz-modifier: 0.3968265;
+  //}
 
   @media (max-width: $mobile-xxs) {
-    --fz-modifier: 2.777777; // 360
+    --fz-modifier: 0.555555; // 360
   }
   @media (max-width: $mobile-xxx) {
-    --fz-modifier: 3.125; // 360
+    //--fz-modifier: 0.413222; // 320
+    --fz-modifier: 0.5814; // 320
   }
   background-color: var(--bg-app);
 }

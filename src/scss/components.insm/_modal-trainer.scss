@@ -6,20 +6,11 @@
 	max-width: 32em;
 	background: var(--c-accent-second);
 	border-radius: 2.5em;
-	margin-top: 4em;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
   max-height: 80vh;
-
-	@media (max-width: $tablet) {
-		margin-top: 7.5em;
-		margin-bottom: 10em;
-	}
-	@media (max-width: $mobile) {
-		margin-top: 14.5em;
-	}
 }
 
 .b_modal__overlay--modal-trainer .b_modal__aligner {
@@ -39,6 +30,7 @@
 	width: 100%;
 
 	@media (max-width: $tablet) {
+    padding-top: 60%;
 		margin-bottom: 1.5em;
 	}
 }
@@ -80,7 +72,7 @@
 .modal-trainer__content {
 	font-size: 0.85714em;
 	--lh-regular: 1.15;
-  max-height: 25vh;
+  max-height: 20vh;
   overflow: auto;
   @include scrollbar;
   padding-right: 0.5em;

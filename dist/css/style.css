@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* stylelint-disable no-invalid-position-at-import-rule */
 :root {
-  --base-size: 1vw;
+  --base-size: calc(1vw + 2vh);
   --tr: 0.3s;
   --tr-regular: all var(--tr) ease;
   --p-container: 2.65rem;
@@ -576,48 +576,38 @@ fieldset {
 
 html {
   overscroll-behavior: none;
-  --fz-modifier: 0.80834;
+  --fz-modifier: 0.34;
   font-size: calc(var(--fz-modifier) * var(--base-size));
   background-color: var(--bg-app);
 }
-@media (max-width: 2559px) {
-  html {
-    --fz-modifier: 0.72834;
-  }
-}
 @media (max-width: 1919px) {
   html {
-    --fz-modifier: 0.70834;
+    --fz-modifier: 0.31;
   }
 }
-@media (max-width: 1439px) {
+@media (max-width: 1535px) {
   html {
-    --fz-modifier: 0.6949267;
+    --fz-modifier: 0.34;
   }
 }
 @media (max-width: 1365px) {
   html {
-    --fz-modifier: 0.78125;
+    --fz-modifier: 0.36;
   }
 }
 @media (max-width: 991px) {
   html {
-    --fz-modifier: 1.763894;
-  }
-}
-@media (max-width: 575px) {
-  html {
-    --fz-modifier: 2.666666;
+    --fz-modifier: 0.63894;
   }
 }
 @media (max-width: 359px) {
   html {
-    --fz-modifier: 2.777777;
+    --fz-modifier: 0.555555;
   }
 }
 @media (max-width: 320px) {
   html {
-    --fz-modifier: 3.125;
+    --fz-modifier: 0.5814;
   }
 }
 
@@ -3675,20 +3665,7 @@ html.with-fancybox body.hide-scrollbar {
 .menu__nav-links {
   font-family: var(--ff-title);
   max-width: 56em;
-  overflow: auto;
   height: 100%;
-}
-.menu__nav-links::-webkit-scrollbar {
-  width: 5px;
-  height: 100%;
-}
-.menu__nav-links::-webkit-scrollbar-track {
-  background: #fff;
-  border-radius: 5px;
-}
-.menu__nav-links::-webkit-scrollbar-thumb {
-  background-color: #FFE600;
-  border-radius: 5px;
 }
 @media (max-width: 1439px) {
   .menu__nav-links {
@@ -4545,7 +4522,7 @@ html.with-fancybox body.hide-scrollbar {
   --padding: 2em;
   font-size: 1rem;
   max-width: 43.9em;
-  min-height: 62.8em;
+  min-height: 55.8em;
   background: var(--c-secondary);
   border-radius: 2.5em;
   display: flex;
@@ -4566,7 +4543,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (max-width: 991px) {
   .b_modal__overlay--modal-news .b_modal__aligner {
-    padding-top: 3em;
+    padding-top: 14em;
     padding-left: 0;
     padding-right: 0;
   }
@@ -4629,6 +4606,11 @@ html.with-fancybox body.hide-scrollbar {
   background-color: #FFE600;
   border-radius: 5px;
 }
+@media (max-width: 575px) {
+  .modal-news__content {
+    max-height: 21vh;
+  }
+}
 
 .modal-news__buttons {
   margin-top: auto;
@@ -4679,23 +4661,11 @@ html.with-fancybox body.hide-scrollbar {
   max-width: 32em;
   background: var(--c-accent-second);
   border-radius: 2.5em;
-  margin-top: 4em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   max-height: 80vh;
-}
-@media (max-width: 991px) {
-  .modal-trainer {
-    margin-top: 7.5em;
-    margin-bottom: 10em;
-  }
-}
-@media (max-width: 575px) {
-  .modal-trainer {
-    margin-top: 14.5em;
-  }
 }
 
 .b_modal__overlay--modal-trainer .b_modal__aligner {
@@ -4718,6 +4688,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (max-width: 991px) {
   .modal-trainer__media {
+    padding-top: 60%;
     margin-bottom: 1.5em;
   }
 }
@@ -4760,7 +4731,7 @@ html.with-fancybox body.hide-scrollbar {
 .modal-trainer__content {
   font-size: 0.85714em;
   --lh-regular: 1.15;
-  max-height: 25vh;
+  max-height: 20vh;
   overflow: auto;
   padding-right: 0.5em;
 }
@@ -5100,8 +5071,13 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (max-width: 991px) {
   .screener__title {
-    font-size: 4.4em;
+    font-size: 3.6em;
     margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  .screener__title {
+    font-size: 3em;
   }
 }
 @media (min-width: 1920px) {
@@ -5433,7 +5409,7 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width: 575px) {
   .page-home .screener__particles-bottom .blob:nth-child(1) {
     width: 22.2em;
-    height: 44em;
+    height: 37em;
     top: -8.5em;
   }
 }
@@ -6254,7 +6230,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (max-width: 991px) {
   .about .screener__bg {
-    height: calc(100% - 7.2rem);
+    height: calc(100% - 6.9rem);
     border-radius: 2.5em 2.5em 0 0;
   }
 }
