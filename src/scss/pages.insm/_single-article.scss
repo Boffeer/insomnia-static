@@ -51,7 +51,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: static;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
+	position: relative;
 	--size: 3em;
 	--width: var(--size);
 	--height: var(--size);
@@ -64,6 +68,29 @@
 	background: #fff;
 	border-radius: var(--size);
 	margin: 0;
+  transition: all 0.3s ease;
+}
+
+.single-article-carousel__button-prev::before,
+.single-article-carousel__button-next::before {
+  content: '';
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  border-radius: 9999em;
+  background-color: var(--c-secondary);
+  transition: all 0.3s ease;
+  transform: scale(0.1);
+  opacity: 0;
+}
+.single-article-carousel__button-prev:hover::before,
+.single-article-carousel__button-next:hover::before {
+  @media (any-hover: hover) {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .single-article-carousel__button-prev::after,
@@ -72,13 +99,20 @@
 	display: block;
 	width: 80%;
 	height: 80%;
-	background-image: url("../img/common.insm/arrow-right.svg")
+	background-image: url("../img/common.insm/arrow-right.svg");
+  transition: all 0.3s ease;
 }
 
 .single-article-carousel__button-prev::after {
 	transform: scaleX(-1);
 }
 
+.single-article-carousel__button-prev:hover::after,
+.single-article-carousel__button-next:hover::after {
+  @media (any-hover: hover) {
+    filter: brightness(0) invert(1);
+  }
+}
 
 .single-article-carousel__media {
 	border-radius: 5em;
@@ -171,7 +205,6 @@
 }
 
 .single-article__button-icon {
-	margin-right: 2em;
 	display: block;
 	--size: 4.2em;
 	--width: var(--size);
@@ -182,14 +215,55 @@
 	height: var(--height);
 	min-height: var(--height);
 	max-height: var(--height);
-	border-radius: var(--size);
-	background: #fff;
 	padding: 0.9em;
+  transition: all 0.3s ease;
 
 	@media (max-width: $tablet) {
 		--size: 3.2em;
 		padding: 0.7em;
 	}
+}
+
+.single-article__button:hover .single-article__button-icon {
+  @media (any-hover: hover) {
+    filter: brightness(0) invert(1);
+  }
+
+}
+
+.single-article__button-wrap {
+  position: relative;
+  --size: 4.2em;
+  border-radius: var(--size);
+  background: #fff;
+  transition: all 0.3s ease;
+  margin-right: 2em;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    --size: 3.2em;
+  }
+}
+
+.single-article__button-wrap::before {
+  content: '';
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  border-radius: 9999em;
+  background-color: var(--c-secondary);
+  transition: all 0.3s ease;
+  transform: scale(0.1);
+  opacity: 0;
+}
+
+.single-article__button:hover .single-article__button-wrap::before {
+  @media (any-hover: hover) {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .single-article__button-text {

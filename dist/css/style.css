@@ -5833,7 +5833,11 @@ html.with-fancybox body.hide-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: static;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
+  position: relative;
   --size: 3em;
   --width: var(--size);
   --height: var(--size);
@@ -5846,6 +5850,30 @@ html.with-fancybox body.hide-scrollbar {
   background: #fff;
   border-radius: var(--size);
   margin: 0;
+  transition: all 0.3s ease;
+}
+
+.single-article-carousel__button-prev::before,
+.single-article-carousel__button-next::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  border-radius: 9999em;
+  background-color: var(--c-secondary);
+  transition: all 0.3s ease;
+  transform: scale(0.1);
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  .single-article-carousel__button-prev:hover::before,
+  .single-article-carousel__button-next:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .single-article-carousel__button-prev::after,
@@ -5855,10 +5883,18 @@ html.with-fancybox body.hide-scrollbar {
   width: 80%;
   height: 80%;
   background-image: url("../img/common.insm/arrow-right.svg");
+  transition: all 0.3s ease;
 }
 
 .single-article-carousel__button-prev::after {
   transform: scaleX(-1);
+}
+
+@media (any-hover: hover) {
+  .single-article-carousel__button-prev:hover::after,
+  .single-article-carousel__button-next:hover::after {
+    filter: brightness(0) invert(1);
+  }
 }
 
 .single-article-carousel__media {
@@ -5957,7 +5993,6 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .single-article__button-icon {
-  margin-right: 2em;
   display: block;
   --size: 4.2em;
   --width: var(--size);
@@ -5968,14 +6003,55 @@ html.with-fancybox body.hide-scrollbar {
   height: var(--height);
   min-height: var(--height);
   max-height: var(--height);
-  border-radius: var(--size);
-  background: #fff;
   padding: 0.9em;
+  transition: all 0.3s ease;
 }
 @media (max-width: 991px) {
   .single-article__button-icon {
     --size: 3.2em;
     padding: 0.7em;
+  }
+}
+
+@media (any-hover: hover) {
+  .single-article__button:hover .single-article__button-icon {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.single-article__button-wrap {
+  position: relative;
+  --size: 4.2em;
+  border-radius: var(--size);
+  background: #fff;
+  transition: all 0.3s ease;
+  margin-right: 2em;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .single-article__button-wrap {
+    --size: 3.2em;
+  }
+}
+
+.single-article__button-wrap::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  border-radius: 9999em;
+  background-color: var(--c-secondary);
+  transition: all 0.3s ease;
+  transform: scale(0.1);
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  .single-article__button:hover .single-article__button-wrap::before {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
