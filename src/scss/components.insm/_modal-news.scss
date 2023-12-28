@@ -67,13 +67,15 @@
 
 .modal-news__content {
 	font-size: 1em;
-  max-height: 25vh;
+  max-height: 20vh;
   overflow: auto;
   @include scrollbar;
   padding-right: 0.5em;
+  max-width: 96.5%;
 
   @media (max-width: $mobile) {
     max-height: 21vh;
+    max-width: 94.5%;
   }
 }
 

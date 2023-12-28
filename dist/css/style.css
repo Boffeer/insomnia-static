@@ -3709,7 +3709,7 @@ html.with-fancybox body.hide-scrollbar {
 @media (any-hover: hover) {
   .menu__nav-item:hover {
     color: var(--c-accent-second);
-    letter-spacing: 13.6px;
+    letter-spacing: 1.36rem;
   }
 }
 
@@ -4590,9 +4590,10 @@ html.with-fancybox body.hide-scrollbar {
 
 .modal-news__content {
   font-size: 1em;
-  max-height: 25vh;
+  max-height: 20vh;
   overflow: auto;
   padding-right: 0.5em;
+  max-width: 96.5%;
 }
 .modal-news__content::-webkit-scrollbar {
   width: 5px;
@@ -4609,6 +4610,7 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width: 575px) {
   .modal-news__content {
     max-height: 21vh;
+    max-width: 94.5%;
   }
 }
 
