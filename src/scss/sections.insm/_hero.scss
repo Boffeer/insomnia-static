@@ -115,6 +115,31 @@
 	    margin-right: 0.7em;
 	}
 }
+.hero__bullet--custom-icon::before {
+  display: none;
+  content: none;
+}
+
+.hero__bullet-icon {
+  display: block;
+  --size: 1.5em;
+  --width: var(--size);
+  --height: var(--size);
+  width: var(--width);
+  min-width: var(--width);
+  max-width: var(--width);
+  height: var(--height);
+  min-height: var(--height);
+  max-height: var(--height);
+  margin-top: -0.2em;
+  margin-right: 0.5em;
+
+  @media (max-width: $tablet) {
+    --size: 1.5em;
+    margin-top: -0.4em;
+    margin-right: 0.7em;
+  }
+}
 
 
 .hero__bullet-link {

@@ -3218,7 +3218,7 @@ html.with-fancybox body.hide-scrollbar {
   --margin-bottom-ul: 2em;
   --padding-left-ul: 1.55em;
   --margin-bottom-li: 0.2em;
-  --fz-p: 1.4em;
+  --fz-p: 1.25em;
   --lh-p: var(--lh-regular);
   --ls-p: var(--ls-regular);
   --margin-top-p: 1em;
@@ -3491,6 +3491,103 @@ html.with-fancybox body.hide-scrollbar {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+.fancybox__container {
+  z-index: 10000000000;
+}
+
+.fancybox__thumbs {
+  padding-bottom: 1.375rem;
+}
+
+.fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after {
+  display: none;
+}
+
+.fancybox__thumbs .carousel__slide {
+  padding: 0.375rem;
+  border-radius: 0.375rem;
+}
+
+.fancybox__thumbs .carousel__slide.is-nav-selected {
+  border: 1px solid #fff;
+}
+
+.fancybox__thumbs .carousel__slide {
+  width: var(--fancybox-thumbs-width, 6rem);
+}
+
+.fancybox__thumbs .carousel__slide.has-video::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 3.75rem;
+  display: block;
+  background-image: url("../img/common/play-icon-mask.svg");
+  background-position: 22px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-color: #fff;
+  width: 3.75rem;
+  height: 2.625rem;
+}
+
+.fancybox__nav svg {
+  display: none;
+}
+
+.fancybox__nav .carousel__button {
+  width: 3.75rem;
+  height: 2.5rem;
+  border-radius: 3.75rem;
+  background-color: #fff;
+  transition: 0.3s all ease;
+}
+@media (max-width: 768px) {
+  .fancybox__nav .carousel__button {
+    display: none;
+  }
+}
+
+.fancybox__nav .carousel__button::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+}
+
+.fancybox__nav .carousel__button.is-next::after {
+  transform: scaleX(-1);
+}
+
+.fancybox__nav .carousel__button.is-prev {
+  left: 1.25rem;
+}
+
+.fancybox__nav .carousel__button.is-next {
+  right: 1.25rem;
+}
+
+@media (any-hover: hover) {
+  .fancybox__nav .carousel__button:hover {
+    background-color: #000;
+  }
+}
+
+@media (any-hover: hover) {
+  .fancybox__nav .carousel__button:hover::after {
+    background-color: #fff;
+  }
 }
 
 .socials {
@@ -5304,6 +5401,33 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 
+.hero__bullet--custom-icon::before {
+  display: none;
+  content: none;
+}
+
+.hero__bullet-icon {
+  display: block;
+  --size: 1.5em;
+  --width: var(--size);
+  --height: var(--size);
+  width: var(--width);
+  min-width: var(--width);
+  max-width: var(--width);
+  height: var(--height);
+  min-height: var(--height);
+  max-height: var(--height);
+  margin-top: -0.2em;
+  margin-right: 0.5em;
+}
+@media (max-width: 991px) {
+  .hero__bullet-icon {
+    --size: 1.5em;
+    margin-top: -0.4em;
+    margin-right: 0.7em;
+  }
+}
+
 .hero__bullet-link {
   color: inherit;
   font-size: inherit;
@@ -5930,6 +6054,30 @@ html.with-fancybox body.hide-scrollbar {
   margin-bottom: 1.8em;
 }
 @media (max-width: 991px) and (min-width: 576px) {
+  .single-article__content {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .single-article__content {
+    max-height: 30rem;
+    overflow: auto;
+    padding-right: 0.5em;
+  }
+  .single-article__content::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+  }
+  .single-article__content::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 5px;
+  }
+  .single-article__content::-webkit-scrollbar-thumb {
+    background-color: #FFE600;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 991px) {
   .single-article__content {
     max-width: 100%;
   }

@@ -38,9 +38,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
   let enableBarbaTransitions = true;
 
 
-  async function fetchNews(id) {
+  async function fetchNews(id, slug) {
     const formData = new FormData();
-    formData.append('action', 'get_modal_news');
+    formData.append('action', `get_modal_${slug}`);
     formData.append('id', id);
     // formData.append('id', card.dataset.id);
 
@@ -111,13 +111,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
 
   function initNewsCards(e) {
-    if (!e.next.url.path.startsWith('/news/'))  return;
+    if (!e.next.url.path.startsWith('/news/') &&
+        !e.next.url.path.startsWith('/services/')
+    ) {
+      return;
+    }
     const newsCards = [...document.querySelectorAll('.accordion-carousel__slide .news-card')];
     // console.log(newsCards)
     newsCards.forEach(card => {
       card.addEventListener('click', async () => {
+        const slug = card.closest('.news').id
 
-        const response = await fetchNews(card.dataset.id);
+        const response = await fetchNews(card.dataset.id, slug);
         placeNewsModal(response);
         b_modal.openPop('modal-news');
       })
@@ -129,7 +134,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     buttonPrev.addEventListener('click', async () => {
       blurCard();
 
-      let response = await fetchNews(buttonPrev.dataset.id);
+      const slug = document.querySelector('.news.screener__layout').id;
+      let response = await fetchNews(buttonPrev.dataset.id, slug);
       placeNewsModal(response);
 
       focusCard();
@@ -137,7 +143,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     buttonNext.addEventListener('click', async () => {
       blurCard();
 
-      let response = await fetchNews(buttonNext.dataset.id);
+      const slug = document.querySelector('.news.screener__layout').id;
+      let response = await fetchNews(buttonNext.dataset.id, slug);
       placeNewsModal(response);
 
       focusCard();
@@ -161,8 +168,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
       },
       {
+        namespace: 'services',
+        afterEnter(e) {
+          if (e.next.url.path.startsWith('/services/') && e.next.url.path.indexOf('/services/') !== e.next.url.path.length - '/services/'.length) {
+            if (e.trigger !== 'popstate') {
+              b_modal.openPop('modal-news');
+            }
+          }
+          initNewsCards(e)
+        }
+      },
+      {
         namespace: 'clip',
         beforeEnter(e) {
+          console.log('clip', e)
            // console.log(e)
            // if (!enableBarbaTransitions) {
            //   console.log('prevent')
@@ -172,8 +191,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
            // }
         },
         afterEnter(e) {
-          // console.log(e)
-          if (!e.next.url.path.startsWith('/news/')) {
+          if (!e.next.url.path.startsWith('/news/') ||
+              !e.next.url.path.startsWith('/services/')
+          ) {
             if (b_modal.getLastOpenedId()) {
               b_modal.closePop(b_modal.getLastOpenedId());
             }
@@ -196,7 +216,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
              bullet.addEventListener('click', async () => {
              blurCard();
 
-             const response = await fetchNews(bullet.dataset.id);
+             const response = await fetchNews(bullet.dataset.id, 'news');
              placeNewsModal(response);
 
              focusCard();
@@ -224,10 +244,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
     enableBarbaTransitions = false;
     let currentPath = window.location.pathname;
     let newPath;
+
+    let archiveSlug = null;
     if (currentPath === '/news/') {
-      newPath = '/news/' + slug;
+      archiveSlug = 'news';
+    } else if (currentPath === '/services/') {
+      archiveSlug = 'services';
+    }
+
+    if (!archiveSlug) {
+      return;
+    }
+
+    if (currentPath === `/${archiveSlug}/`) {
+      newPath = `/${archiveSlug}/` + slug;
     } else {
-      newPath = currentPath.replace(/\/news\/[^\/]+/, '/news/' + slug);
+      if (archiveSlug === 'news') {
+        newPath = currentPath.replace(/\/news\/[^\/]+/, '/news/' + slug);
+      } else if (archiveSlug === 'services') {
+        newPath = currentPath.replace(/\/services\/[^\/]+/, '/services/' + slug);
+      }
     }
     window.history.pushState({}, '', newPath + window.location.hash);
   }

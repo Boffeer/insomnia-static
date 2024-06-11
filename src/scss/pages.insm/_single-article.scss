@@ -146,6 +146,15 @@
 	@media (max-width: $tablet) and (min-width: $mobile + 1)  {
 		max-width: 100%;
 	}
+  @media (min-width: $tablet + 1) {
+      max-height: 30rem;
+      overflow: auto;
+      @include scrollbar;
+      padding-right: 0.5em;
+  }
+  @media (max-width: $tablet) {
+      max-width: 100%;
+  }
 }
 
 .single-article__body {
